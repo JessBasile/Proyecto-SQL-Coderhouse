@@ -1,4 +1,4 @@
-[![coderhouse] (https://objetivo.news/download/multimedia.grande.b41044a4769588b5.Y29kZXJob3VzZS1xdWUtZXMtcXVlLWhhY2VuX2dyYW5kZS53ZWJw.webp)
+[![coderr.jpg](https://i.postimg.cc/YS6q3q0z/coderr.jpg)](https://postimg.cc/4K3g4GzY)
 
 # Proyecto SQL Coderhouse
 
