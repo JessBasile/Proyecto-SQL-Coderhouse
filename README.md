@@ -12,16 +12,16 @@ Tutor: Ariel Annone
 
 Docente: Anderson Michel Torres
 
-#Introducción: Descripción de la temática de la base de datos
+# Introducción: Descripción de la temática de la base de datos
 
-#Objetivo
+# Objetivo
 
 Diseñar e implementar una base de datos relacional que satisfaga las necesidades de una adecuada gestión y organización para el sistema utilizado en la firma Wifly. La base de datos será eficiente, escalable, fácil de mantener, aportando agilidad y precisión en la asignación de operaciones (instalaciones, reclamos, modificaciones, bajas) a los distintos equipos de trabajo, y la acertada adjudicación de los equipos a los clientes de acuerdo al plan (o abono) que contrataron.
 
-#Situación problemática
+# Situación problemática
 
-#Modelo de negocio
+# Modelo de negocio
 
-#Listado de las tablas con descripción de estructura
+# Listado de las tablas con descripción de estructura
 
 
