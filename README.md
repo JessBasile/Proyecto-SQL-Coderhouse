@@ -22,6 +22,10 @@ Diseñar e implementar una base de datos relacional que satisfaga las necesidade
 
 # Modelo de negocio
 
+# Diagrama de entidad relación
+
+[![DER-Wifly.jpg](https://i.postimg.cc/zX8MbDY1/DER-Wifly.jpg)](https://postimg.cc/V5Z428N7)
+
 # Listado de las tablas con descripción de estructura
 
 
