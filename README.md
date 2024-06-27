@@ -1,4 +1,4 @@
-https://drive.google.com/file/d/1fWT--rsuAzAlxop0aDNrUAYvb19E_5oG/view?usp=sharing
+[![coderhouse] (https://objetivo.news/download/multimedia.grande.b41044a4769588b5.Y29kZXJob3VzZS1xdWUtZXMtcXVlLWhhY2VuX2dyYW5kZS53ZWJw.webp)
 
 # Proyecto SQL Coderhouse
 
