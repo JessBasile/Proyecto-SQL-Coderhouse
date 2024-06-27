@@ -4,6 +4,4 @@
 
 # Primera preentrega
 
-Alumna:
-Tutor:
-Bla bla
+Alumna: Jesica Brenda Basile
