@@ -4,7 +4,6 @@
 
 # Primera preentrega
 
-Alumna: Jésica Brenda Basile
-Comisión: 57190
-Tutor: Ariel Annone
-Docente: Anderson Michel Torres
+Alumna:
+Tutor:
+Bla bla
