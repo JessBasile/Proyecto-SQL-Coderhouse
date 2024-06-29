@@ -1,4 +1,4 @@
-[![coderr.jpg](https://i.postimg.cc/YS6q3q0z/coderr.jpg)](https://postimg.cc/4K3g4GzY)
+[![Coder-House-Con-Foto-Perfil.png](https://i.postimg.cc/L6hRNr3w/Coder-House-Con-Foto-Perfil.png)](https://postimg.cc/qzf97DYx)
 
 # Entrega Proyecto SQL Coderhouse
 
