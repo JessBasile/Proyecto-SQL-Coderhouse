@@ -38,11 +38,9 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 `EQUIPOS`  
 + Almacena información sobre los distintos equipos que utiliza la empresa para brindar servicio.  
 + Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO.
-
 `ABONOS`
-
-Almacena información sobre los distintos abonos que ofrece la compañia.  
-Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
++ Almacena información sobre los distintos abonos que ofrece la compañia.  
++ Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
 
 ### Listado de las tablas con descripción de estructura
 ___
