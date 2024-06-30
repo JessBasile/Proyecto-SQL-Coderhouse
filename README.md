@@ -13,7 +13,7 @@ Tutor: Ariel Annone
 Docente: Anderson Michel Torres
 
 ### Introducción: Descripción de la temática de la base de datos
-_
+
 La temática se encuentra inspirada en una empresa real que brinda servicios de internet, bajo el nombre ficticio de Wifly cuya diferenciación en el mercado radica en el nicho del mercado al que apunta, puesto que se orienta principalmente a brindar servicio a clientes ubicados en zonas rurales. 
 El método de trabajo utilizado es por equipos de trabajo (en grupos compuestos por dos técnicos) a los que se les asignan distintas operaciones (instalaciones, reclamos, modificaciones/cambios y bajas) para efectuar a los clientes que contratan el servicio bajo con determinado paquete de servicio.
 
@@ -35,10 +35,12 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 Tablas
 
 `EQUIPOS`
+
 Almacena información sobre los distintos equipos que utiliza la empresa para brindar servicio.
 Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO.
 
 `ABONOS`
+
 Almacena información sobre los distintos abonos que ofrece la compañia.
 Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
 
