@@ -41,7 +41,15 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 
 `ABONOS`
 + Almacena información sobre los distintos abonos que ofrece la compañia.  
-+ Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.  
++ Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
+
+`CLIENTES`
++ Almacena información sobre todos los clientes que posee la organiación y el detalle de sus registros.
++ Atributos: IDCLIENTE, IDEQUIPO, IDABONO, FECHA DE ALTA, RAZON SOCIAL, DIRECCION, CELULAR, DNI, COORDENADAS, NUNERO DE IP, CORREO ELECTRONICO.
+
+`TIPO_DE_PAGO`
++ Contiene información sobre los diferentes medios de pago disponibles para los cliente de Wifly.
++ Atributos: IDPAGO, TIPO DE PAGO.  
 
 ### Listado de las tablas con descripción de estructura
 ___
