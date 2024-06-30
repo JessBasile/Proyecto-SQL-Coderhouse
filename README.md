@@ -27,6 +27,9 @@ Diseñar e implementar una base de datos relacional que satisfaga las necesidade
 [![DER-Wifly.jpg](https://i.postimg.cc/zX8MbDY1/DER-Wifly.jpg)](https://postimg.cc/V5Z428N7)
 
 # Descripción de base de datos
+Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas operaciones ejecutadas por diferentes equipos de trabajo, hacia los clientes de acuerdo al tipo de abono contratado. Esta base de datos cumplirá con las características de ser eficiente, escalable, ágil y precisa para todos lo procesos abordados por la compañia.
+
+Tablas
 
 # Listado de las tablas con descripción de estructura
 
