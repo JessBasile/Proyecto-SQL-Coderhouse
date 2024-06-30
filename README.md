@@ -36,11 +36,11 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 **Tablas**
 
 `EQUIPOS`  
-+ Almacena información sobre los distintos equipos que utiliza la empresa para brindar servicio.  
-+ Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO.
++ Contiene información sobre los distintos equipos que utiliza la empresa para brindar servicio.  
++ Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO, CANTIDAD.
 
 `ABONOS`
-+ Almacena información sobre los distintos abonos que ofrece la compañia.  
++ Define los distintos tipos de abonos que ofrece la compañia.  
 + Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
 
 `CLIENTES`
@@ -50,6 +50,38 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 `TIPO_DE_PAGO`
 + Contiene información sobre los diferentes medios de pago disponibles para los cliente de Wifly.
 + Atributos: IDPAGO, TIPO DE PAGO.  
+
+`FACTURAS`
++ Contiene información detallada sobre las facturas emitidas a los ditintos clientes.
++ Atributos: IDFACTURA, NRO FACTURA, FECHA, IDPAGO, IDCLIENTE.  
+
+`PROVEEDORES`
++ Detalla información sobre los proveedores con los que opera la compañia.
++ Atributos: IDPROVEEDOR, RAZON SOCIAL, DIRECCION, TELEFONO, CORREO ELECTRONICO.  
+
+`SUMINISTROS`
++ Comprende información sobre los equipos que suministran los distintos proveedores.
++ Atributos: IDPROVEEDOR, IDEQUIPO, FECHA DE SUMINISTRO.  
+
+`OPERACIONES`
++ Alamacena información sobre las distintas operaciones que son abordadas por la firma y su descripción.
++ Atributos: IDOPERACION, IDCLIENTE, INSTALACIONES, RECLAMO, MODIFICACIÓN, BAJA, DESCRIPCION, MOTIVO, RESPUESTA.  
+
+`AREAS`
++ Contiene información sobre las distintas áreas de trabajo que intervienen en la compañia (tales como: técnicos, administrativos, maestranza, etc).  
++ Atributos: IDAREA, AREA DE TRABAJO.  
+
+`EMPLEADOS`
++ Contiene información sobre los empleados contratados que brindan servicio a la firma.
++ Atributos: IDEMPLEADO, IDAREA, APELLIDO, NOMBRE, DIRECCION, CELULAR, DNI, FECHA DE NACIMIENTO.  
+
+`ASIGNACIONES`
++ Comprende información sobre las operaciones que le son asignadas a los distintos empleados (equipos de trabajo).
++ Atributos: IDEMPLEADO, IDOPERACION, FECHA DE ASIGNACION.  
+
+`VENTAS`
++ Contiene información integral y detallada sobre todas las ventas realizadas en Wifly.
++ Atributos: IDVENTA, IDFACTURA, IDABONO, IDEQUIPO, IDOPERACION, IDPAGO, IDCLIENTE, CANTIDAD, COSTO ABONO, PRECIO ABONO, COSTO EQUIPO, PRECIO EQUIPO.
 
 ### Listado de las tablas con descripción de estructura
 ___
