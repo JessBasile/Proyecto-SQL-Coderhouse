@@ -32,10 +32,17 @@ Diseñar e implementar una base de datos relacional que satisfaga las necesidade
 # Descripción de base de datos
 Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas operaciones ejecutadas por diferentes equipos de trabajo, hacia los clientes de acuerdo al tipo de abono contratado. Esta base de datos cumplirá con las características de ser eficiente, escalable, ágil y precisa para todos lo procesos abordados por la compañia.
 
-`#RRGGBB`
-
 Tablas
 
+`#EQUIPOS`
+○ Almacena información sobre los distintos equipos que utiliza la empresa para brindar servicio.
+○ Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO.
+
+`#ABONOS`
+○ Almacena información sobre los distintos abonos que ofrece la compañia.
+○ Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
+
 # Listado de las tablas con descripción de estructura
+
 
 
