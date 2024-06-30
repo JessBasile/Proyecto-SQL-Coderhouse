@@ -36,8 +36,8 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 **Tablas**
 
 `EQUIPOS`  
-Almacena información sobre los distintos equipos que utiliza la empresa para brindar servicio.  
-Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO.
++ Almacena información sobre los distintos equipos que utiliza la empresa para brindar servicio.  
++ Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO.
 
 `ABONOS`
 
