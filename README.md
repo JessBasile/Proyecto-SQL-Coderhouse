@@ -29,6 +29,8 @@ ___
 ___
 ### DER EFECTUADO EN [MIRO](https://miro.com/welcomeonboard/NW1tS2xNVTZzR0pNU2I1MWl1cUJ5Ymw2OVZHVmxONWVFaXRkWFM1clJuRFZFclhjZWVaSllJalR2WEJGOW0xZXwzNDU4NzY0NTU4MTkyNjc2ODAwfDI=?share_link_id=663161836839)
 
+[![DER-Wi-Fly-definitivo.jpg](https://i.postimg.cc/GtX9fkyJ/DER-Wi-Fly-definitivo.jpg)](https://postimg.cc/jnJswnvL)
+
 ### Descripción de base de datos
 ___
 Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas operaciones ejecutadas por diferentes equipos de trabajo, hacia los clientes de acuerdo al tipo de abono contratado. Esta base de datos cumplirá con las características de ser eficiente, escalable, ágil y precisa para todos lo procesos abordados por la compañia.
