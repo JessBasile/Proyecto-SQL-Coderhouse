@@ -33,7 +33,7 @@ Se enfrenta la necesidad de la creación de una base de datos relacional eficien
 
 3. Gestión de Facturas y Medios de pago: La base de datos deberá proporcionar información certera para la emisión de las facturas, acorde a las operaciones efectuadas sobre cada cliente, de acuerdo a su costo y precio, a través del pago previsto por el mismo.
 
-### Modelo de negocio
+### Resolución de la problemática
 ___
 
 ### Diagrama de entidad relación
