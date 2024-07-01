@@ -27,7 +27,78 @@ ___
 ___
 ### Diagrama de entidad relación
 ___
-[![DER-Wifly.jpg](https://i.postimg.cc/zX8MbDY1/DER-Wifly.jpg)](https://postimg.cc/V5Z428N7)
+´´´
++-----------------+         +-----------------+         +--------------------+
+|    EQUIPOS      |         |      ABONOS     |         |      CLIENTES      |
++-----------------+         +-----------------+         +--------------------+
+| id_equipo (PK)  |         | id_abono (PK)   |         | id_cliente (PK)    |
+| marca           |         | tipo_de_abono   |         | id_equipo (FK)     |
+| modelo          |         | costo_abono     |         | id_abono (FK)      |
+| costo_equipo    |         | precio_abono    |         | fecha_de_alta      |
+| precio_equipo   |         +-----------------+         | razon_social       |
+| cantidad        |                                     | direccion          |
++-----------------+                                     | celular            |
+                                                        | dni                |
+                                                        | coordenadas        |
+                                                        | numero_ip          |
+                                                        | correo_electronico |
+                                                        +--------------------+
+                                                         
++-----------------+         +-----------------+         +-----------------+
+|  TIPO_DE_PAGO   |         |    FACTURAS     |         |   PROVEEDORES   |
++-----------------+         +-----------------+         +-----------------+
+| id_pago (PK)    |         | id_factura (PK) |         | id_proveedor (PK)|
+| tipo_de_pago    |         | nro_factura     |         | razon_social (UN)|
++-----------------+         | fecha           |         | direccion       |
+                            | id_pago (FK)    |         | telefono (UN)   |
+                            | id_cliente (FK) |         | correo_electronico (UN) |
+                            +-----------------+         +-----------------+
+
++-----------------+         +-----------------+         +-----------------+
+|  SUMINISTROS    |         |   OPERACIONES   |         |      AREAS      |
++-----------------+         +-----------------+         +-----------------+
+| id_proveedor (FK)|        | id_operacion (PK)|        | id_area (PK)    |
+| id_equipo (FK)  |         | id_cliente (FK) |         | area_de_trabajo |
+| fecha_de_suministro|      | instalacion     |         +-----------------+
++-----------------+         | reclamo         |
+                             | modificacion    |
+                             | baja            |
+                             | descripcion     |
+                             | motivo          |
+                             | respuesta       |
+                             | fecha_operacion |
+                             +-----------------+
+
++-----------------+         +-----------------+
+|   EMPLEADOS     |         |   ASIGNACIONES  |
++-----------------+         +-----------------+
+| id_empleado (PK)|         | id_empleado (FK)|
+| id_area (FK)    |         | id_operacion (FK)|
+| apellido        |         | fecha_de_asignacion|
+| nombre          |         +-----------------+
+| direccion       |
+| celular (UN)    |
+| dni             |
+| fecha_de_nacimiento |
++-----------------+
+
++-----------------+
+|     VENTAS      |
++-----------------+
+| id_venta (PK)   |
+| id_factura (FK) |
+| id_abono (FK)   |
+| id_equipo (FK)  |
+| id_operacion (FK)|
+| id_pago (FK)    |
+| id_cliente (FK) |
+| cantidad        |
+| costo_abono     |
+| precio_abono    |
+| costo_equipo    |
+| precio_equipo   |
++-----------------+
+
 
 ### Descripción de base de datos
 ___
