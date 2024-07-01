@@ -27,9 +27,9 @@ ___
 ___
 ### Diagrama de entidad relación
 ___
-
+### DER SIMPLIFICADO
 ```
-+-----------------+         +-----------------+         +--------------------+
++-----------------+         +-----------------+         +--------------------+       
 |    EQUIPOS      |         |      ABONOS     |         |      CLIENTES      |
 +-----------------+         +-----------------+         +--------------------+
 | id_equipo (PK)  |         | id_abono (PK)   |         | id_cliente (PK)    |
@@ -44,16 +44,6 @@ ___
                                                         | numero_ip          |
                                                         | correo_electronico |
                                                         +--------------------+
-                                                         
-+-----------------+         +-----------------+         +-----------------+
-|  TIPO_DE_PAGO   |         |    FACTURAS     |         |   PROVEEDORES   |
-+-----------------+         +-----------------+         +-----------------+
-| id_pago (PK)    |         | id_factura (PK) |         | id_proveedor (PK)|
-| tipo_de_pago    |         | nro_factura     |         | razon_social (UN)|
-+-----------------+         | fecha           |         | direccion       |
-                            | id_pago (FK)    |         | telefono (UN)   |
-                            | id_cliente (FK) |         | correo_electronico (UN) |
-                            +-----------------+         +-----------------+
 
 +-----------------+         +-----------------+         +-----------------+
 |  SUMINISTROS    |         |   OPERACIONES   |         |      AREAS      |
@@ -101,7 +91,7 @@ ___
 +-----------------+
 
 ```
-
+### DER EFECTUADO EN [MIRO](https://miro.com/welcomeonboard/NW1tS2xNVTZzR0pNU2I1MWl1cUJ5Ymw2OVZHVmxONWVFaXRkWFM1clJuRFZFclhjZWVaSllJalR2WEJGOW0xZXwzNDU4NzY0NTU4MTkyNjc2ODAwfDI=?share_link_id=663161836839)
 ### Descripción de base de datos
 ___
 Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas operaciones ejecutadas por diferentes equipos de trabajo, hacia los clientes de acuerdo al tipo de abono contratado. Esta base de datos cumplirá con las características de ser eficiente, escalable, ágil y precisa para todos lo procesos abordados por la compañia.
