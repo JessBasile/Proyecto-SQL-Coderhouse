@@ -98,7 +98,7 @@ ___
 | costo_equipo    |
 | precio_equipo   |
 +-----------------+
-
+´´´
 
 ### Descripción de base de datos
 ___
