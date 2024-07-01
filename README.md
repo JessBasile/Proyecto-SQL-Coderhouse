@@ -29,55 +29,6 @@ ___
 ___
 ### DER EFECTUADO EN [MIRO](https://miro.com/welcomeonboard/NW1tS2xNVTZzR0pNU2I1MWl1cUJ5Ymw2OVZHVmxONWVFaXRkWFM1clJuRFZFclhjZWVaSllJalR2WEJGOW0xZXwzNDU4NzY0NTU4MTkyNjc2ODAwfDI=?share_link_id=663161836839)
 
-### DER SIMPLIFICADO
-```
-+-----------------+         +-----------------+         +--------------------+         +---------------------+         +--------------------+         +------------------+       
-|     EQUIPOS     |         |     ABONOS      |         |      CLIENTES      |         |     SUMINISTROS     |         |     OPERACIONES    |         |      AREAS       |
-+-----------------+         +-----------------+         +--------------------+         +---------------------+         +--------------------+         +------------------+
-| id_equipo (PK)  |         | id_abono (PK)   |         | id_cliente (PK)    |         | id_proveedor (PK)   |         | id_operacion (PK)  |         | id_area (PK)     |
-| marca           |         | tipo_de_abono   |         | id_equipo (FK)     |         | id_equipo (PK)      |         | id_cliente (FK)    |         | area_de_trabajo  |
-| modelo          |         | costo_abono     |         | id_abono (FK)      |         | fecha_de_suministro |         | instalacion        |         +------------------+
-| costo_equipo    |         | precio_abono    |         | fecha_de_alta      |         +---------------------+         | reclamo            |
-| precio_equipo   |         +-----------------+         | razon_social       |                                         | modificaciones     |
-| cantidad        |                                     | direccion          |                                         | baja               |
-+-----------------+                                     | celular            |                                         | descripcion        |
-                                                        | dni                |                                         | motivo             |
-                                                        | coordenadas        |                                         | respuesta          |
-                                                        | numero_ip          |                                         | fecha_de_operacion |
-                                                        | correo_electronico |
-                                                        +--------------------+
-
-+---------------------+     +--------------------+
-|      EMPLEADOS      |     |    ASIGNACIONES    |
-+---------------------+     +--------------------+
-| id_empleado (PK)    |     | id_empleado (PK)   |
-| id_area (FK)        |     | id_operacion (PK)  |
-| apellido            |     | fecha_de_asignacion|
-| nombre              |     +--------------------+
-| direccion           |
-| celular             |
-| dni                 |
-| fecha_de_nacimiento |
-+---------------------+
-
-+------------------+
-|      VENTAS      |
-+------------------+
-| id_venta (PK)    |
-| id_factura (FK)  |
-| id_abono (FK)    |
-| id_equipo (FK)   |
-| id_operacion (FK)|
-| id_pago (FK)     |
-| id_cliente (FK)  |
-| cantidad         |
-| costo_abono      |
-| precio_abono     |
-| costo_equipo     |
-| precio_equipo    |
-+------------------+
-
-```
 ### Descripción de base de datos
 ___
 Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas operaciones ejecutadas por diferentes equipos de trabajo, hacia los clientes de acuerdo al tipo de abono contratado. Esta base de datos cumplirá con las características de ser eficiente, escalable, ágil y precisa para todos lo procesos abordados por la compañia.
