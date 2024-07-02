@@ -40,7 +40,11 @@ ___
 ___
 ### DER EFECTUADO EN [MIRO](https://miro.com/welcomeonboard/NW1tS2xNVTZzR0pNU2I1MWl1cUJ5Ymw2OVZHVmxONWVFaXRkWFM1clJuRFZFclhjZWVaSllJalR2WEJGOW0xZXwzNDU4NzY0NTU4MTkyNjc2ODAwfDI=?share_link_id=663161836839)
 
-[![DER-Wi-Fly-definitivo.jpg](https://i.postimg.cc/GtX9fkyJ/DER-Wi-Fly-definitivo.jpg)](https://postimg.cc/jnJswnvL)
+[![DER-Wi-Fly-correcto.jpg](https://i.postimg.cc/tTxWpKDv/DER-Wi-Fly-correcto.jpg)](https://postimg.cc/LYmnV0cj)
+
+DER EN DBEAVER
+
+[![DER-SQL.jpg](https://i.postimg.cc/N0W2JNY6/DER-SQL.jpg)](https://postimg.cc/B8BvtBjb)
 
 ### Descripción de base de datos
 ___
