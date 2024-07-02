@@ -12,7 +12,7 @@ Tutor: Ariel Annone
 
 Docente: Anderson Michel Torres
 
-Presentación didáctica [click aquí](https://view.genially.com/6682fc0815c608001450761e)
+Presentación didáctica ([click aquí](https://view.genially.com/6682fc0815c608001450761e))
 
 ### Introducción: Descripción de la temática de la base de datos
 ___
