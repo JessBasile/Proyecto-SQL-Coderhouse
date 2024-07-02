@@ -85,7 +85,7 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 
 `OPERACIONES`
 + Alamacena información sobre las distintas operaciones que son abordadas por la firma y su descripción.
-+ Atributos: IDOPERACION, IDCLIENTE, INSTALACIONES, RECLAMO, MODIFICACIÓN, BAJA, DESCRIPCION, MOTIVO, RESPUESTA, FECHA OPERACIONES.  
++ Atributos: IDOPERACION, IDCLIENTE, TIPO_OPERACION, DESCRIPCION, RESPUESTA, FECHA OPERACIONES.  
 
 `AREAS`
 + Contiene información sobre las distintas áreas de trabajo que intervienen en la compañia (tales como: técnicos, administrativos, maestranza, etc).  
