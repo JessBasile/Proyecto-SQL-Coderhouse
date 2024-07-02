@@ -106,5 +106,6 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 ### Listado de las tablas con descripción de estructura
 ___
 
-[![Tablas-PARTE-1.jpg](https://i.postimg.cc/jdWZ3SpP/Tablas-PARTE-1.jpg)](https://postimg.cc/bshxspNw)
+[![Tablas-PARTE-1-A.jpg](https://i.postimg.cc/13Xnr8b1/Tablas-PARTE-1-A.jpg)](https://postimg.cc/yDq8V8VL)
+[![Tablas-PARTE-1-B.jpg](https://i.postimg.cc/q7XTtLQJ/Tablas-PARTE-1-B.jpg)](https://postimg.cc/CZ1tXbWX)
 [![Tablas-PARTE-2.jpg](https://i.postimg.cc/pT4qPN8p/Tablas-PARTE-2.jpg)](https://postimg.cc/JD3bQ2pL)
