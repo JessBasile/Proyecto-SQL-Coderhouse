@@ -42,11 +42,11 @@ ___
 ___
 ### DER EFECTUADO EN [MIRO](https://miro.com/welcomeonboard/NW1tS2xNVTZzR0pNU2I1MWl1cUJ5Ymw2OVZHVmxONWVFaXRkWFM1clJuRFZFclhjZWVaSllJalR2WEJGOW0xZXwzNDU4NzY0NTU4MTkyNjc2ODAwfDI=?share_link_id=663161836839)
 
-[![DER-Wi-Fly-correcto.jpg](https://i.postimg.cc/ryfPYbKX/DER-Wi-Fly-correcto.jpg)](https://postimg.cc/bd2gZmx3)
+aca
 
 ### DER EN DBEAVER
 
-[![DER-SQL.jpg](https://i.postimg.cc/N0W2JNY6/DER-SQL.jpg)](https://postimg.cc/B8BvtBjb)
+[![DER-Dbeaver.jpg](https://i.postimg.cc/T3rCt23P/DER-Dbeaver.jpg)](https://postimg.cc/PC5WxjZG)
 
 Se puede observar la similitud de ambos diagramas, lo que demuestra un trabajo adecuado en la elaboración de la base de datos, las tablas y sus relaciones en DBeaver.
 ### Descripción de base de datos
