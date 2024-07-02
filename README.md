@@ -4,7 +4,7 @@
 
 ## Primera preentrega
 
-Alumna: Jesica Brenda Basile
+Alumna: [Jesica Brenda Basile](www.linkedin.com/in/jesica-basile-749b46b3)
 
 Comisión: 57190
 
