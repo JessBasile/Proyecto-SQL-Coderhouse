@@ -107,3 +107,4 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 ___
 
 [![Tablas-PARTE-1.jpg](https://i.postimg.cc/jdWZ3SpP/Tablas-PARTE-1.jpg)](https://postimg.cc/bshxspNw)
+[![Tablas-PARTE-2.jpg](https://i.postimg.cc/pT4qPN8p/Tablas-PARTE-2.jpg)](https://postimg.cc/JD3bQ2pL)
