@@ -42,7 +42,7 @@ ___
 ___
 ### DER EFECTUADO EN [MIRO](https://miro.com/welcomeonboard/NW1tS2xNVTZzR0pNU2I1MWl1cUJ5Ymw2OVZHVmxONWVFaXRkWFM1clJuRFZFclhjZWVaSllJalR2WEJGOW0xZXwzNDU4NzY0NTU4MTkyNjc2ODAwfDI=?share_link_id=663161836839)
 
-[![DER-Wi-Fly-correcto.jpg](https://i.postimg.cc/tTxWpKDv/DER-Wi-Fly-correcto.jpg)](https://postimg.cc/LYmnV0cj)
+[![DER-Wi-Fly-correcto.jpg](https://i.postimg.cc/ryfPYbKX/DER-Wi-Fly-correcto.jpg)](https://postimg.cc/bd2gZmx3)
 
 ### DER EN DBEAVER
 
