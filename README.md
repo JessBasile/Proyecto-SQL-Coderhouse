@@ -144,6 +144,97 @@ ___
 | NUMERO IP           | VARCHAR(50)  |               | No admite datos nulos y debe ser único.                                                                                   |
 | CORREO ELECTRONICO  | VARCHAR(100) |               | No admite datos nulos y debe ser único.                                                                                   |
 
+**Tabla Tipo de Pago**
+
+| COLUMNA       | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                                 |
+|---------------|--------------|---------------|-------------------------------------------------------------------------------------------------------------|
+| ID PAGO        | INT          | PK            | No admite datos nulos y es autoincremental.                                                                |
+| TIPO DE PAGO   | VARCHAR(50)  |               | Por default se tomará el tipo de pago "Efectivo", para el caso que no se especifique otro medio de pago.  |
+
+**Tabla Facturas**
+
+| COLUMNA        | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                       |
+|----------------|--------------|---------------|---------------------------------------------------------------------------------------------------|
+| ID FACTURA     | INT          | PK            | No admite datos nulos y es autoincremental.                                                        |
+| NRO FACTURA    | VARCHAR(100) |               | No admite datos nulos.                                                                            |
+| FECHA          | DATETIME     |               | Por default coloca fecha actual (en caso de no ingresarse ese dato).                              |
+| ID PAGO        | INT          | FK            | No admite datos nulos.                                                                            |
+| ID CLIENTE     | INT          |               | No admite datos nulos.                                                                            |
+
+**Tabla Proveedores**
+
+| COLUMNA            | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                       |
+|--------------------|--------------|---------------|---------------------------------------------------------------------------------------------------|
+| ID PROVEEDOR       | INT          | PK            | No admite datos nulos y es autoincremental.                                                        |
+| RAZON SOCIAL       | VARCHAR(100) |               | No admite datos nulos, y debe ser único (puede ser nombre y apellido).                          |
+| DIRECCION          | VARCHAR(100) |               | No admite datos nulos.                                                                            |
+| TELEFONO           | INT          |               | No admite datos nulos, y debe ser único.                                                          |
+| CORREO ELECTRONICO | VARCHAR(100) |               | No admite datos nulos, y debe ser único.                                                          |
+
+**Tabla Suministros**
+
+| COLUMNA              | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                   |
+|----------------------|--------------|---------------|-----------------------------------------------------------------------------------------------|
+| ID PROVEEDOR         | INT          | PK            | No admite datos nulos.                                                                       |
+| ID EQUIPO            | INT          | PK            | No admite datos nulos.                                                                       |
+| FECHA DE SUMINISTRO  | DATETIME     |               | Por default coloca fecha actual (en caso de no ingresarse ese dato).                          |
+
+**Tabla Operaciones**
+
+| COLUMNA           | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                       |
+|-------------------|--------------|---------------|---------------------------------------------------------------------------------------------------|
+| ID OPERACIÓN      | INT          | PK            | No admite datos nulos y es autoincremental.                                                      |
+| ID CLIENTE        | INT          |               | No admite datos nulos.                                                                          |
+| TIPO OPERACIÓN    | VARCHAR(100) |               | No admite datos nulos.                                                                          |
+| DESCRIPCION       | VARCHAR(300) |               | No admite datos nulos.                                                                          |
+| RESPUESTA         | VARCHAR(200) |               | No admite datos nulos.                                                                          |
+| FECHA OPERACIONES | DATETIME     |               | Por default coloca fecha actual (en caso de no ingresarse ese dato).                            |
+
+**Tabla Áreas**
+
+| COLUMNA          | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                             |
+|------------------|--------------|---------------|---------------------------------------------------------|
+| ID AREA          | INT          | PK            | No admite datos nulos y es autoincremental.            |
+| AREA DE TRABAJO  | VARCHAR(50)  |               | No admite datos nulos.                                |
+
+**Tabla Empleados**
+
+| COLUMNA              | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                     |
+|----------------------|--------------|---------------|-------------------------------------------------------------------------------------------------|
+| ID EMPLEADO          | INT          | PK            | No admite datos nulos y es autoincremental.                                                    |
+| ID AREA              | INT          | FK            | No admite datos nulos.                                                                        |
+| APELLIDO             | VARCHAR(100) |               | No admite datos nulos.                                                                        |
+| NOMBRE               | VARCHAR(100) |               | No admite datos nulos.                                                                        |
+| DIRECCION            | VARCHAR(100) |               | No admite datos nulos.                                                                        |
+| CELULAR              | VARCHAR(50)  |               | No admite datos nulos y debe ser único.                                                        |
+| DNI                  | VARCHAR(50)  |               | No admite datos nulos.                                                                        |
+| FECHA DE NACIMIENTO  | DATE         |               | No admite datos nulos.                                                                        |
+
+**Tabla Asignaciones**
+
+| COLUMNA              | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                   |
+|----------------------|--------------|---------------|-----------------------------------------------------------------------------------------------|
+| ID EMPLEADO          | INT          | PK            | No admite datos nulos.                                                                      |
+| ID OPERACIÓN         | INT          | PK            | No admite datos nulos.                                                                      |
+| FECHA DE ASIGNACION  | DATETIME     |               | Por default coloca fecha actual (en caso de no ingresarse ese dato).                        |
+
+**Tabla Ventas**
+
+| COLUMNA         | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                       |
+|-----------------|--------------|---------------|---------------------------------------------------------------------------------------------------|
+| ID VENTA        | INT          | PK            | No admite datos nulos y es autoincremental.                                                      |
+| ID FACTURA      | INT          | FK            | No admite datos nulos.                                                                          |
+| ID ABONO        | INT          | FK            | No admite datos nulos.                                                                          |
+| ID EQUIPO       | INT          |               | No admite datos nulos.                                                                          |
+| ID OPERACIÓN    | INT          | FK            | No admite datos nulos.                                                                          |
+| ID PAGO         | INT          |               | No admite datos nulos.                                                                          |
+| ID CLIENTE      | INT          | FK            | No admite datos nulos.                                                                          |
+| CANTIDAD        | INT          |               | No admite datos nulos.                                                                          |
+| COSTO ABONO     | INT          |               | No admite datos nulos.                                                                          |
+| PRECIO ABONO    | INT          |               | No admite datos nulos.                                                                          |
+| COSTO EQUIPO    | INT          |               | No admite datos nulos.                                                                          |
+| PRECIO EQUIPO   | INT          |               | No admite datos nulos.                                                                          |
+
 
 [![Tablas-PARTE-1-A.jpg](https://i.postimg.cc/13Xnr8b1/Tablas-PARTE-1-A.jpg)](https://postimg.cc/yDq8V8VL)
 [![Tablas-PARTE-1-B.jpg](https://i.postimg.cc/SsRVCQqZ/Tablas-PARTE-1-B.jpg)](https://postimg.cc/62sdNX8R)
