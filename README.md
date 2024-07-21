@@ -107,71 +107,15 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 ### Listado de las tablas con descripción de estructura
 ___
 
-Aquí está la tabla "EQUIPOS" convertida a formato Markdown HTML:
-
-```markdown
 | COLUMNA        | TIPO DE DATO   | TIPO DE CLAVE | DESCRIPCIÓN                                                                 |
 |----------------|----------------|----------------|-----------------------------------------------------------------------------|
 | ID EQUIPO      | INT            | PK             | No admite datos nulos y es autoincremental.                                  |
-| MARCA          | VARCHAR(100)   |                | Por default coloca el equipo más pequeño de wifi (en caso de no ingresarse ese dato). |
-| MODELO         | VARCHAR(100)   |                | Por default coloca el modelo más económico de wifi (en caso de no ingresarse ese dato). |
-| COSTO EQUIPO   | INT            |                | Por default coloca el costo del equipo más barato (en caso de no ingresarse ese dato). |
-| PRECIO EQUIPO  | INT            |                | Por default coloca el precio del equipo más barato (en caso de no ingresarse ese dato). |
+| MARCA          | VARCHAR(100)   |                | Por default coloca el equipo más pequeño de wifi si no se ingresa dato.      |
+| MODELO         | VARCHAR(100)   |                | Por default coloca el modelo más económico de wifi si no se ingresa dato.    |
+| COSTO EQUIPO   | INT            |                | Por default coloca el costo del equipo más barato si no se ingresa dato.     |
+| PRECIO EQUIPO  | INT            |                | Por default coloca el precio del equipo más barato si no se ingresa dato.    |
 | CANTIDAD       | INT            |                | No admite datos nulos.                                                      |
-```
 
-Esta tabla se verá como sigue cuando se renderice en HTML:
-
-<table>
-<thead>
-<tr>
-<th>COLUMNA</th>
-<th>TIPO DE DATO</th>
-<th>TIPO DE CLAVE</th>
-<th>DESCRIPCIÓN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID EQUIPO</td>
-<td>INT</td>
-<td>PK</td>
-<td>No admite datos nulos y es autoincremental.</td>
-</tr>
-<tr>
-<td>MARCA</td>
-<td>VARCHAR(100)</td>
-<td></td>
-<td>Por default coloca el equipo más pequeño de wifi (en caso de no ingresarse ese dato).</td>
-</tr>
-<tr>
-<td>MODELO</td>
-<td>VARCHAR(100)</td>
-<td></td>
-<td>Por default coloca el modelo más económico de wifi (en caso de no ingresarse ese dato).</td>
-</tr>
-<tr>
-<td>COSTO EQUIPO</td>
-<td>INT</td>
-<td></td>
-<td>Por default coloca el costo del equipo más barato (en caso de no ingresarse ese dato).</td>
-</tr>
-<tr>
-<td>PRECIO EQUIPO</td>
-<td>INT</td>
-<td></td>
-<td>Por default coloca el precio del equipo más barato (en caso de no ingresarse ese dato).</td>
-</tr>
-<tr>
-<td>CANTIDAD</td>
-<td>INT</td>
-<td></td>
-<td>No admite datos nulos.</td>
-</tr>
-</tbody>
-</table>
-
-Si tienes más tablas o necesitas alguna modificación adicional, házmelo saber. Estoy aquí para ayudar.
 
 [![Tablas-PARTE-1-A.jpg](https://i.postimg.cc/13Xnr8b1/Tablas-PARTE-1-A.jpg)](https://postimg.cc/yDq8V8VL)
 [![Tablas-PARTE-1-B.jpg](https://i.postimg.cc/SsRVCQqZ/Tablas-PARTE-1-B.jpg)](https://postimg.cc/62sdNX8R)
