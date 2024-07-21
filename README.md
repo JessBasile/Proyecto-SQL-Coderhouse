@@ -128,6 +128,23 @@ ___
 | COSTO ABONO   | INT          |               | Por default coloca el costo del tipo de equipo más bajo 10MB (en caso de no ingresarse ese dato).      |
 | PRECIO ABONO  | INT          |               | Por default coloca el precio del tipo de equipo más bajo 10MB (en caso de no ingresarse ese dato).     |
 
+**Tabla Clientes**
+
+| COLUMNA             | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                                               |
+|---------------------|--------------|---------------|---------------------------------------------------------------------------------------------------------------------------|
+| ID CLIENTE          | INT          | PK            | No admite datos nulos y es autoincremental.                                                                              |
+| ID EQUIPO           | INT          | FK            | No admite datos nulos.                                                                                                    |
+| ID ABONO            | INT          |               | No admite datos nulos.                                                                                                    |
+| FECHA DE ALTA       | DATETIME     |               | Por default coloca fecha actual (en caso de no ingresarse ese dato).                                                        |
+| RAZON SOCIAL        | VARCHAR(100) |               | No admite datos nulos, puede ser nombre y apellido.                                                                       |
+| DIRECCION           | VARCHAR(100) |               | No admite datos nulos.                                                                                                    |
+| CELULAR             | VARCHAR(100) |               | No admite datos nulos.                                                                                                    |
+| DNI                 | VARCHAR(50)  |               | No admite datos nulos.                                                                                                    |
+| COORDENADAS         | VARCHAR(30)  |               | Por default se incorporará la leyenda "Carga en domicilio", para que en caso que el cliente no lo proporcione, en la visita al domicilio los técnicos lo incorporen. |
+| NUMERO IP           | VARCHAR(50)  |               | No admite datos nulos y debe ser único.                                                                                   |
+| CORREO ELECTRONICO  | VARCHAR(100) |               | No admite datos nulos y debe ser único.                                                                                   |
+
+
 [![Tablas-PARTE-1-A.jpg](https://i.postimg.cc/13Xnr8b1/Tablas-PARTE-1-A.jpg)](https://postimg.cc/yDq8V8VL)
 [![Tablas-PARTE-1-B.jpg](https://i.postimg.cc/SsRVCQqZ/Tablas-PARTE-1-B.jpg)](https://postimg.cc/62sdNX8R)
 [![Tablas-PARTE-2-A.jpg](https://i.postimg.cc/Dy3CLb7N/Tablas-PARTE-2-A.jpg)](https://postimg.cc/s1K9RxQP)
