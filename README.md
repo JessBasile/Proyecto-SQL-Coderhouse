@@ -109,6 +109,58 @@ ___
 
 # **Tabla Equipos**
 
+# Tabla Equipos
+
+<table>
+  <thead>
+    <tr>
+      <th style="font-size: 12px;">COLUMNA</th>
+      <th style="font-size: 12px;">TIPO DE DATO</th>
+      <th style="font-size: 12px;">TIPO DE CLAVE</th>
+      <th style="font-size: 12px;">DESCRIPCIÓN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-size: 12px;">ID EQUIPO</td>
+      <td style="font-size: 12px;">INT</td>
+      <td style="font-size: 12px;">PK</td>
+      <td style="font-size: 12px;">No admite datos nulos y es autoincremental.</td>
+    </tr>
+    <tr>
+      <td style="font-size: 12px;">MARCA</td>
+      <td style="font-size: 12px;">VARCHAR(100)</td>
+      <td style="font-size: 12px;"></td>
+      <td style="font-size: 12px;">Por default coloca el equipo más pequeño de wifi (en caso de no ingresarse ese dato).</td>
+    </tr>
+    <tr>
+      <td style="font-size: 12px;">MODELO</td>
+      <td style="font-size: 12px;">VARCHAR(100)</td>
+      <td style="font-size: 12px;"></td>
+      <td style="font-size: 12px;">Por default coloca el modelo más económico de wifi (en caso de no ingresarse ese dato).</td>
+    </tr>
+    <tr>
+      <td style="font-size: 12px;">COSTO EQUIPO</td>
+      <td style="font-size: 12px;">INT</td>
+      <td style="font-size: 12px;"></td>
+      <td style="font-size: 12px;">Por default coloca el costo del equipo más barato (en caso de no ingresarse ese dato).</td>
+    </tr>
+    <tr>
+      <td style="font-size: 12px;">PRECIO EQUIPO</td>
+      <td style="font-size: 12px;">INT</td>
+      <td style="font-size: 12px;"></td>
+      <td style="font-size: 12px;">Por default coloca el precio del equipo más barato (en caso de no ingresarse ese dato).</td>
+    </tr>
+    <tr>
+      <td style="font-size: 12px;">CANTIDAD</td>
+      <td style="font-size: 12px;">INT</td>
+      <td style="font-size: 12px;"></td>
+      <td style="font-size: 12px;">No admite datos nulos.</td>
+    </tr>
+  </tbody>
+</table>
+
+
 | COLUMNA        | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                           |
 |----------------|--------------|---------------|-------------------------------------------------------------------------------------------------------|
 | ID EQUIPO      | INT          | PK            | No admite datos nulos y es autoincremental.                                                          |
