@@ -107,7 +107,7 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 ### Listado de las tablas con descripción de estructura
 ___
 
-# Tabla Equipos
+# **Tabla Equipos**
 
 | COLUMNA        | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                           |
 |----------------|--------------|---------------|-------------------------------------------------------------------------------------------------------|
