@@ -234,9 +234,3 @@ ___
 | PRECIO ABONO    | INT          |               | No admite datos nulos.                                                                          |
 | COSTO EQUIPO    | INT          |               | No admite datos nulos.                                                                          |
 | PRECIO EQUIPO   | INT          |               | No admite datos nulos.                                                                          |
-
-
-[![Tablas-PARTE-1-A.jpg](https://i.postimg.cc/13Xnr8b1/Tablas-PARTE-1-A.jpg)](https://postimg.cc/yDq8V8VL)
-[![Tablas-PARTE-1-B.jpg](https://i.postimg.cc/SsRVCQqZ/Tablas-PARTE-1-B.jpg)](https://postimg.cc/62sdNX8R)
-[![Tablas-PARTE-2-A.jpg](https://i.postimg.cc/Dy3CLb7N/Tablas-PARTE-2-A.jpg)](https://postimg.cc/s1K9RxQP)
-[![Tablas-PARTE-2-B.jpg](https://i.postimg.cc/Y90LbhvW/Tablas-PARTE-2-B.jpg)](https://postimg.cc/mzxrrZNL)
