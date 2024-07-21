@@ -109,7 +109,6 @@ ___
 
 **Tabla Equipos**
 
-###
 | COLUMNA        | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                           |
 |----------------|--------------|---------------|-------------------------------------------------------------------------------------------------------|
 | ID EQUIPO      | INT          | PK            | No admite datos nulos y es autoincremental.                                                          |
@@ -118,6 +117,16 @@ ___
 | COSTO EQUIPO   | INT          |               | Por default coloca el costo del equipo más barato (en caso de no ingresarse ese dato).                 |
 | PRECIO EQUIPO  | INT          |               | Por default coloca el precio del equipo más barato (en caso de no ingresarse ese dato).                |
 | CANTIDAD       | INT          |               | No admite datos nulos.                                                                              |
+
+
+**Tabla Abonos**
+
+| COLUMNA       | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                           |
+|---------------|--------------|---------------|-------------------------------------------------------------------------------------------------------|
+| ID ABONO      | INT          | PK            | No admite datos nulos y es autoincremental.                                                          |
+| TIPO DE ABONO | VARCHAR(20)  |               | Por default coloca el tipo de equipo más bajo 10MB (en caso de no ingresarse ese dato).                |
+| COSTO ABONO   | INT          |               | Por default coloca el costo del tipo de equipo más bajo 10MB (en caso de no ingresarse ese dato).      |
+| PRECIO ABONO  | INT          |               | Por default coloca el precio del tipo de equipo más bajo 10MB (en caso de no ingresarse ese dato).     |
 
 [![Tablas-PARTE-1-A.jpg](https://i.postimg.cc/13Xnr8b1/Tablas-PARTE-1-A.jpg)](https://postimg.cc/yDq8V8VL)
 [![Tablas-PARTE-1-B.jpg](https://i.postimg.cc/SsRVCQqZ/Tablas-PARTE-1-B.jpg)](https://postimg.cc/62sdNX8R)
