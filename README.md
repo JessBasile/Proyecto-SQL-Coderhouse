@@ -107,60 +107,9 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 ### Listado de las tablas con descripción de estructura
 ___
 
-# **Tabla Equipos**
+**Tabla Equipos**
 
-# Tabla Equipos
-
-<table>
-  <thead>
-    <tr>
-      <th><small>COLUMNA</small></th>
-      <th><small>TIPO DE DATO</small></th>
-      <th><small>TIPO DE CLAVE</small></th>
-      <th><small>DESCRIPCIÓN</small></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><small>ID EQUIPO</small></td>
-      <td><small>INT</small></td>
-      <td><small>PK</small></td>
-      <td><small>No admite datos nulos y es autoincremental.</small></td>
-    </tr>
-    <tr>
-      <td><small>MARCA</small></td>
-      <td><small>VARCHAR(100)</small></td>
-      <td></td>
-      <td><small>Por default coloca el equipo más pequeño de wifi (en caso de no ingresarse ese dato).</small></td>
-    </tr>
-    <tr>
-      <td><small>MODELO</small></td>
-      <td><small>VARCHAR(100)</small></td>
-      <td></td>
-      <td><small>Por default coloca el modelo más económico de wifi (en caso de no ingresarse ese dato).</small></td>
-    </tr>
-    <tr>
-      <td><small>COSTO EQUIPO</small></td>
-      <td><small>INT</small></td>
-      <td></td>
-      <td><small>Por default coloca el costo del equipo más barato (en caso de no ingresarse ese dato).</small></td>
-    </tr>
-    <tr>
-      <td><small>PRECIO EQUIPO</small></td>
-      <td><small>INT</small></td>
-      <td></td>
-      <td><small>Por default coloca el precio del equipo más barato (en caso de no ingresarse ese dato).</small></td>
-    </tr>
-    <tr>
-      <td><small>CANTIDAD</small></td>
-      <td><small>INT</small></td>
-      <td></td>
-      <td><small>No admite datos nulos.</small></td>
-    </tr>
-  </tbody>
-</table>
-
-
+###
 | COLUMNA        | TIPO DE DATO | TIPO DE CLAVE | DESCRIPCIÓN                                                                                           |
 |----------------|--------------|---------------|-------------------------------------------------------------------------------------------------------|
 | ID EQUIPO      | INT          | PK            | No admite datos nulos y es autoincremental.                                                          |
