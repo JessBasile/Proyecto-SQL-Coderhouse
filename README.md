@@ -259,3 +259,13 @@ IGNORE 1 LINES;
 ```
 En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco D:/Documents.
 Los archivos csv fueron creados con información ficticia pero semejante a la realidad para otorgar seriedad y coherencia al proyecto, dado que fue inspirado en una empresa real.
+
+### Objetos de la base de datos
+___
+## Vistas
+
+## Triggers
+
+## Funciones
+
+## Procedimientos
