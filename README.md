@@ -2,7 +2,7 @@
 
 # Entrega Proyecto SQL Coderhouse
 
-## Primera preentrega
+## Segunda preentrega
 
 Alumna: [Jesica Brenda Basile](https://www.linkedin.com/in/jesica-basile-749b46b3/)
 
@@ -234,3 +234,28 @@ ___
 | PRECIO ABONO    | INT          |               | No admite datos nulos.                                                                          |
 | COSTO EQUIPO    | INT          |               | No admite datos nulos.                                                                          |
 | PRECIO EQUIPO   | INT          |               | No admite datos nulos.                                                                          |
+
+### Estructura e ingesta de Datos
+___
+
+**Instrucciones para habilitar permisos en MySQL y BDeaver
+
+Antes de proceder a la importación de datos, fue imprescindible habilitar los permisos pertinentes en MySQL y DBeaver para poder efectuarlo sin inconvenientes. Para ello, inicialmente se procedió a habilitar el ´local_infile´ incluyendo un archivo de tipo ´my.ini´ tanto en la carpeta de instalación de MySQL Server 8.0, y también en la carpeta MySQL Workbench 8.0 CE. Esa extensión de archivo, contiene en su interior el comando: 
+[mysqld]
+local_infile=1
+Posteriormente, para aplicar los cambios se procedió a reiniciar MySQL y DBeaver. En DBEaver se editó la pestaña “databases” en la sección propiedades, para modificar el valor "allowLoadLocalInfile" a “true”. Finalmente, para asegurar que realmente los cambios se efectuaron correctamente se efectuó una consulta con la siguiente sintaxis:
+SHOW VARIABLES LIKE 'local_infile';
+La respuesta fue: local_infile ON, lo cual indica que ya se encuentra habilitado para exportar los datos.
+
+**Importación de datos con archivos extensión csv
+
+Los Comandos utilizados para la cargar de datos desde archivos CSV fue la siguiente adaptada a cada tabla, por lo tanto, se repitió 12 veces (para incorporar datos en las 12 tablas):
+
+LOAD DATA LOCAL INFILE 'ruta/al/archivo/nombre_archivo.csv'
+INTO TABLE nombre_tabla
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco D:/Documents.
+Los archivos csv fueron creados con información ficticia pero semejante a la realidad para otorgar seriedad y coherencia al proyecto, dado que fue inspirado en una empresa real.
