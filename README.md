@@ -250,12 +250,12 @@ La respuesta fue: local_infile ON, lo cual indica que ya se encuentra habilitado
 ## Importación de datos con archivos extensión csv
 
 Los Comandos utilizados para la cargar de datos desde archivos CSV fue la siguiente adaptada a cada tabla, por lo tanto, se repitió 12 veces (para incorporar datos en las 12 tablas):
-
+```
 LOAD DATA LOCAL INFILE 'ruta/al/archivo/nombre_archivo.csv'
 INTO TABLE nombre_tabla
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
-
+```
 En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco D:/Documents.
 Los archivos csv fueron creados con información ficticia pero semejante a la realidad para otorgar seriedad y coherencia al proyecto, dado que fue inspirado en una empresa real.
