@@ -269,26 +269,26 @@ ___
 ## Vistas
 
 En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de  vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
-1. Nombre de la vista: 
+1. `Nombre de la vista:` 
 + Descripción: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
 + Objetivo:
 + Tablas que la componen:
 
-2. Nombre de la vista: 
+2. `Nombre de la vista:` 
 + Descripción: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
 + Objetivo:
 + Tablas que la componen:
 ## Triggers
 
 En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
-+ Nombre del Trigger: 
+1. `Nombre del Trigger:` 
 + Descripción:
 + Objetivo:
 + Tablas que afecta:
 ## Funciones
 
 Se elaboraron 2 funciones para la base de datos Wifly que retornan información relevante para la toma de decisiones.
-+ Nombre de la Función: 
+1. `Nombre de la Función:`
 + Descripción:
 + Objetivo:
 + Valor que retorna:
