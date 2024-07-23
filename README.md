@@ -246,9 +246,10 @@ Antes de proceder a la importación de datos, fue imprescindible habilitar los p
 local_infile=1
 ```
 Posteriormente, para aplicar los cambios se procedió a reiniciar MySQL y DBeaver. En DBEaver se editó la pestaña “databases” en la sección propiedades, para modificar el valor "allowLoadLocalInfile" a “true”. Finalmente, para asegurar que realmente los cambios se efectuaron correctamente se efectuó una consulta con la siguiente sintaxis:
+```
 SHOW VARIABLES LIKE 'local_infile';
 La respuesta fue: local_infile ON, lo cual indica que ya se encuentra habilitado para exportar los datos.
-
+```
 ## Importación de datos con archivos extensión csv
 
 Los Comandos utilizados para la cargar de datos desde archivos CSV fue la siguiente adaptada a cada tabla, por lo tanto, se repitió 12 veces (para incorporar datos en las 12 tablas):
