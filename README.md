@@ -280,7 +280,7 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Tablas que la componen_: clientes y abonos.
 
 3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
-+ _Descripción_: La principal finalidad es permitir visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
++ _Descripción_: El diseño de esta vista permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
 + _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento de "el estado" de los reclamos, y como fueron solucionados los inconvenientes.
 + _Tablas que la componen_: operaciones, asignaciones y empleados.
 
@@ -290,14 +290,14 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Tablas que la componen_: clientes y operaciones.
 
 5. `Nombre de la vista:` "view_reclamos_respuesta"
-+ _Descripción_: 
-+ _Objetivo_: 
-+ _Tablas que la componen_: clientes y abonos.
++ _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
++ _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas efectuadas en los mismos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
++ _Tablas que la componen_: operaciones y clientes.
 
-6. `Nombre de la vista:` ""
-+ _Descripción_: 
-+ _Objetivo_: 
-+ _Tablas que la componen_: clientes y abonos.
+6. `Nombre de la vista:` "view_gerencia_ganancia"
++ _Descripción_: Esta vista permite ver en forma concisa la ganancia total obtenida por la suma obtenida de los abonos y equipos agrupado por cada cliente.
++ _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente.
++ _Tablas que la componen_: ventas y clientes.
 
 ## Triggers
 
