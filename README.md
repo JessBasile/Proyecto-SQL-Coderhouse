@@ -238,7 +238,7 @@ ___
 ### Estructura e ingesta de Datos
 ___
 
-## Instrucciones para habilitar permisos en MySQL y BDeaver
+## Habilitación de permisos en MySQL y BDeaver para la importación de datos
 
 Antes de proceder a la importación de datos, fue imprescindible habilitar los permisos pertinentes en MySQL y DBeaver para poder efectuarlo sin inconvenientes. Para ello, inicialmente se procedió a habilitar el ´local_infile´ incluyendo un archivo de tipo ´my.ini´ tanto en la carpeta de instalación de MySQL Server 8.0, y también en la carpeta MySQL Workbench 8.0 CE. Esa extensión de archivo, contiene en su interior el comando: 
 [mysqld]
@@ -259,13 +259,35 @@ IGNORE 1 LINES;
 ```
 En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco D:/Documents.
 Los archivos csv fueron creados con información ficticia pero semejante a la realidad para otorgar seriedad y coherencia al proyecto, dado que fue inspirado en una empresa real.
+Los 12 archivos se denominan: 
 
 ### Objetos de la base de datos
 ___
 ## Vistas
 
+En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de  vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
+Nombre de la vista: 
+Descripción: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
+Objetivo:
+Tablas que la componen:
+
 ## Triggers
+
+En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
+Nombre del Trigger: 
+Descripción:
+Objetivo:
+Tablas que afecta:
 
 ## Funciones
 
-## Procedimientos
+Se elaboraron 2 funciones para la base de datos Wifly que retornan información relevante para la toma de decisiones.
+Nombre de la Función: 
+Descripción:
+Objetivo:
+Valor que retorna:
+Utilidad:
+
+## Eventos y Procedimientos
+
+
