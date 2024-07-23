@@ -58,51 +58,51 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 
 `EQUIPOS`  
 + Contiene información sobre los distintos equipos que utiliza la empresa para brindar servicio.  
-+ Atributos: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO, CANTIDAD.
++ _Atributos_: IDEQUIPO, MARCA, MODELO, COSTO EQUIPO, PRECIO EQUIPO, CANTIDAD.
 
 `ABONOS`
 + Define los distintos tipos de abonos que ofrece la compañia.  
-+ Atributos: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
++ _Atributos_: IDABONO, TIPO DE ABONO, COSTO ABONO, PRECIO ABONO.
 
 `CLIENTES`
 + Almacena información sobre todos los clientes que posee la organiación y el detalle de sus registros.
-+ Atributos: IDCLIENTE, IDEQUIPO, IDABONO, FECHA DE ALTA, RAZON SOCIAL, DIRECCION, CELULAR, DNI, COORDENADAS, NUNERO DE IP, CORREO ELECTRONICO.
++ _Atributos_: IDCLIENTE, IDEQUIPO, IDABONO, FECHA DE ALTA, RAZON SOCIAL, DIRECCION, CELULAR, DNI, COORDENADAS, NUNERO DE IP, CORREO ELECTRONICO.
 
 `TIPO_DE_PAGO`
 + Contiene información sobre los diferentes medios de pago disponibles para los cliente de Wifly.
-+ Atributos: IDPAGO, TIPO DE PAGO.  
++_Atributos_: IDPAGO, TIPO DE PAGO.  
 
 `FACTURAS`
 + Contiene información detallada sobre las facturas emitidas a los ditintos clientes.
-+ Atributos: IDFACTURA, NRO FACTURA, FECHA, IDPAGO, IDCLIENTE.  
++ _Atributos_: IDFACTURA, NRO FACTURA, FECHA, IDPAGO, IDCLIENTE.  
 
 `PROVEEDORES`
 + Detalla información sobre los proveedores con los que opera la compañia.
-+ Atributos: IDPROVEEDOR, RAZON SOCIAL, DIRECCION, TELEFONO, CORREO ELECTRONICO.  
++ _Atributos_: IDPROVEEDOR, RAZON SOCIAL, DIRECCION, TELEFONO, CORREO ELECTRONICO.  
 
 `SUMINISTROS`
 + Comprende información sobre los equipos que suministran los distintos proveedores.
-+ Atributos: IDPROVEEDOR, IDEQUIPO, FECHA DE SUMINISTRO.  
++ _Atributos_: IDPROVEEDOR, IDEQUIPO, FECHA DE SUMINISTRO.  
 
 `OPERACIONES`
 + Alamacena información sobre las distintas operaciones que son abordadas por la firma y su descripción.
-+ Atributos: IDOPERACION, IDCLIENTE, TIPO_OPERACION, DESCRIPCION, RESPUESTA, FECHA OPERACIONES.  
++ _Atributos_: IDOPERACION, IDCLIENTE, TIPO_OPERACION, DESCRIPCION, RESPUESTA, FECHA OPERACIONES.  
 
 `AREAS`
 + Contiene información sobre las distintas áreas de trabajo que intervienen en la compañia (tales como: técnicos, administrativos, maestranza, etc).  
-+ Atributos: IDAREA, AREA DE TRABAJO.  
++ _Atributos_: IDAREA, AREA DE TRABAJO.  
 
 `EMPLEADOS`
 + Contiene información sobre los empleados contratados que brindan servicio a la firma.
-+ Atributos: IDEMPLEADO, IDAREA, APELLIDO, NOMBRE, DIRECCION, CELULAR, DNI, FECHA DE NACIMIENTO.  
++ _Atributos_: IDEMPLEADO, IDAREA, APELLIDO, NOMBRE, DIRECCION, CELULAR, DNI, FECHA DE NACIMIENTO.  
 
 `ASIGNACIONES`
 + Comprende información sobre las operaciones que le son asignadas a los distintos empleados (equipos de trabajo).
-+ Atributos: IDEMPLEADO, IDOPERACION, FECHA DE ASIGNACION.  
++ _Atributos_: IDEMPLEADO, IDOPERACION, FECHA DE ASIGNACION.  
 
 `VENTAS`
 + Contiene información integral y detallada sobre todas las ventas realizadas en Wifly.
-+ Atributos: IDVENTA, IDFACTURA, IDABONO, IDEQUIPO, IDOPERACION, IDPAGO, IDCLIENTE, CANTIDAD, COSTO ABONO, PRECIO ABONO, COSTO EQUIPO, PRECIO EQUIPO.
++ _Atributos_: IDVENTA, IDFACTURA, IDABONO, IDEQUIPO, IDOPERACION, IDPAGO, IDCLIENTE, CANTIDAD, COSTO ABONO, PRECIO ABONO, COSTO EQUIPO, PRECIO EQUIPO.
 
 ### Listado de las tablas con descripción de estructura
 ___
@@ -270,29 +270,29 @@ ___
 
 En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de  vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
 1. `Nombre de la vista:` 
-+ Descripción: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
-+ Objetivo:
-+ Tablas que la componen:
++ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
++ _Objetivo_:
++ _Tablas que la componen_:
 
 2. `Nombre de la vista:` 
-+ Descripción: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
-+ Objetivo:
-+ Tablas que la componen:
++ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
++ _Objetivo_:
++ _Tablas que la componen_:
 ## Triggers
 
 En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
 1. `Nombre del Trigger:` 
-+ Descripción:
-+ Objetivo:
-+ Tablas que afecta:
++ _Descripción_:
++ _Objetivo_:
++ _Tablas que afecta_:
 ## Funciones
 
 Se elaboraron 2 funciones para la base de datos Wifly que retornan información relevante para la toma de decisiones.
 1. `Nombre de la Función:`
-+ Descripción:
-+ Objetivo:
-+ Valor que retorna:
-+ Utilidad:
++ _Descripción_:
++ _Objetivo_:
++ _Valor que retorna_:
++ _Utilidad_:
 
 ## Eventos y Procedimientos
 
