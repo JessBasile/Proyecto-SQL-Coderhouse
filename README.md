@@ -268,16 +268,41 @@ Los 12 archivos se denominan:
 ___
 ## Vistas
 
-En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de  vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
-1. `Nombre de la vista:` 
-+ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
-+ _Objetivo_:
-+ _Tablas que la componen_:
+En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de 7 vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
+1. `Nombre de la vista:` "view_admin_equipos_adquiridos_fecha"
++ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
++ _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, para el dominio de esa información por parte de los administrativos al momento de asentar el reclamo, y pasarlo a los técnicos para ir al domicilio a revisar.
++ _Tablas que la componen_: clients, equipos, facturas, suministros y proveedores.
 
-2. `Nombre de la vista:` 
-+ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene instalado cada cliente y el proveedor que lo suministro.
-+ _Objetivo_:
-+ _Tablas que la componen_:
+2. `Nombre de la vista:` "view_admin_abonos_clientes"
++ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Tablas que la componen_: clientes y abonos.
+
+3. `Nombre de la vista:` ""
++ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Tablas que la componen_: clientes y abonos.
+
+4. `Nombre de la vista:` ""
++ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Tablas que la componen_: clientes y abonos.
+
+5. `Nombre de la vista:` ""
++ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Tablas que la componen_: clientes y abonos.
+
+6. `Nombre de la vista:` ""
++ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Tablas que la componen_: clientes y abonos.
+
+7. `Nombre de la vista:` ""
++ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Tablas que la componen_: clientes y abonos.
 ## Triggers
 
 En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
