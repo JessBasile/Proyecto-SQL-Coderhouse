@@ -275,28 +275,28 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Tablas que la componen_: clients, equipos, facturas, suministros y proveedores.
 
 2. `Nombre de la vista:` "view_admin_abonos_clientes"
-+ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Descripción_: Esta vista permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
++ _Objetivo_: Es útil para los administrativos y técnicos saber el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio.
 + _Tablas que la componen_: clientes y abonos.
 
 3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
-+ _Descripción_: La principal finalidad es permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
-+ _Objetivo_: Es relevante, dado que 
++ _Descripción_: La principal finalidad es permitir visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
++ _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento de "el estado" de los reclamos, y como fueron solucionados los inconvenientes.
 + _Tablas que la componen_: operaciones, asignaciones y empleados.
 
-4. `Nombre de la vista:` ""
-+ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
-+ _Tablas que la componen_: clientes y abonos.
+4. `Nombre de la vista:` "view_bajas_clientes"
++ _Descripción_: Esta vista permite visualizar los clientes dados de baja con la fecha, a el CEO y los administrativos.
++ _Objetivo_: Es útil para ambos sectores (CEO y Administración) dado que si el volumen de bajas en muy grande o se eleva, se requerirá indagar para evitar la fuga de clientes hacia la competencia.
++ _Tablas que la componen_: clientes y operaciones.
 
-5. `Nombre de la vista:` ""
-+ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
+5. `Nombre de la vista:` "view_reclamos_respuesta"
++ _Descripción_: 
++ _Objetivo_: 
 + _Tablas que la componen_: clientes y abonos.
 
 6. `Nombre de la vista:` ""
-+ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
++ _Descripción_: 
++ _Objetivo_: 
 + _Tablas que la componen_: clientes y abonos.
 
 ## Triggers
