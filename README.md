@@ -268,7 +268,7 @@ Los 12 archivos se denominan:
 ___
 ## Vistas
 
-En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de 7 vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
+En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de 6 vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
 1. `Nombre de la vista:` "view_admin_equipos_adquiridos_fecha"
 + _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
 + _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, para el dominio de esa información por parte de los administrativos al momento de asentar el reclamo, y pasarlo a los técnicos para ir al domicilio a revisar.
@@ -279,10 +279,10 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
 + _Tablas que la componen_: clientes y abonos.
 
-3. `Nombre de la vista:` ""
-+ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
-+ _Tablas que la componen_: clientes y abonos.
+3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
++ _Descripción_: La principal finalidad es permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
++ _Objetivo_: Es relevante, dado que 
++ _Tablas que la componen_: operaciones, asignaciones y empleados.
 
 4. `Nombre de la vista:` ""
 + _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
@@ -299,10 +299,6 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
 + _Tablas que la componen_: clientes y abonos.
 
-7. `Nombre de la vista:` ""
-+ _Descripción_: Esta vista permite permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativo y técnicos saber de que tipo de abono tiene contrsatado el cliente, puesto que mientras mayor ancho de banda, mayor será su precio.
-+ _Tablas que la componen_: clientes y abonos.
 ## Triggers
 
 En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
