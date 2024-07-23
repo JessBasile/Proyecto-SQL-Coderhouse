@@ -1,0 +1,111 @@
+id_operacion,id_cliente,tipo_operacion,descripcion,respuesta,fecha_operaciones
+1,1,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2022-01-10 14:30:00
+2,1,Reclamo,router quemado,router reemplazado,2022-02-15 15:00:00
+3,1,Modificacion,cambiar router por modelo más nuevo,router cambiado,2022-03-10 16:00:00
+4,1,Baja,cancelar servicio,efectuado satisfactoriamente,2022-04-10 10:00:00
+5,2,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2022-05-15 11:00:00
+6,2,Reclamo,cable cortado,cable reparado,2022-06-20 12:30:00
+7,2,Modificacion,cambiar configuración de red,cambio realizado,2022-07-25 09:00:00
+8,3,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2022-08-15 17:00:00
+9,3,Reclamo,inestabilidad de conexion,conexion estabilizada,2022-09-20 13:00:00
+10,3,Baja,cancelar servicio,efectuado satisfactoriamente,2022-10-25 14:30:00
+11,4,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2022-11-10 10:00:00
+12,4,Reclamo,router quemado,router reemplazado,2022-12-15 15:00:00
+13,4,Modificacion,cambiar IP estática a dinámica,cambio realizado,2022-12-25 11:00:00
+14,5,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2023-01-10 15:00:00
+15,5,Reclamo,cable cortado,cable reparado,2023-02-15 16:00:00
+16,5,Baja,cancelar servicio,efectuado satisfactoriamente,2023-03-20 09:00:00
+17,6,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2023-04-10 10:30:00
+18,6,Reclamo,inestabilidad de conexion,conexion estabilizada,2023-05-15 11:30:00
+19,6,Modificacion,cambiar configuración de red,cambio realizado,2023-06-20 12:00:00
+20,7,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2023-07-10 17:00:00
+21,7,Reclamo,cable cortado,cable reparado,2023-08-15 12:00:00
+22,8,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2023-09-10 08:00:00
+23,8,Reclamo,inestabilidad de conexion,conexion estabilizada,2023-10-15 11:30:00
+24,8,Baja,cancelar servicio,efectuado satisfactoriamente,2023-11-20 09:00:00
+25,9,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2023-12-10 18:00:00
+26,9,Reclamo,cable cortado,cable reparado,2024-01-15 13:00:00
+27,10,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-10 10:00:00
+28,10,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-15 12:00:00
+29,11,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-10 16:00:00
+30,11,Reclamo,cable cortado,cable reparado,2024-05-15 11:30:00
+31,12,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-10 08:00:00
+32,12,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-15 13:00:00
+33,13,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-10 18:00:00
+34,13,Reclamo,cable cortado,cable reparado,2024-09-15 12:00:00
+35,14,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-10 10:00:00
+36,14,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-15 11:30:00
+37,15,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-12-10 17:00:00
+38,15,Reclamo,cable cortado,cable reparado,2024-01-20 13:00:00
+39,16,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-15 09:00:00
+40,16,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-20 11:30:00
+41,17,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-10 16:00:00
+42,17,Reclamo,cable cortado,cable reparado,2024-05-15 12:00:00
+43,18,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-10 08:00:00
+44,18,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-15 13:00:00
+45,19,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-10 17:00:00
+46,19,Reclamo,cable cortado,cable reparado,2024-09-15 11:30:00
+47,20,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-10 09:00:00
+48,20,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-15 10:30:00
+49,21,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-12-10 18:00:00
+50,21,Reclamo,cable cortado,cable reparado,2024-01-25 12:00:00
+51,22,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-25 08:00:00
+52,22,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-25 11:30:00
+53,23,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-25 17:00:00
+54,23,Reclamo,cable cortado,cable reparado,2024-05-25 13:00:00
+55,24,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-25 09:00:00
+56,24,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-25 11:00:00
+57,25,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-25 16:00:00
+58,25,Reclamo,cable cortado,cable reparado,2024-09-25 12:00:00
+59,26,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-25 10:00:00
+60,26,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-25 11:30:00
+61,27,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-12-25 17:00:00
+62,27,Reclamo,cable cortado,cable reparado,2024-01-31 12:00:00
+63,28,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-29 09:00:00
+64,28,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-30 10:30:00
+65,29,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-30 17:00:00
+66,29,Reclamo,cable cortado,cable reparado,2024-05-30 12:00:00
+67,30,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-30 09:00:00
+68,30,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-30 11:00:00
+69,31,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-30 18:00:00
+70,31,Reclamo,cable cortado,cable reparado,2024-09-30 13:00:00
+71,32,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-30 10:00:00
+72,32,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-30 12:00:00
+73,33,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-12-30 16:00:00
+74,33,Reclamo,cable cortado,cable reparado,2024-01-31 11:00:00
+75,34,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-29 09:00:00
+76,34,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-31 10:00:00
+77,35,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-30 18:00:00
+78,35,Reclamo,cable cortado,cable reparado,2024-05-31 12:00:00
+79,36,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-30 10:00:00
+80,36,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-31 11:30:00
+81,37,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-31 16:00:00
+82,37,Reclamo,cable cortado,cable reparado,2024-09-30 13:00:00
+83,38,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-31 09:00:00
+84,38,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-30 10:00:00
+85,39,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-12-31 18:00:00
+86,39,Reclamo,cable cortado,cable reparado,2024-01-31 12:00:00
+87,40,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-29 09:00:00
+88,40,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-31 10:00:00
+89,41,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-30 16:00:00
+90,41,Reclamo,cable cortado,cable reparado,2024-05-31 13:00:00
+91,42,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-30 09:00:00
+92,42,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-31 11:00:00
+93,43,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-31 18:00:00
+94,43,Reclamo,cable cortado,cable reparado,2024-09-30 12:00:00
+95,44,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-31 10:00:00
+96,44,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-30 11:00:00
+97,45,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-12-31 16:00:00
+98,45,Reclamo,cable cortado,cable reparado,2024-01-31 13:00:00
+99,46,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-02-29 09:00:00
+100,46,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-03-31 10:00:00
+101,47,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-04-30 16:00:00
+102,47,Reclamo,cable cortado,cable reparado,2024-05-31 13:00:00
+103,48,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-06-30 09:00:00
+104,48,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-07-31 11:00:00
+105,49,Instalacion,visitar después de las 17hs,instalado satisfactoriamente,2024-08-31 16:00:00
+106,49,Reclamo,cable cortado,cable reparado,2024-09-30 12:00:00
+107,50,Instalacion,disponible solo por la mañana,instalado satisfactoriamente,2024-10-31 10:00:00
+108,50,Reclamo,inestabilidad de conexion,conexion estabilizada,2024-11-30 11:00:00
+109,12,Reclamo,cable cortado,cable reparado,2024-12-15 13:00:00
+110,31,Reclamo,cable cortado,cable reparado,2024-12-30 13:00:00
