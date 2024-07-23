@@ -70,7 +70,7 @@ Esta base de datos de la firma Wifly esta diseñada para gestionar las distintas
 
 `TIPO_DE_PAGO`
 + Contiene información sobre los diferentes medios de pago disponibles para los cliente de Wifly.
-+_Atributos_: IDPAGO, TIPO DE PAGO.  
++ _Atributos_: IDPAGO, TIPO DE PAGO.  
 
 `FACTURAS`
 + Contiene información detallada sobre las facturas emitidas a los ditintos clientes.
