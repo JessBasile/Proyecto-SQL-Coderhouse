@@ -270,7 +270,7 @@ ___
 
 En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de 6 vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
 1. `Nombre de la vista:` "view_admin_equipos_adquiridos_fecha"
-+ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
++ _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado al cliente (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
 + _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, para el dominio de esa información por parte de los administrativos al momento de asentar el reclamo, y pasarlo a los técnicos para ir al domicilio a revisar.
 + _Tablas que la componen_: clients, equipos, facturas, suministros y proveedores.
 
