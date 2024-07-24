@@ -21,7 +21,7 @@ El método de trabajo utilizado es por equipos de trabajo (en grupos compuestos 
 
 ### Objetivo
 ___
-Diseñar e implementar una base de datos relacional que satisfaga las necesidades para una adecuada gestión y organización en el sistema utilizado en la firma Wifly. La base de datos será eficiente, escalable, fácil de mantener, aportando agilidad y precisión en la asignación de operaciones (instalaciones, reclamos, modificaciones, bajas) a los distintos equipos de trabajo, y la acertada adjudicación de los equipos a los clientes de acuerdo al plan (o abono) que contrataron.
+Diseñar e implementar una base de datos relacional que satisfaga las necesidades para una adecuada gestión y organización en el sistema utilizado en la firma Wifly. La base de datos será eficiente, escalable, fácil de mantener, aportando agilidad y precisión en la asignación de operaciones (instalaciones, reclamos, modificaciones, bajas) a los distintos equipos de trabajo, y la acertada adjudicación de los equipos (routers) a los clientes de acuerdo al plan (o abono) que contrataron.
 
 ### Situación problemática
 ___
