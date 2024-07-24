@@ -271,17 +271,17 @@ ___
 En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de 6 vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
 1. `Nombre de la vista:` "view_admin_equipos_adquiridos_fecha"
 + _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado al cliente (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
-+ _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, para el dominio de esa información por parte de los administrativos al momento de asentar el reclamo, y pasarlo a los técnicos para ir al domicilio a revisar.
++ _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, el dominio de esa información por parte de los administrativos y los técnicos es importante, ya que en caso de un reclamo o fallas, al momento de ir hacia el domicilio a revisar podrán tener una noción del modelo de router que se trata, y por experiencia de reportes sobre fallos anteriores en los mismos equipos, identificar con mayor facilidad el problema y solucionarlo para reestablecer el servicio.
 + _Tablas que la componen_: clients, equipos, facturas, suministros y proveedores.
 
 2. `Nombre de la vista:` "view_admin_abonos_clientes"
 + _Descripción_: Esta vista permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativos y técnicos saber el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio.
++ _Objetivo_: Es útil para los administrativos y técnicos saber el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio, y permite identificar tendencias en los patrones de consumo y preferencias. 
 + _Tablas que la componen_: clientes y abonos.
 
 3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
 + _Descripción_: El diseño de esta vista permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
-+ _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento de "el estado" de los reclamos, y como fueron solucionados los inconvenientes.
++ _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios y la distribución en el volumen de tareas a cada grupo de trabajo.
 + _Tablas que la componen_: operaciones, asignaciones y empleados.
 
 4. `Nombre de la vista:` "view_bajas_clientes"
@@ -296,7 +296,7 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 
 6. `Nombre de la vista:` "view_gerencia_ganancia"
 + _Descripción_: Esta vista permite ver en forma concisa la ganancia total obtenida por la suma obtenida de los abonos y equipos agrupado por cada cliente.
-+ _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente.
++ _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente, y permite tomar decisiones sobre inversiones y distribución de dividendos.
 + _Tablas que la componen_: ventas y clientes.
 
 ## Triggers
