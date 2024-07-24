@@ -291,7 +291,7 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 
 5. `Nombre de la vista:` "view_reclamos_respuesta"
 + _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
-+ _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas efectuadas en los mismos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
++ _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas proporcionadas por los técnicos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
 + _Tablas que la componen_: operaciones y clientes.
 
 6. `Nombre de la vista:` "view_gerencia_ganancia"
