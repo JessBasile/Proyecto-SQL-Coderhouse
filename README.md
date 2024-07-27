@@ -372,9 +372,9 @@ WHERE
 ```
 2. `Nombre de la Función:` "cantidad_vendida_por_equipo"
 + _Descripción_: Arroja la cantidad total vendida por id_equipo.
-+ _Utilidad_: 
-+ _Parámetros_: 
-+ _Retorno_: 
++ _Utilidad_: Permite identificar la cantidad vendida de cada tipo de equipo.
++ _Parámetros_: id_equipo
++ _Retorno_: cantidad_vendida
 + _Ejemplo de su aplicación_:
 + 
 [x] _General_:
