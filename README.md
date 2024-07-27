@@ -295,11 +295,11 @@ WHERE `Tipo de Abono` = '40MB';
 + _Columnas que la componen_: tipo_operacion, fecha_operaciones, "Empleado" (una concatenación de su nombre y apellido) y respuesta.
 + _Ejemplo de consultas:_
 
-- [x] General:
+- [x] _General_:
 ```
 SELECT * FROM Wifly.view_admin_operaciones_respuesta;
 ```
-- [x] Específica sobre un empleado:
+- [x] _Específica sobre un empleado_:
 ```
 SELECT *   
    FROM view_admin_operaciones_respuesta
@@ -308,15 +308,11 @@ SELECT *
 4. `Nombre de la vista:` "view_bajas_clientes"
 + _Descripción_: Esta vista permite visualizar los clientes dados de baja con la fecha, a el CEO y los administrativos.
 + _Objetivo_: Es útil para ambos sectores (CEO y Administración) dado que si el volumen de bajas en muy grande o se eleva, se requerirá indagar para evitar la fuga de clientes hacia la competencia.
-+ _Columnas que la componen_: 
-+ _Ejemplo de consulta:_
-Si se desconoce el id_cliente, primero debe obtenerse el identificador mediante el nombre:
++ _Columnas que la componen_: id_cliente, Nombre Cliente, id_operacion, Descripcion Operacion y Fecha Operacion.
++ _Ejemplo de consulta de la vista completa:_
 ```
-SELECT id_cliente
-FROM CLIENTES
-WHERE razon_social = 'Libreria La Pluma';
+SELECT * FROM view_bajas_clientes;
 ```
-Una vez conocido el identificador, puede efctuarse la consulta
 5. `Nombre de la vista:` "view_reclamos_respuesta"
 + _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
 + _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas proporcionadas por los técnicos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
