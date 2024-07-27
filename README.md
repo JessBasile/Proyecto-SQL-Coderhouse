@@ -349,11 +349,51 @@ ___
 ## Funciones
 
 Se elaboraron 2 funciones para la base de datos Wifly que retornan información relevante para la toma de decisiones.
-1. `Nombre de la Función:`
-+ _Descripción_:
-+ _Objetivo_:
-+ _Valor que retorna_:
-+ _Utilidad_:
+1. `Nombre de la Función:` "ganancia_anual_cliente"
++ _Descripción_: Arroja la ganancia anual por el tipo de abono que tiene asignado cada id_cliente.
++ _Utilidad_: Permite identificar que tipo de abono genera mayor ganancia.
++ _Parámetros_: id_cliente INT
++ _Retorno_: ganancia_anual INT
++ _Ejemplo de su aplicación_:
++ 
+[x] _General_:
+```
+SELECT ganancia_anual_cliente(10) AS ganancia_anual;
+```
+[x] _Específica sobre un cliente en particular_:
+```
+SELECT 
+    c.razon_social,
+    ganancia_anual_cliente(c.id_cliente) AS ganancia_anual
+FROM 
+    CLIENTES c
+WHERE 
+    c.id_cliente = 10;
+```
+2. `Nombre de la Función:` "cantidad_vendida_por_equipo"
++ _Descripción_: Arroja la cantidad total vendida por id_equipo.
++ _Utilidad_: 
++ _Parámetros_: 
++ _Retorno_: 
++ _Ejemplo de su aplicación_:
++ 
+[x] _General_:
+```
+SELECT cantidad_vendida_por_equipo(5) AS cantidad_vendida;
+```
+[x] _Específica sobre un cliente en particular_:
+```
+SELECT 
+    c.razon_social AS Cliente,
+    e.marca,
+    e.modelo,
+    cantidad_vendida_por_equipo(c.id_cliente) AS cantidad_vendida
+FROM 
+    CLIENTES c
+JOIN EQUIPOS e ON e.id_equipo = c.id_equipo
+WHERE 
+    c.id_cliente = 10;
+```
 ___
 ## Eventos y Procedimientos
 
