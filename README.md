@@ -294,6 +294,7 @@ WHERE `Tipo de Abono` = '40MB';
 + _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios y la distribución en el volumen de tareas a cada grupo de trabajo.
 + _Columnas que la componen_: tipo_operacion, fecha_operaciones, "Empleado" (una concatenación de su nombre y apellido) y respuesta.
 + _Ejemplo de consulta:_
+
 General:
 ```
 SELECT * FROM Wifly.view_admin_operaciones_respuesta;
