@@ -273,19 +273,22 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado al cliente (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
 + _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, el dominio de esa información por parte de los administrativos y los técnicos es importante, ya que en caso de un reclamo o fallas, al momento de ir hacia el domicilio a revisar podrán tener una noción del modelo de router que se trata, y por experiencia de reportes sobre fallos anteriores en los mismos equipos, identificar con mayor facilidad el problema y solucionarlo para reestablecer el servicio.
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_equipo, marca, modelo, id_proveedor, Nombre Proveedor, fecha_de_suministro y fecha_factura.
-+ _Ejemplo de consulta:_
++ _Ejemplo de consulta sobre un cliente en específico:_
 ```
-SELECT * 
+SELECT *
 FROM Wifly.view_admin_equipos_adquiridos_fecha
-WHERE fecha_factura BETWEEN '2024-01-01' AND '2024-12-31'
-ORDER BY fecha_factura ASC;
+WHERE `Nombre Cliente` = 'Libreria La Pluma';
 ```
-
 2. `Nombre de la vista:` "view_admin_abonos_clientes"
 + _Descripción_: Esta vista permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
 + _Objetivo_: Es útil para los administrativos y técnicos saber el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio, y permite identificar tendencias en los patrones de consumo y preferencias. 
-+ _Tablas que la componen_: clientes y abonos.
-
++ _Columnas que la componen_: id_cliente, Nombre Cliente, id_abono, Tipo de Abono y precio_abono.
++ _Ejemplo de consulta sobre los clientes que tienen contratado el abono más caro:_
+```
+SELECT *
+FROM Wifly.view_admin_abonos_clientes
+WHERE `Tipo de Abono` = '40MB';
+```
 3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
 + _Descripción_: El diseño de esta vista permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
 + _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios y la distribución en el volumen de tareas a cada grupo de trabajo.
