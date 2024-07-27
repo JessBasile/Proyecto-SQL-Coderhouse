@@ -295,7 +295,7 @@ WHERE `Tipo de Abono` = '40MB';
 + _Columnas que la componen_: tipo_operacion, fecha_operaciones, "Empleado" (una concatenación de su nombre y apellido) y respuesta.
 + _Ejemplo de consultas:_
 
-A. General:
+- [x] #739 General:
 ```
 SELECT * FROM Wifly.view_admin_operaciones_respuesta;
 ```
