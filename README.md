@@ -316,12 +316,23 @@ SELECT * FROM view_bajas_clientes;
 5. `Nombre de la vista:` "view_reclamos_respuesta"
 + _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
 + _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas proporcionadas por los técnicos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
-+ _Tablas que la componen_: operaciones y clientes.
++ _Columnas que la componen_: id_peracion, Descripción Reclamo, Respuesta, Fecha, id_cliente y Nombre Cliente.
++ _Ejemplo de consultas_:
 
+- [x] _General_:
+```
+SELECT * FROM view_reclamos_respuesta;
+```
+- [x] _Específica sobre el último año_:
+```
+SELECT * 
+FROM view_reclamos_respuesta
+WHERE `Fecha` > '2023-12-31';
+```
 6. `Nombre de la vista:` "view_gerencia_ganancia"
 + _Descripción_: Esta vista permite ver en forma concisa la ganancia total obtenida por la suma obtenida de los abonos y equipos agrupado por cada cliente.
 + _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente, y permite tomar decisiones sobre inversiones y distribución de dividendos.
-+ _Tablas que la componen_: ventas y clientes.
++ _Columnas que la componen_: 
 
 ## Triggers
 
