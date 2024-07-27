@@ -292,13 +292,30 @@ WHERE `Tipo de Abono` = '40MB';
 3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
 + _Descripción_: El diseño de esta vista permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
 + _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios y la distribución en el volumen de tareas a cada grupo de trabajo.
-+ _Tablas que la componen_: operaciones, asignaciones y empleados.
-
++ _Columnas que la componen_: tipo_operacion, fecha_operaciones, "Empleado" (una concatenación de su nombre y apellido) y respuesta.
++ _Ejemplo de consulta:_
+General:
+```
+SELECT * FROM Wifly.view_admin_operaciones_respuesta;
+```
+Específica sobre un empleado:
+```
+SELECT *   
+   FROM view_admin_operaciones_respuesta
+   WHERE `Empleado`= 'Juan Perez';
+```
 4. `Nombre de la vista:` "view_bajas_clientes"
 + _Descripción_: Esta vista permite visualizar los clientes dados de baja con la fecha, a el CEO y los administrativos.
 + _Objetivo_: Es útil para ambos sectores (CEO y Administración) dado que si el volumen de bajas en muy grande o se eleva, se requerirá indagar para evitar la fuga de clientes hacia la competencia.
-+ _Tablas que la componen_: clientes y operaciones.
-
++ _Columnas que la componen_: 
++ _Ejemplo de consulta:_
+Si se desconoce el id_cliente, primero debe obtenerse el identificador mediante el nombre:
+```
+SELECT id_cliente
+FROM CLIENTES
+WHERE razon_social = 'Libreria La Pluma';
+```
+Una vez conocido el identificador, puede efctuarse la consulta
 5. `Nombre de la vista:` "view_reclamos_respuesta"
 + _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
 + _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas proporcionadas por los técnicos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
