@@ -272,7 +272,14 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 1. `Nombre de la vista:` "view_admin_equipos_adquiridos_fecha"
 + _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado al cliente (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
 + _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, el dominio de esa información por parte de los administrativos y los técnicos es importante, ya que en caso de un reclamo o fallas, al momento de ir hacia el domicilio a revisar podrán tener una noción del modelo de router que se trata, y por experiencia de reportes sobre fallos anteriores en los mismos equipos, identificar con mayor facilidad el problema y solucionarlo para reestablecer el servicio.
-+ _Tablas que la componen_: clients, equipos, facturas, suministros y proveedores.
++ _Columnas que la componen_: id_cliente, Nombre Cliente, id_equipo, marca, modelo, id_proveedor, Nombre Proveedor, fecha_de_suministro y fecha_factura.
++ _Ejemplo de consulta:_
+```
+SELECT * 
+FROM Wifly.view_admin_equipos_adquiridos_fecha
+WHERE fecha_factura BETWEEN '2024-01-01' AND '2024-12-31'
+ORDER BY fecha_factura ASC;
+```
 
 2. `Nombre de la vista:` "view_admin_abonos_clientes"
 + _Descripción_: Esta vista permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
