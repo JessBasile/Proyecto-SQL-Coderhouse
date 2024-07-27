@@ -293,13 +293,13 @@ WHERE `Tipo de Abono` = '40MB';
 + _Descripción_: El diseño de esta vista permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
 + _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios y la distribución en el volumen de tareas a cada grupo de trabajo.
 + _Columnas que la componen_: tipo_operacion, fecha_operaciones, "Empleado" (una concatenación de su nombre y apellido) y respuesta.
-+ _Ejemplo de consulta:_
++ _Ejemplo de consultas:_
 
-General:
+A. General:
 ```
 SELECT * FROM Wifly.view_admin_operaciones_respuesta;
 ```
-Específica sobre un empleado:
+B. Específica sobre un empleado:
 ```
 SELECT *   
    FROM view_admin_operaciones_respuesta
