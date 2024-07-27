@@ -329,11 +329,15 @@ SELECT *
 FROM view_reclamos_respuesta
 WHERE `Fecha` > '2023-12-31';
 ```
-6. `Nombre de la vista:` "view_gerencia_ganancia"
+6. `Nombre de la vista:` "view_gerencia_ganancia_equipos"
 + _Descripción_: Esta vista permite ver en forma concisa la ganancia total obtenida por la suma obtenida de los abonos y equipos agrupado por cada cliente.
 + _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente, y permite tomar decisiones sobre inversiones y distribución de dividendos.
-+ _Columnas que la componen_: 
-
++ _Columnas que la componen_: id_cliente, Ganancia Equipos y razon_social.
++ _Ejemplo de consulta general de la vista_:
+```
+SELECT * FROM view_gerencia_ganancia_equipos;
+```
+___
 ## Triggers
 
 En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
@@ -341,6 +345,7 @@ En la base de datos Wifly se diseñaron 2 Triggers para validación de datos ant
 + _Descripción_:
 + _Objetivo_:
 + _Tablas que afecta_:
+___
 ## Funciones
 
 Se elaboraron 2 funciones para la base de datos Wifly que retornan información relevante para la toma de decisiones.
@@ -349,7 +354,7 @@ Se elaboraron 2 funciones para la base de datos Wifly que retornan información 
 + _Objetivo_:
 + _Valor que retorna_:
 + _Utilidad_:
-
+___
 ## Eventos y Procedimientos
 
 
