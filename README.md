@@ -467,7 +467,7 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 SET @id_abono = 0;
 ```
 2do: Se llama al procedimiento:
-:heavy_check_mark: Caso exitoso:
+<p>:heavy_check_mark: Caso exitoso:</p>
 ```
 CALL Wifly.registrar_abono('50MB', 17000, 38000, @id_abono);
 ```
@@ -475,7 +475,7 @@ CALL Wifly.registrar_abono('50MB', 17000, 38000, @id_abono);
 ```
 CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_abono);
 ```
-3ro: Llamdo del id_nuevo_abono:
+3ro: Llamado del id_nuevo_abono:
 ```
 SELECT @id_abono AS id_nuevo_abono;
 ```
