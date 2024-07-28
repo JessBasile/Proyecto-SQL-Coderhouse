@@ -340,11 +340,43 @@ SELECT * FROM view_gerencia_ganancia_equipos;
 ___
 ## Triggers
 
-En la base de datos Wifly se diseñaron 2 Triggers para validación de datos antes de proceder a la importación de los datos, para evitar inconvenientes en su ejecución e implementación.
-1. `Nombre del Trigger:` 
-+ _Descripción_:
-+ _Objetivo_:
-+ _Tablas que afecta_:
+En la base de datos Wifly se diseñaron 2 Triggers para validación de datos.
+1. `Nombre del Trigger:` "verificar_cantidad_equipo"
++ _Descripción_: Verifica que la cantidad de equipos esten disponibles cuando se realiza una venta.
++ _Tabla afectada_: Ventas
++ Acción: Insert
++ _Ejemplo de inserción de datos válidos_:
+```
+INSERT INTO VENTAS (id_factura, id_abono, id_equipo, id_operacion, id_pago, id_cliente, cantidad, costo_abono, precio_abono, costo_equipo, precio_equipo)
+VALUES (1, 1, 1, 1, 1, 1, 1, 7000, 15000, 35000, 45000);
+```
++ _Ejemplo de inserción de datos inválidos_:
+```
+INSERT INTO VENTAS (id_factura, id_abono, id_equipo, id_operacion, id_pago, id_cliente, cantidad, costo_abono, precio_abono, costo_equipo, precio_equipo)
+VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
+```
++ _Leyenda de la respuesta_: "SQL Error [1644] [45000]: No hay suficiente cantidad en stock para el equipo seleccionado."
+
+2. `Nombre del Trigger:` "nuevo_abono"
++ _Descripción_: Coteja el precio mínimo 15.000 para la incorporación de nuevos abonos.
++ _Tabla afectada_: Abonos
++ Acción: Insert
++ _Ejemplo de inserción de datos válidos_:
+```
+INSERT INTO ABONOS (id_abono, tipo_de_abono, costo_abono, precio_abono)
+VALUES (5, '50MB', 20000, 20000);
+```
++ _Ejemplo de inserción de datos inválidos_:
+```
+INSERT INTO ABONOS (id_abono, tipo_de_abono, costo_abono, precio_abono)
+VALUES (6, '5MB', 3000, 10000);
+```
++ _Leyenda de la respuesta_: "SQL Error [1644] [45000]: El precio del abono debe ser superior a 15.000"
+
+###NOTA###: Para verificar que los Tiggers fueron creados adecuadamente, se pueden listar:
+```
+SHOW TRIGGERS;
+```
 ___
 ## Funciones
 
