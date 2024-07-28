@@ -453,19 +453,33 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 <p>:warning: 'La cantidad debe ser mayor que 0'</p>
 <p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
 
-2. `Nombre del procedimiento:` ""
-+ _Descripción_: Este procedimiento
+2. `Nombre del procedimiento:` "registrar_abono"
++ _Descripción_: Este procedimiento permite registrar un nuevo abono en la tabla pertinente de la base de datos Wifly, siempre que cumpla con el requisito de ser mayor a 40MB, coto mayor a 16 mil y precio mayor a 36 mil. Si cumple con las condiciones se insertan los nuevos datos y devuelve el id_nuevo_abono, caso contrario, mostrará el valor -1 que significa que el registro no se incorporó.
 + _Parámetros de entrada_:
-<p>marca VARCHAR(100),</p>
-<p>modelo VARCHAR(100),</p>
-<p>costo_equipo INT,</p>
-<p>precio_equipo INT,</p>
-<p>cantidad INT</p>
+<p>tipo_abono VARCHAR(50),</p>
+<p>costo_abono INT,</p>
+<p>precio_abono INT,</p>
+
 + _Ejemplo de su uso_:
-```
-CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
-```
-+ _Mensajes de salida en caso insatisfactorio_:
 
-<p>
-
+1ro: Se declara la variable para recibir el parámetro de salida:
+```
+SET @id_abono = 0;
+```
+2do: Se llama al procedimiento:
+:heavy_check_mark: Caso exitoso:
+```
+CALL Wifly.registrar_abono('50MB', 17000, 38000, @id_abono);
+```
+:no_entry: Caso inválido:
+```
+CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_abono);
+```
+3ro: Llamdo del id_nuevo_abono:
+```
+SELECT @id_abono AS id_nuevo_abono;
+```
+`NOTA:` Para verificar el ingreso del nuevo abono puede efectuarse una consulta sobre la tabla en cuestión:
+```
+SELECT * FROM ABONOS;
+```
