@@ -437,6 +437,7 @@ Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con paráme
 <p>costo_equipo INT,</p>
 <p>precio_equipo INT,</p>
 <p>cantidad INT</p>
+
 + _Ejemplo de su uso_:
 ```
 CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
