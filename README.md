@@ -387,7 +387,7 @@ Se elaboraron 2 funciones para la base de datos Wifly que retornan información 
 + _Parámetros_: id_cliente INT
 + _Retorno_: ganancia_anual INT
 + _Ejemplo de su aplicación_:
-+ 
+  
 - [x] _General_:
 ```
 SELECT ganancia_anual_cliente(10) AS ganancia_anual;
