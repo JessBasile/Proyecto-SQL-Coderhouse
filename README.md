@@ -373,7 +373,7 @@ VALUES (6, '5MB', 3000, 10000);
 ```
 + _Leyenda de la respuesta_: "SQL Error [1644] [45000]: El precio del abono debe ser superior a 15.000"
 
-###NOTA###: Para verificar que los Tiggers fueron creados adecuadamente, se pueden listar:
+`NOTA:` Para verificar que los Tiggers fueron creados adecuadamente, se pueden listar con el siguiente instrucción:
 ```
 SHOW TRIGGERS;
 ```
@@ -408,7 +408,7 @@ WHERE
 + _Parámetros_: id_equipo
 + _Retorno_: cantidad_vendida
 + _Ejemplo de su aplicación_:
-+ 
+
 [x] _General_:
 ```
 SELECT cantidad_vendida_por_equipo(5) AS cantidad_vendida;
