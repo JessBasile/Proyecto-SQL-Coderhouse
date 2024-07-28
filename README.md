@@ -442,7 +442,9 @@ cantidad INT
 CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 ```
 + _Mensajes de salida_:
+
 :bulb: 'La marca del equipo no puede estar vacía'
+
 :bulb: 'La marca del equipo no puede tener más de 100 caracteres'
 :bulb:
 :bulb:
