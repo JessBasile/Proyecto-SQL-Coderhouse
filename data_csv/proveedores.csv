@@ -1,0 +1,16 @@
+id_proveedor,razon_social,direccion,telefono,correo_electronico
+1,Netcom Argentina SRL,Av. Libertador 1234,011-2345678,info@netcomargentina.com.ar
+2,Conexión Wireless SA,Av. San Martín 567,0341-8765432,ventas@conexionwireless.com.ar
+3,Servicios Wifi Express,Calle 9 de Julio 789,0221-3456789,info@wifiexpress.com.ar
+4,RapidLink Telecomunicaciones,Ruta 3 km 45,0299-6543210,ventas@rapidlinktelecom.com.ar
+5,Inalámbricos del Sur SA,Av. Patagonia 678,0381-9876543,info@inalambricosdelsur.com.ar
+6,WirelessNet Soluciones,Av. Norte 4321,0261-2345678,contacto@wirelessnetsoluciones.com.ar
+7,Servicios de Internet Inalámbrico,Calle Principal 789,0342-8765432,ventas@serviciosdeinternet.com.ar
+8,Global Wireless Solutions,Ruta Nacional 1 km 23,0223-3456789,info@globalwireless.com.ar
+9,Redes Wifi SA,Av. Belgrano 456,0291-6543210,contacto@redeswifi.com.ar
+10,Linkup Telecomunicaciones,Av. Rivadavia 987,011-9876543,ventas@linkuptelecom.com.ar
+11,WiFi Tech Solutions,Av. Córdoba 1234,0341-2345678,info@wifitech.com.ar
+12,Telecomunicaciones Inalámbricas del Centro,Calle Sarmiento 567,0261-8765432,contacto@telecomunicacionescentral.com.ar
+13,Conectividad Wireless Argentina,Av. Independencia 789,0299-2345678,ventas@conectividadwireless.com.ar
+14,Netlink Inalámbrico,Av. Corrientes 456,0223-8765432,info@netlinkinalambrico.com.ar
+15,WifiXpress Comunicaciones,Av. Mitre 678,0381-2345678,contacto@wifixpress.com.ar
