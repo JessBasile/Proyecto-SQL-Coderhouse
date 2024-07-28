@@ -432,11 +432,11 @@ Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con paráme
 1. `Nombre del procedimiento:` "insertar_equipo"
 + _Descripción_: Este procedimiento se ejecuta al momento de insertar un nuevo equipo dentro de la tabla pertinente. En caso que la inserción no cumpla con los requisitos necesarios, el procedimiento expondrá un mensaje de error justificando el motivo por el cual no puede incorporarse ese nuevo producto. Este procedimiento **solo** cuenta con parámetros de entrada.
 + _Parámetros de entrada_:
-marca VARCHAR(100),
-modelo VARCHAR(100),
-costo_equipo INT,
-precio_equipo INT,
-cantidad INT
+<p>marca VARCHAR(100),</p>
+<p>modelo VARCHAR(100),</p>
+<p>costo_equipo INT,</p>
+<p>precio_equipo INT,</p>
+<p>cantidad INT</p>
 + _Ejemplo de su uso_:
 ```
 CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
@@ -451,3 +451,20 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 <p>:warning: 'El precio del equipo debe ser mayor que su costo'</p>
 <p>:warning: 'La cantidad debe ser mayor que 0'</p>
 <p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
+
+2. `Nombre del procedimiento:` ""
++ _Descripción_: Este procedimiento
++ _Parámetros de entrada_:
+<p>marca VARCHAR(100),</p>
+<p>modelo VARCHAR(100),</p>
+<p>costo_equipo INT,</p>
+<p>precio_equipo INT,</p>
+<p>cantidad INT</p>
++ _Ejemplo de su uso_:
+```
+CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
+```
++ _Mensajes de salida en caso insatisfactorio_:
+
+<p>
+
