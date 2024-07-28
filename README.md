@@ -409,11 +409,11 @@ WHERE
 + _Retorno_: cantidad_vendida
 + _Ejemplo de su aplicación_:
 
-[x] _General_:
+- [x] _General_:
 ```
 SELECT cantidad_vendida_por_equipo(5) AS cantidad_vendida;
 ```
-[x] _Específica sobre un cliente en particular_:
+- [x] _Específica sobre un cliente en particular_:
 ```
 SELECT 
     c.razon_social AS Cliente,
