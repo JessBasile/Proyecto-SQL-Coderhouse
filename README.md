@@ -444,10 +444,10 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 + _Mensajes de salida en caso insatisfactorio_:
 
 <p>:bulb: 'La marca del equipo no puede estar vacía'</p>
-+ :bulb: 'La marca del equipo no puede tener más de 100 caracteres'
-:bulb: 'El modelo del equipo no puede estar vacío'
-:bulb: 'El modelo del equipo no puede tener más de 100 caracteres'
-:bulb: 'El costo del equipo debe ser mayor que 28.000'
-:bulb: 'El precio del equipo debe ser mayor que su costo'
-:bulb: 'La cantidad debe ser mayor que 0'
-:bulb: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'
+<p>:bulb: 'La marca del equipo no puede tener más de 100 caracteres'</p>
+<p>:bulb: 'El modelo del equipo no puede estar vacío'</p>
+<p>:bulb: 'El modelo del equipo no puede tener más de 100 caracteres'</p>
+<p>:bulb: 'El costo del equipo debe ser mayor que 28.000'</p>
+<p>:bulb: 'El precio del equipo debe ser mayor que su costo'</p>
+<p>:bulb: 'La cantidad debe ser mayor que 0'</p>
+<p>:bulb: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
