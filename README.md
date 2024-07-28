@@ -476,7 +476,7 @@ CALL Wifly.registrar_abono('50MB', 17000, 38000, @id_abono);
 ```
 CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_abono);
 ```
-3ro: Llamado del id_nuevo_abono:
+3ro: Llamado al id_nuevo_abono:
 ```
 SELECT @id_abono AS id_nuevo_abono;
 ```
