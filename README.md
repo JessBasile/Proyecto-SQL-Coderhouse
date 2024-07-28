@@ -388,11 +388,11 @@ Se elaboraron 2 funciones para la base de datos Wifly que retornan información 
 + _Retorno_: ganancia_anual INT
 + _Ejemplo de su aplicación_:
 + 
-[x] _General_:
+- [x] _General_:
 ```
 SELECT ganancia_anual_cliente(10) AS ganancia_anual;
 ```
-[x] _Específica sobre un cliente en particular_:
+- [x] _Específica sobre un cliente en particular_:
 ```
 SELECT 
     c.razon_social,
