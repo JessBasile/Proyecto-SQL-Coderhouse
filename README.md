@@ -427,6 +427,27 @@ WHERE
     c.id_cliente = 10;
 ```
 ___
-## Eventos y Procedimientos
-
+## Procedimientos Almacenados
+Se elaboraron 2 procedimientos para la base de datos Wifly de alta utilidad para un eficiente funcionamiento de la base.
+1. `Nombre del procedimiento:` "insertar_equipo"
++ _Descripción_: Este procedimiento se ejecuta al momento de insertar un nuevo equipo dentro de la tabla pertinente. En caso que la inserción no cumpla con los requisitos necesarios, el procedimiento expondrá un mensaje de error justificando el motivo por el cual no puede incorporarse ese nuevo producto.
++ _Parámetros de entrada_:
+marca VARCHAR(100),
+modelo VARCHAR(100),
+costo_equipo INT,
+precio_equipo INT,
+cantidad INT
++ _Ejemplo de su uso_:
+```
+CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
+```
++ _Mensajes de salida_:
+:bulb: 'La marca del equipo no puede estar vacía'
+:bulb: 'La marca del equipo no puede tener más de 100 caracteres'
+:bulb:
+:bulb:
+:bulb:
+:bulb:
+:bulb:
+:bulb:
 
