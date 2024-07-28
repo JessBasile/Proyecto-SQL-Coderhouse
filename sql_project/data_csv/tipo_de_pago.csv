@@ -1,0 +1,8 @@
+id_pago,tipo_de_pago
+1,Efectivo
+2,Tarjeta de debito
+3,Tarjeta de credito
+4,Transferencia bancaria
+5,Mercado pago
+6,Cheque
+7,E-cheq
