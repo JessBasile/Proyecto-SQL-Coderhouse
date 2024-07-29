@@ -26,7 +26,7 @@ DELIMITER ;
 
 -- FUNCIÓN DE CANTIDAD EQUIPOS VENDIDOS: Arroja la cantidad total vendida por id equipo.
 
-DROP FUNCTION IF EXISTS Wifly.cantidad_vendida_por_equipo
+DROP FUNCTION IF EXISTS Wifly.cantidad_vendida_por_equipo;
 
 DELIMITER //
 
