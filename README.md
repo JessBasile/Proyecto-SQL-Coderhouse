@@ -358,7 +358,7 @@ VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
 + _Leyenda de la respuesta_: "SQL Error [1644] [45000]: No hay suficiente cantidad en stock para el equipo seleccionado."
 
 2. `Nombre del Trigger:` "nuevo_abono"
-+ _Descripción_: Coteja el precio mínimo 15.000 para la incorporación de nuevos abonos.
++ _Descripción_: Coteja el precio sea mayor a 15.000 para la incorporación de nuevos abonos.
 + _Tabla afectada_: Abonos
 + Acción: Insert
 + _Ejemplo de inserción de datos válidos_:
@@ -454,7 +454,7 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 <p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
 
 2. `Nombre del procedimiento:` "registrar_abono"
-+ _Descripción_: Este procedimiento permite registrar un nuevo abono en la tabla pertinente de la base de datos Wifly, siempre que cumpla con el requisito de ser mayor a 40MB, coto mayor a 16 mil y precio mayor a 36 mil. Si cumple con las condiciones se insertan los nuevos datos y devuelve el id_nuevo_abono, caso contrario, mostrará el valor -1 que significa que el registro no se incorporó.
++ _Descripción_: Este procedimiento permite registrar un nuevo abono en la tabla pertinente de la base de datos Wifly, siempre que cumpla con el requisito de ser mayor a 40MB, costo mayor a 16 mil y precio mayor a 36 mil. Si cumple con las condiciones se insertan los nuevos datos y devuelve el id_nuevo_abono, caso contrario, mostrará el valor -1 que significa que el registro no se incorporó.
 + _Parámetros de entrada_:
 <p>tipo_abono VARCHAR(50),</p>
 <p>costo_abono INT,</p>
