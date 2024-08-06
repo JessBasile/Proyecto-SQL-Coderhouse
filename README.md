@@ -245,8 +245,9 @@ Antes de proceder a la importación de datos, fue imprescindible habilitar los p
 [mysqld]
 local_infile=1
 ```
-Posteriormente, para aplicar los cambios se procedió a reiniciar MySQL y DBeaver. En DBEaver se editó la pestaña “databases” en la sección propiedades, para modificar el valor "allowLoadLocalInfile" a “true”. Finalmente, para asegurar que realmente los cambios se efectuaron correctamente se efectuó una consulta con la siguiente sintaxis:
+Posteriormente, para aplicar los cambios se procedió a reiniciar MySQL y DBeaver. En DBeaver se editó la pestaña “databases” en la sección propiedades, para modificar el valor "allowLoadLocalInfile" a “true”. Finalmente, para asegurar que realmente los cambios se efectuaron correctamente se procede a realizar las siguientes consultas en su respectivo orden para aplicar la habilitación global, y luego la verificación de la configuración que debe arrojar la leyenda ON, tal como se oberserva en la siguiente sintaxis detallada:
 ```
+SET GLOBAL local_infile = 1;
 SHOW VARIABLES LIKE 'local_infile';
 La respuesta fue: local_infile ON, lo cual indica que ya se encuentra habilitado para exportar los datos.
 ```
