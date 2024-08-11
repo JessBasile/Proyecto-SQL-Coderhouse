@@ -485,3 +485,5 @@ SELECT @id_abono AS id_nuevo_abono;
 ```
 SELECT * FROM ABONOS;
 ```
+___
+## Roles, usuarios y privilegios
