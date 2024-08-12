@@ -241,12 +241,12 @@ ___
 ## Habilitación de permisos en MySQL y BDeaver para la importación de datos
 
 Antes de proceder a la importación de datos, fue imprescindible habilitar los permisos pertinentes en MySQL y DBeaver para poder efectuarlo sin inconvenientes. Para ello, inicialmente se procedió a habilitar el ´local_infile´ incluyendo un archivo de tipo ´my.ini´ tanto en la carpeta de instalación de MySQL Server 8.0, y también en la carpeta MySQL Workbench 8.0 CE. Esa extensión de archivo, contiene en su interior el comando: 
-```
+```sql
 [mysqld]
 local_infile=1
 ```
 Posteriormente, para aplicar los cambios se procedió a reiniciar MySQL y DBeaver. En DBeaver se editó la pestaña “databases” en la sección propiedades, para modificar el valor "allowLoadLocalInfile" a “true”. Finalmente, para asegurar que realmente los cambios se efectuaron correctamente se procede a realizar las siguientes consultas en su respectivo orden para aplicar la habilitación global, y luego la verificación de la configuración que debe arrojar la leyenda ON, tal como se oberserva en la siguiente sintaxis detallada:
-```
+```sql
 SET GLOBAL local_infile = 1;
 SHOW VARIABLES LIKE 'local_infile';
 La respuesta fue: local_infile ON, lo cual indica que ya se encuentra habilitado para exportar los datos.
@@ -254,7 +254,7 @@ La respuesta fue: local_infile ON, lo cual indica que ya se encuentra habilitado
 ## Importación de datos con archivos extensión csv
 
 Los Comandos utilizados para la cargar de datos desde archivos CSV fue la siguiente adaptada a cada tabla, por lo tanto, se repitió 12 veces (para incorporar datos en las 12 tablas):
-```
+```sql
 LOAD DATA LOCAL INFILE 'ruta/al/archivo/nombre_archivo.csv'
 INTO TABLE nombre_tabla
 FIELDS TERMINATED BY ',' 
