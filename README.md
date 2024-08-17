@@ -4,10 +4,7 @@
 
 ## Segunda preentrega
 
-
-
-<img align="right" alt="qr_wifly" width="400" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/qr_wifly.png?raw=true">
-
+<img align="right" alt="qr_wifly" width="200" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/qr_wifly.png?raw=true">
 <p>Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/" target="_blank">Jesica Brenda Basile</a></p>
 
 <p>Comisión: 57190</p>
@@ -17,9 +14,6 @@
 <p>Docente: Anderson Michel Torres</p>
 
 <p>Presentación didáctica (<a href="https://view.genially.com/6682fc0815c608001450761e" target="_blank">click aquí</a>)</p>
-
-
-
 
 ### Introducción: Descripción de la temática de la base de datos
 ___
