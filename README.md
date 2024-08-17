@@ -2,8 +2,6 @@
 
 # Entrega Proyecto SQL Coderhouse
 
-## Segunda preentrega
-
 <img align="right" alt="qr_wifly" width="200" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/qr_wifly.png?raw=true">
 <p>Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/" target="_blank">Jesica Brenda Basile</a></p>
 
