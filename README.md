@@ -3,21 +3,19 @@
 # Entrega Proyecto SQL Coderhouse
 
 ## Segunda preentrega
-<div align="center">
-  <table style="width: 100%;">
-    <tr>
-      <td style="width: 50%; vertical-align: top; text-align: left; font-size: 18px;">
-        Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/">Jesica Brenda Basile</a><br/>
-        Comisión: 57190<br/>
-        Tutor: Ariel Annone<br/>
-        Docente: Anderson Michel Torres<br/>
-        Presentación didáctica: <a href="https://view.genially.com/6682fc0815c608001450761e">click aquí</a>
-      </td>
-      <td style="width: 50%; text-align: right;">
-        <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
-      </td>
-    </tr>
-  </table>
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div style="flex: 1; font-size: 18px; text-align: left;">
+    <p>
+      Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/">Jesica Brenda Basile</a><br/>
+      Comisión: 57190<br/>
+      Tutor: Ariel Annone<br/>
+      Docente: Anderson Michel Torres<br/>
+      Presentación didáctica: <a href="https://view.genially.com/6682fc0815c608001450761e">click aquí</a>
+    </p>
+  </div>
+  <div style="flex: 1; text-align: right;">
+    <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
+  </div>
 </div>
 
 ### Introducción: Descripción de la temática de la base de datos
