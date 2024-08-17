@@ -6,9 +6,13 @@
 <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/qr_wifly.png?raw=true" alt="qr_wifly" width="400" style="float: right; margin-left: 10px;">
 
 Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/" target="_blank">Jesica Brenda Basile</a>
+
 Comisión: 57190
+
 Tutor: Ariel Annone
+
 Docente: Anderson Michel Torres
+
 Presentación didáctica (<a href="https://view.genially.com/6682fc0815c608001450761e" target="_blank">click aquí</a>)
 
 ### Introducción: Descripción de la temática de la base de datos
