@@ -13,9 +13,11 @@ Tutor: Ariel Annone
 Docente: Anderson Michel Torres
 
 Presentación didáctica ([click aquí](https://view.genially.com/6682fc0815c608001450761e))
+
 <p align="right">
   <img src="https://github.com/JessBasile/JessBasile/blob/main/QR%20-%20WIFLY.png" alt="QR - WIFLY" width="400"/>
 </p>
+
 ### Introducción: Descripción de la temática de la base de datos
 ___
 La temática se encuentra inspirada en una empresa real que brinda servicios de internet, bajo el nombre ficticio de Wifly cuya diferenciación en el mercado radica en el nicho al que apunta, puesto que se orienta principalmente a brindar servicio a clientes ubicados en zonas rurales. 
