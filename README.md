@@ -4,16 +4,16 @@
 
 ## Segunda preentrega
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-  <div style="flex: 1; text-align: left; font-size: 18px;">
-    <p>
-      Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/">Jesica Brenda Basile</a><br/>
-      Comisión: 57190<br/>
-      Tutor: Ariel Annone<br/>
-      Docente: Anderson Michel Torres<br/>
-      Presentación didáctica: <a href="https://view.genially.com/6682fc0815c608001450761e">click aquí</a>
-    </p>
+  <!-- Texto alineado a la izquierda -->
+  <div style="flex: 1; text-align: left;">
+    <p>Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/" target="_blank">Jesica Brenda Basile</a></p>
+    <p>Comisión: 57190</p>
+    <p>Tutor: Ariel Annone</p>
+    <p>Docente: Anderson Michel Torres</p>
+    <p>Presentación didáctica (<a href="https://view.genially.com/6682fc0815c608001450761e" target="_blank">click aquí</a>)</p>
   </div>
-  <div style="flex: 1; text-align: right;">
+  <!-- Imagen alineada a la derecha -->
+  <div style="flex: 0;">
     <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
   </div>
 </div>
