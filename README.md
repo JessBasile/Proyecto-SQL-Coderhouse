@@ -5,19 +5,14 @@
 ## Segunda preentrega
 <table>
   <tr>
-    <td>
-Alumna: [Jesica Brenda Basile](https://www.linkedin.com/in/jesica-basile-749b46b3/)
-
-Comisión: 57190
-
-Tutor: Ariel Annone
-
-Docente: Anderson Michel Torres
-
-Presentación didáctica ([click aquí](https://view.genially.com/6682fc0815c608001450761e))
+    <td style="vertical-align: top; text-align: left;">
+      Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/">Jesica Brenda Basile</a><br/>
+      Comisión: 57190<br/>
+      Tutor: Ariel Annone<br/>
+      Docente: Anderson Michel Torres<br/>
+      Presentación didáctica: <a href="https://view.genially.com/6682fc0815c608001450761e">click aquí</a>
     </td>
-    <td>
-      <!-- Imagen a la derecha -->
+    <td style="text-align: right;">
       <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
     </td>
   </tr>
