@@ -4,7 +4,7 @@
 
 ## Segunda preentrega
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-  <div style="flex: 1; font-size: 18px; text-align: left;">
+  <div style="flex: 1; text-align: left; font-size: 18px;">
     <p>
       Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/">Jesica Brenda Basile</a><br/>
       Comisión: 57190<br/>
