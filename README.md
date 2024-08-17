@@ -15,7 +15,7 @@ Docente: Anderson Michel Torres
 Presentación didáctica ([click aquí](https://view.genially.com/6682fc0815c608001450761e))
 
 <p align="right">
-  <img src="https://github.com/JessBasile/JessBasile/blob/main/qr_wifly.png" alt="QR - WIFLY" width="400"/>
+  <img src="https://github.com/JessBasile/JessBasile/raw/main/qr_wifly.png" alt="qr_wifly.png" width="400"/>
 </p>
 
 ### Introducción: Descripción de la temática de la base de datos
