@@ -5,7 +5,7 @@
 ## Segunda preentrega
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <!-- Texto alineado a la izquierda -->
-  <div style="flex: 1; text-align: left;">
+  <div style="flex: 1;">
     <p>Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/" target="_blank">Jesica Brenda Basile</a></p>
     <p>Comisión: 57190</p>
     <p>Tutor: Ariel Annone</p>
@@ -13,7 +13,7 @@
     <p>Presentación didáctica (<a href="https://view.genially.com/6682fc0815c608001450761e" target="_blank">click aquí</a>)</p>
   </div>
   <!-- Imagen alineada a la derecha -->
-  <div style="flex: 0;">
+  <div>
     <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
   </div>
 </div>
