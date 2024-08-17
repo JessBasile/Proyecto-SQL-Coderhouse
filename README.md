@@ -3,11 +3,9 @@
 # Entrega Proyecto SQL Coderhouse
 
 ## Segunda preentrega
-
-<p align="right">
-  <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
-</p>
-
+<table>
+  <tr>
+    <td>
 Alumna: [Jesica Brenda Basile](https://www.linkedin.com/in/jesica-basile-749b46b3/)
 
 Comisión: 57190
@@ -17,6 +15,13 @@ Tutor: Ariel Annone
 Docente: Anderson Michel Torres
 
 Presentación didáctica ([click aquí](https://view.genially.com/6682fc0815c608001450761e))
+    </td>
+    <td>
+      <!-- Imagen a la derecha -->
+      <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/qr_wifly.png" alt="qr_wifly" width="400"/>
+    </td>
+  </tr>
+</table>
 
 ### Introducción: Descripción de la temática de la base de datos
 ___
