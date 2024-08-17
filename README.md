@@ -3,7 +3,7 @@
 # Entrega Proyecto SQL Coderhouse
 
 ## Segunda preentrega
-<img align="right" alt="cubo" width="400" src="https://github.com/JessBasile/JessBasile/blob/main/cubo_negro.gif?raw=true">
+<img align="right" alt="qr_wifly" width="400" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/cubo_negro.gif?raw=true">
 Alumna: <a href="https://www.linkedin.com/in/jesica-basile-749b46b3/" target="_blank">Jesica Brenda Basile</a>
 Comisión: 57190
 Tutor: Ariel Annone
