@@ -274,7 +274,7 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 + _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, el dominio de esa información por parte de los administrativos y los técnicos es importante, ya que en caso de un reclamo o fallas, al momento de ir hacia el domicilio a revisar podrán tener una noción del modelo de router que se trata, y por experiencia de reportes sobre fallos anteriores en los mismos equipos, identificar con mayor facilidad el problema y solucionarlo para reestablecer el servicio.
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_equipo, marca, modelo, id_proveedor, Nombre Proveedor, fecha_de_suministro y fecha_factura.
 + _Ejemplo de consulta sobre un cliente en específico:_
-```
+```sql
 SELECT *
 FROM Wifly.view_admin_equipos_adquiridos_fecha
 WHERE `Nombre Cliente` = 'Libreria La Pluma';
@@ -284,7 +284,7 @@ WHERE `Nombre Cliente` = 'Libreria La Pluma';
 + _Objetivo_: Es útil para los administrativos y técnicos saber el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio, y permite identificar tendencias en los patrones de consumo y preferencias. 
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_abono, Tipo de Abono y precio_abono.
 + _Ejemplo de consulta sobre los clientes que tienen contratado el abono más caro:_
-```
+```sql
 SELECT *
 FROM Wifly.view_admin_abonos_clientes
 WHERE `Tipo de Abono` = '40MB';
@@ -296,11 +296,11 @@ WHERE `Tipo de Abono` = '40MB';
 + _Ejemplo de consultas:_
 
 - [x] _General_:
-```
+```sql
 SELECT * FROM Wifly.view_admin_operaciones_respuesta;
 ```
 - [x] _Específica sobre un empleado_:
-```
+```sql
 SELECT *   
    FROM view_admin_operaciones_respuesta
    WHERE `Empleado`= 'Juan Perez';
@@ -310,7 +310,7 @@ SELECT *
 + _Objetivo_: Es útil para ambos sectores (CEO y Administración) dado que si el volumen de bajas en muy grande o se eleva, se requerirá indagar para evitar la fuga de clientes hacia la competencia.
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_operacion, Descripcion Operacion y Fecha Operacion.
 + _Ejemplo de consulta de la vista completa:_
-```
+```sql
 SELECT * FROM view_bajas_clientes;
 ```
 5. `Nombre de la vista:` "view_reclamos_respuesta"
@@ -320,11 +320,11 @@ SELECT * FROM view_bajas_clientes;
 + _Ejemplo de consultas_:
 
 - [x] _General_:
-```
+```sql
 SELECT * FROM view_reclamos_respuesta;
 ```
 - [x] _Específica sobre el último año_:
-```
+```sql
 SELECT * 
 FROM view_reclamos_respuesta
 WHERE `Fecha` > '2023-12-31';
@@ -334,7 +334,7 @@ WHERE `Fecha` > '2023-12-31';
 + _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente, y permite tomar decisiones sobre inversiones y distribución de dividendos.
 + _Columnas que la componen_: id_cliente, Ganancia Equipos y razon_social.
 + _Ejemplo de consulta general de la vista_:
-```
+```sql
 SELECT * FROM view_gerencia_ganancia_equipos;
 ```
 ___
@@ -346,12 +346,12 @@ En la base de datos Wifly se diseñaron 2 Triggers para validación de datos.
 + _Tabla afectada_: Ventas
 + Acción: Insert
 + _Ejemplo de inserción de datos válidos_:
-```
+```sql
 INSERT INTO VENTAS (id_factura, id_abono, id_equipo, id_operacion, id_pago, id_cliente, cantidad, costo_abono, precio_abono, costo_equipo, precio_equipo)
 VALUES (1, 1, 1, 1, 1, 1, 1, 7000, 15000, 35000, 45000);
 ```
 + _Ejemplo de inserción de datos inválidos_:
-```
+```sql
 INSERT INTO VENTAS (id_factura, id_abono, id_equipo, id_operacion, id_pago, id_cliente, cantidad, costo_abono, precio_abono, costo_equipo, precio_equipo)
 VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
 ```
@@ -362,12 +362,12 @@ VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
 + _Tabla afectada_: Abonos
 + Acción: Insert
 + _Ejemplo de inserción de datos válidos_:
-```
+```sql
 INSERT INTO ABONOS (id_abono, tipo_de_abono, costo_abono, precio_abono)
 VALUES (5, '50MB', 20000, 20000);
 ```
 + _Ejemplo de inserción de datos inválidos_:
-```
+```sql
 INSERT INTO ABONOS (id_abono, tipo_de_abono, costo_abono, precio_abono)
 VALUES (6, '5MB', 3000, 10000);
 ```
@@ -389,11 +389,11 @@ Se elaboraron 2 funciones para la base de datos Wifly que retornan información 
 + _Ejemplo de su aplicación_:
   
 - [x] _General_:
-```
+```sql
 SELECT ganancia_anual_cliente(10) AS ganancia_anual;
 ```
 - [x] _Específica sobre un cliente en particular_:
-```
+```sql
 SELECT 
     c.razon_social,
     ganancia_anual_cliente(c.id_cliente) AS ganancia_anual
@@ -410,11 +410,11 @@ WHERE
 + _Ejemplo de su aplicación_:
 
 - [x] _General_:
-```
+```sql
 SELECT cantidad_vendida_por_equipo(5) AS cantidad_vendida;
 ```
 - [x] _Específica sobre un cliente en particular_:
-```
+```sql
 SELECT 
     c.razon_social AS Cliente,
     e.marca,
@@ -439,7 +439,7 @@ Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con paráme
 <p>cantidad INT</p>
 
 + _Ejemplo de su uso_:
-```
+```sql
 CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 ```
 + _Mensajes de salida en caso insatisfactorio_:
@@ -463,25 +463,25 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 + _Ejemplo de su uso_:
 
 1ro: Se declara la variable para recibir el parámetro de salida:
-```
+```sql
 SET @id_abono = 0;
 ```
 2do: Se llama al procedimiento:
 
 :heavy_check_mark: Caso exitoso:
-```
+```sql
 CALL Wifly.registrar_abono('50MB', 17000, 38000, @id_abono);
 ```
 :no_entry: Caso inválido:
-```
+```sql
 CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_abono);
 ```
 3ro: Llamado al id_nuevo_abono:
-```
+```sql
 SELECT @id_abono AS id_nuevo_abono;
 ```
 `NOTA:` Para verificar el ingreso del nuevo abono puede efectuarse una consulta sobre la tabla en cuestión:
-```
+```sq
 SELECT * FROM ABONOS;
 ```
 ___
