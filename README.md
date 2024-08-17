@@ -481,7 +481,7 @@ CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_abono);
 SELECT @id_abono AS id_nuevo_abono;
 ```
 `NOTA:` Para verificar el ingreso del nuevo abono puede efectuarse una consulta sobre la tabla en cuestión:
-```sq
+```sql
 SELECT * FROM ABONOS;
 ```
 ___
