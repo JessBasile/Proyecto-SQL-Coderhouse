@@ -1,3 +1,6 @@
+# Cargar variables de entorno desde el archivo .env
+include .env
+
 # Variables
 SERVICE_NAME=mysql
 HOST=127.0.0.1
@@ -53,4 +56,3 @@ down:
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --host $(HOST) --port $(PORT) -e "DROP DATABASE IF EXISTS $(DATABASE);"
 	@echo "Bye"
 	docker-compose -f $(DOCKER_COMPOSE_FILE) down
-
