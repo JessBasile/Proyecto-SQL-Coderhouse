@@ -638,6 +638,9 @@ CALL Wifly.insertar_cliente_y_factura(
 SET @@autocommit = FALSE;
 SET @@autocommit = TRUE;
 ```
+***ROLLBACK*** es un comando que revierte un transacción y se suele utilizar cuando acontece un error para deshacer los cambios realizados durante la transacción.
+***SAVEPOINT*** son puntos de retroceso que guardan modificaciones efectuadas, y son muy útiles en casos que surjan errores, para recuperar instancias de avance anteriores.
+***COMMIT*** es el comando que se utiliza para confirmar y guardar permanentemente los cambios efectuados sobre transacciones.
 ___
 ## Roles, usuarios y privilegios
 
