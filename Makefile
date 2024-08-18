@@ -34,7 +34,7 @@ up:
 
 import-ventas:
 	@echo "Importing ventas data"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SOURCE $(IMPORT_VENTAS_SQL);"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "SET GLOBAL local_infile = 1; USE $(DATABASE); SOURCE $(IMPORT_VENTAS_SQL);"
 
 objects:
 	@echo "Create objects in database"
