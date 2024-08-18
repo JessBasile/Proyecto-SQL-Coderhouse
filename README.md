@@ -633,6 +633,11 @@ CALL Wifly.insertar_cliente_y_factura(
 <p>:warning: 'SQL Error [1644] [45000]: El número de factura ya existe.'</p>
 <p>:warning: 'SQL Error [1644] [45000]: El tipo de pago especificado no existe.'</p>
 
+`ACLARACIÓN:` Si bien Workbench y codespace identifican que se trata de transacciones de control al incorporar dentro del código la sintaxis "START TRANSACTION", puede realizarse una desactivación manual y posterior activación general para corroborar el éxito del control sobre las transacciones. Para ello, se utilizarán los comandos:
+```sql
+SET @@autocommit = FALSE;
+SET @@autocommit = TRUE;
+```
 ___
 ## Roles, usuarios y privilegios
 
