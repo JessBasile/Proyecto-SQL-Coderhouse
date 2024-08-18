@@ -1,11 +1,5 @@
 # Makefile
-
 include .env
-
-# Variables
-DOCKER_COMPOSE_FILE=./docker-compose.yml
-DATABASE_CREATION=./sql_project/database_structure.sql
-DATABASE_POPULATION=./sql_project/population.sql
 
 SERVICE_NAME=mysql
 HOST=127.0.0.1
@@ -15,7 +9,11 @@ PASSWORD=${MYSQL_ROOT_PASSWORD}
 DATABASE=${MYSQL_DATABASE}
 USER=${MYSQL_USER}
 
-FILES=vistas funciones stored_procedures triggers
+DOCKER_COMPOSE_FILE=./docker-compose.yml
+DATABASE_CREATION=./sql_project/database_structure.sql
+DATABASE_POPULATION=./sql_project/population.sql
+
+FILES=vistas funciones stored_procedures triggers user_roles
 
 .PHONY: all up objects test-db access-db down count-ventas count-operaciones
 
