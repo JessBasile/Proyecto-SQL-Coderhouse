@@ -13,7 +13,7 @@ USER=$(MYSQL_USER)
 DOCKER_COMPOSE_FILE=./docker-compose.yml
 DATABASE_CREATION=./sql_project/database_structure.sql
 DATABASE_POPULATION=./sql_project/population.sql
-IMPORT_VENTAS=./sql_project/import_ventas.csv
+IMPORT_VENTAS_SQL=./sql_project/import_ventas.sql
 
 FILES=vistas funciones stored_procedures triggers
 
@@ -34,7 +34,7 @@ up:
 
 import-ventas:
 	@echo "Importing ventas data"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); LOAD DATA LOCAL INFILE '/sql_project/import_ventas.csv' INTO TABLE VENTAS FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES;"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SOURCE $(IMPORT_VENTAS_SQL);"
 
 objects:
 	@echo "Create objects in database"
@@ -56,3 +56,4 @@ down:
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --host $(HOST) --port $(PORT) -e "DROP DATABASE IF EXISTS $(DATABASE);"
 	@echo "Bye"
 	docker-compose -f $(DOCKER_COMPOSE_FILE) down
+
