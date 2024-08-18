@@ -12,18 +12,18 @@ USER=${MYSQL_USER}
 DOCKER_COMPOSE_FILE=./docker-compose.yml
 DATABASE_CREATION=./sql_project/database_structure.sql
 DATABASE_POPULATION=./sql_project/population.sql
+IMPORT_VENTAS=./sql_project/import_ventas.sql
 
 FILES=vistas funciones stored_procedures triggers
 
+.PHONY: all up objects test-db access-db import-ventas down
 
-.PHONY: all up objects test-db access-db down
-
-all: info up objects
+# Define the default target
+all: import-ventas
 
 info:
 	@echo "This is a project for $(DATABASE)"
 	
-
 up:
 	@echo "Create the instance of docker"
 	docker compose -f $(DOCKER_COMPOSE_FILE) up -d --build
@@ -31,9 +31,8 @@ up:
 	@echo "Waiting for MySQL to be ready..."
 	bash mysql_wait.sh
 
-
-	@echo "Create the import and run de script"
-	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD)  -e "source $(DATABASE_CREATION);"
+	@echo "Create the import and run the script"
+	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD) -e "source $(DATABASE_CREATION);"
 	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD) --local-infile=1 -e "source $(DATABASE_POPULATION)"
 
 objects:
@@ -51,6 +50,9 @@ access-db:
 	@echo "Access to db-client"
 	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD) 
 
+import-ventas:
+	@echo "Importing ventas data"
+	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD) -e "USE $(DATABASE); SOURCE $(IMPORT_VENTAS);"
 
 down:
 	@echo "Remove the Database"
