@@ -357,21 +357,21 @@ VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
 ```
 + _Leyenda de la respuesta_: "SQL Error [1644] [45000]: No hay suficiente cantidad en stock para el equipo seleccionado."
 
-2. `Nombre del Trigger:` "nuevo_abono"
-+ _Descripción_: Coteja el precio sea mayor a 15.000 para la incorporación de nuevos abonos.
-+ _Tabla afectada_: Abonos
+2. `Nombre del Trigger:` "chequear_fecha_futura"
++ _Descripción_: Se encarga de evita inserción de operaciones con fechas futuras que superen los 6 meses.
++ _Tabla afectada_: Operaciones
 + Acción: Insert
 + _Ejemplo de inserción de datos válidos_:
 ```sql
-INSERT INTO ABONOS (id_abono, tipo_de_abono, costo_abono, precio_abono)
-VALUES (5, '50MB', 20000, 20000);
+INSERT INTO OPERACIONES (id_operacion, id_cliente, tipo_operacion, descripcion, respuesta, fecha_operaciones)
+VALUES (111, 7, 'Reclamo', 'problema con la factura', 'factura corregida', '2024-12-01 09:00:00');
 ```
 + _Ejemplo de inserción de datos inválidos_:
 ```sql
-INSERT INTO ABONOS (id_abono, tipo_de_abono, costo_abono, precio_abono)
-VALUES (6, '5MB', 3000, 10000);
+INSERT INTO OPERACIONES (id_operacion, id_cliente, tipo_operacion, descripcion, respuesta, fecha_operaciones)
+VALUES (111, 6, 'Reclamo', 'problema con el equipo', 'equipo reparado', '2025-09-01 15:30:00');
 ```
-+ _Leyenda de la respuesta_: "SQL Error [1644] [45000]: El precio del abono debe ser superior a 15.000"
++ _Leyenda de la respuesta_: "La fecha de la operación no puede superar los 6 meses desde ahora. La fecha límite es: (se calcula acorde a la fecha de inserción de datos)."
 
 `NOTA:` Para verificar que los Tiggers fueron creados adecuadamente, se pueden listar con la siguiente instrucción:
 ```sql
