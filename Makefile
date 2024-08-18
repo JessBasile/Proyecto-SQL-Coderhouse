@@ -13,7 +13,7 @@ USER=$(MYSQL_USER)
 DOCKER_COMPOSE_FILE=./docker-compose.yml
 DATABASE_CREATION=./sql_project/database_structure.sql
 DATABASE_POPULATION=./sql_project/population.sql
-IMPORT_VENTAS=./sql_project/import_ventas.sql
+IMPORT_VENTAS=./sql_project/import_ventas.csv
 
 FILES=vistas funciones stored_procedures triggers
 
@@ -29,23 +29,23 @@ up:
 	bash mysql_wait.sh
 
 	@echo "Create the database structure and populate it"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source $(DATABASE_CREATION);"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --local-infile=1 -e "source $(DATABASE_POPULATION);"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source /sql_project/database_structure.sql;"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --local-infile=1 -e "source /sql_project/population.sql;"
 
 import-ventas:
 	@echo "Importing ventas data"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SOURCE $(IMPORT_VENTAS);"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); LOAD DATA LOCAL INFILE '/sql_project/import_ventas.csv' INTO TABLE VENTAS FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES;"
 
 objects:
 	@echo "Create objects in database"
 	@for file in $(FILES); do \
 		echo "Process $$file and add to the database: $(DATABASE)"; \
-		docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source ./sql_project/database_objects/$$file.sql"; \
+		docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source /sql_project/database_objects/$$file.sql"; \
 	done
 
 test-db:
 	@echo "Testing the tables"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source ./sql_project/check_db_objects.sql;"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source /sql_project/check_db_objects.sql;"
 
 access-db:
 	@echo "Access to db-client"
