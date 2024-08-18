@@ -18,9 +18,9 @@ USER=${MYSQL_USER}
 
 FILES=vistas funciones stored_procedures triggers
 
-.PHONY: all up objects test-db access-db down import-ventas count-ventas
+.PHONY: all up objects test-db access-db down import-ventas
 
-all: info up objects import-ventas count-ventas
+all: info up objects import-ventas
 
 info:
 	@echo "This is a project for $(DATABASE)"
@@ -66,4 +66,3 @@ down:
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --host $(HOST) --port $(PORT) -e "DROP DATABASE IF EXISTS $(DATABASE);"
 	@echo "Bye"
 	docker compose -f $(DOCKER_COMPOSE_FILE) down
-
