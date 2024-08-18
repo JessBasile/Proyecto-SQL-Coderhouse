@@ -35,7 +35,7 @@ up:
 
 import-ventas:
 	@echo "Importing data from import_ventas.csv"
-	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD) --local-infile=1 -e "LOAD DATA LOCAL INFILE '/sql_project/import_ventas.csv' INTO TABLE VENTAS FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS;"
+	docker exec -it $(SERVICE_NAME) mysql -u$(MYSQL_USER) -p$(PASSWORD) --local-infile=1 -e "USE $(DATABASE); LOAD DATA LOCAL INFILE '/sql_project/import_ventas.csv' INTO TABLE VENTAS FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS;"
 
 objects:
 	@echo "Create objects in database"
