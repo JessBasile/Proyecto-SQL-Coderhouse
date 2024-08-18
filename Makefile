@@ -1,4 +1,5 @@
-#!make
+# Makefile
+
 include .env
 
 # Variables
@@ -17,9 +18,9 @@ USER=${MYSQL_USER}
 
 FILES=vistas funciones stored_procedures triggers
 
-.PHONY: all up objects test-db access-db down import-ventas
+.PHONY: all up objects test-db access-db down import-ventas count-ventas
 
-all: info up objects import-ventas
+all: info up objects import-ventas count-ventas
 
 info:
 	@echo "This is a project for $(DATABASE)"
@@ -40,6 +41,10 @@ import-ventas:
 	@docker exec -it $(SERVICE_NAME) sh -c "if [ -f /sql_project/import_ventas.csv ]; then echo 'File exists, proceeding with import'; else echo 'File not found!'; exit 1; fi"
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --local-infile=1 -e "USE $(DATABASE); LOAD DATA LOCAL INFILE '/sql_project/import_ventas.csv' INTO TABLE VENTAS FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS;"
 
+count-ventas:
+	@echo "Counting records in VENTAS"
+	@docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SELECT COUNT(*) FROM VENTAS;"
+
 objects:
 	@echo "Create objects in database"
 	@for file in $(FILES); do \
@@ -50,6 +55,7 @@ objects:
 test-db:
 	@echo "Testing the tables"
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source ./sql_project/check_db_objects.sql"
+	@make count-ventas
 
 access-db:
 	@echo "Access to db-client"
@@ -60,3 +66,4 @@ down:
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --host $(HOST) --port $(PORT) -e "DROP DATABASE IF EXISTS $(DATABASE);"
 	@echo "Bye"
 	docker compose -f $(DOCKER_COMPOSE_FILE) down
+
