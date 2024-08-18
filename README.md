@@ -488,7 +488,7 @@ ___
 ## Lenguaje de Control de Transacciones (TCL): Aplicado a Store Procedures
 Se elaboraron 2 procedimientos con implementación de transacciones para la base de datos Wifly.
 
-`Nombre del procedimiento:` "actualizar_domicilio_ip_cliente"
+1. `Nombre del procedimiento:` "actualizar_domicilio_ip_cliente"
 + _Descripción_: Este procedimiento cumple realiza a través de un control de transacciones la modificación del domicilio y N° de la IP de un cliente. Esto generalmente acontece en simultáneo, dado que cuando un cliente se muda de domicilio cambia la IP por la ubicación.
 + _Parámetros de entrada_:
 <p>p_id_cliente INT,</p>
@@ -528,18 +528,195 @@ CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Del Valle', '192.168.1.60');
 <p>p_nro_factura VARCHAR(100),</p>
 <p>p_id_pago INT</p>
 
++ _CASOS_:
++ Exitoso sobre un Cliente ya registrado: Solo se inserta Factura.
+```sql
+CALL Wifly.insertar_cliente_y_factura(
+    1,                      -- p_id_cliente (Cliene existente)
+    1,                      -- p_id_equipo
+    1,                      -- p_id_abono
+    'Cliente Existente',    -- p_razon_social
+    'Direccion',            -- p_direccion
+    '123456789',            -- p_celular
+    '12345678',             -- p_dni
+    '192.168.1.120',        -- p_numero_ip
+    'cliente@ejemplo.com',  -- p_correo_electronico
+    '0001-00000051',        -- p_nro_factura
+    1                       -- p_id_pago
+);
+```
++ Abono no existe: No inserta Cliente ni Factura
+```sql
+CALL Wifly.insertar_cliente_y_factura(
+    51,                     -- p_id_cliente
+    1,                      -- p_id_equipo
+    999,                    -- p_id_abono (No existente)
+    'Nuevo Cliente',        -- p_razon_social
+    'Direccion',            -- p_direccion
+    '123456789',            -- p_celular
+    '12345678',             -- p_dni
+    '192.168.1.200',          -- p_numero_ip
+    'nuevo_cliente@ejemplo.com', -- p_correo_electronico
+    '0001-00000052',       -- p_nro_factura
+    1                       -- p_id_pago
+);
+```
++ Equipo no existe: No inserta Cliente ni Factura.
+```sql
+CALL Wifly.insertar_cliente_y_factura(
+    51,                      -- p_id_cliente
+    999,                    -- p_id_equipo (valor inexistente)
+    1,                      -- p_id_abono
+    'Nuevo Cliente',        -- p_razon_social
+    'Direccion',            -- p_direccion
+    '123456789',            -- p_celular
+    '12345678',             -- p_dni
+    '192.168.1.2',          -- p_numero_ip
+    'nuevo_cliente@ejemplo.com', -- p_correo_electronico
+    '0001-00000053',       -- p_nro_factura
+    1                       -- p_id_pago
+);
+```
++ N° Factura ya existe: Cliente insertado y Factura no incorporada
+```sql
+CALL Wifly.insertar_cliente_y_factura(
+    51,                     -- p_id_cliente
+    1,                      -- p_id_equipo
+    1,                      -- p_id_abono
+    'Cliente Nuevo',        -- p_razon_social
+    'Direccion',            -- p_direccion
+    '123456789',            -- p_celular
+    '12345678',             -- p_dni
+    '192.168.1.70',         -- p_numero_ip
+    'cliente_nuevo@ejemplo.com', -- p_correo_electronico
+    '0001-00000050',        -- p_nro_factura (Ya existente)
+    1                       -- p_id_pago
+);
+```
++ ID_PAGO No existente: Cliente incorporao y factura no generada.
+```sql
+CALL Wifly.insertar_cliente_y_factura(
+    52,                     -- p_id_cliente (Nuevo)
+    1,                      -- p_id_equipo
+    1,                      -- p_id_abono
+    'Nuevo Cliente',        -- p_razon_social
+    'Direccion',            -- p_direccion
+    '123456789',            -- p_celular
+    '12345678',             -- p_dni
+    '192.168.1.100',        -- p_numero_ip
+    'nuevo_cliente@ejemplo.com', -- p_correo_electronico
+    '0001-00000054',       -- p_nro_factura
+    99                     -- p_id_pago (valor que no existe)
+);
+```
++ Exitoso de Cliente y Factura
+```sql
+CALL Wifly.insertar_cliente_y_factura(
+    52,                      -- p_id_cliente (asumiendo que el cliente con id 5 no existe previamente)
+    1,                      -- p_id_equipo
+    1,                      -- p_id_abono
+    'Cliente Nuevo',        -- p_razon_social
+    'Direccion Nueva',      -- p_direccion
+    '123456789',            -- p_celular
+    '12345678',             -- p_dni
+    '192.168.1.101',          -- p_numero_ip
+    'cliente_nuevo@ejemplo.com', -- p_correo_electronico
+    '0001-00000051',       -- p_nro_factura
+    1
+  );
+```
 
++ _Mensajes de salida en casos insatisfactorios_:
+
+<p>:warning: 'SQL Error [1644] [45000]: El cliente no existe, deberá darlo de alta'</p>
+<p>:warning: 'SQL Error [1644] [45000]: La IP ya está en uso por otro cliente'</p>
 ___
 ## Roles, usuarios y privilegios
 
+___
+## Backup de la base de datos 
+Para efectuar el Backup de la base de datos Wifly se decide utilizar el método de terminal, puesto que resulta mucho más ágil y 
+___
+## Exportación de datos a CSV: para análisis de información en otros motores
+Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, puede solo ser necesario exportar los datos de las talas, para que los analistas puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, pueden elaborarse el siguiente Script con el "destino" al que se desea exportar cada carpeta en formato csv (en este caso se utiliza Uploads, que es el destino que por default establece Workbench en forma local):
+```sql
+SELECT * FROM AREAS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/areas.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
 
+SELECT * FROM TIPO_DE_PAGO
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/tipo_de_pago.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
 
-### CÓMO CORRER MI CÓDIGO:
-bash
-   make
+SELECT * FROM ABONOS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/abonos.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM PROVEEDORES
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/proveedores.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM EQUIPOS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/equipos.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM CLIENTES
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/clientes.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM EMPLEADOS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/empleados.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM FACTURAS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/facturas.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM OPERACIONES
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/operaciones.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM ASIGNACIONES
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/asignaciones.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM SUMNISTROS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/suministros.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM VENTAS
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ventas.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+```
+___
+### CÓMO CORRER MI CÓDIGO: bash
 Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
-- make si te da un error de que no conexion al socket, volver al correr el comando make
-- make test-db para mirar los datos de cada tabla
-- make access-db para acceder a la base de datos
-- make backup-db para realizar un backup de mi base de datos
-- make clean-db limpiar la base de datos
+- `make` si te da un error de que no conexion al socket, volver al correr el comando make.
+- `make test-db` para mirar los datos de cada tabla.
+- `make access-db` para acceder a la base de datos.
+- `make backup-db` para realizar un backup de mi base de datos.
+- `make clean-db` limpiar la base de datos.
