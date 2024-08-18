@@ -489,7 +489,7 @@ ___
 Se elaboraron 2 procedimientos con implementación de transacciones para la base de datos Wifly.
 
 1. `Nombre del procedimiento:` "actualizar_domicilio_ip_cliente"
-+ _Descripción_: Este procedimiento cumple realiza a través de un control de transacciones la modificación del domicilio y N° de la IP de un cliente. Esto generalmente acontece en simultáneo, dado que cuando un cliente se muda de domicilio cambia la IP por la ubicación.
++ _Descripción_: Este procedimiento realiza a través de un control de transacciones la modificación del domicilio y N° de la IP de un cliente. Esto generalmente acontece en simultáneo, dado que cuando un cliente se muda de domicilio cambia la IP por la ubicación.
 + _Parámetros de entrada_:
 <p>p_id_cliente INT,</p>
 <p>p_nueva_direccion VARCHAR(100),</p>
@@ -726,7 +726,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 ```
 ___
-### CÓMO CORRER MI CÓDIGO: bash
+### Como correr código en Codespace Github: con bash
 Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
 - `make` si te da un error de que no conexion al socket, volver al correr el comando make.
 - `make test-db` para mirar los datos de cada tabla.
