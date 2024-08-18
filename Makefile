@@ -20,7 +20,7 @@ FILES=vistas funciones stored_procedures triggers
 
 .PHONY: all up objects test-db access-db down import-ventas count-ventas count-operaciones
 
-all: info up objects import-ventas count-ventas count-operaciones
+all: info up objects import-ventas
 
 info:
 	@echo "This is a project for $(DATABASE)"
