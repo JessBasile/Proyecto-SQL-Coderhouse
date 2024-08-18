@@ -487,8 +487,34 @@ SELECT * FROM ABONOS;
 ___
 ## Lenguaje de Control de Transacciones (TCL): Aplicado a Store Procedures
 Se elaboraron 2 procedimientos con implementación de transacciones para la base de datos Wifly.
-1. `Nombre del procedimiento:` "insertar_cliente_y_factura"
-+ _Descripción_: Este procedimiento 
+
+`Nombre del procedimiento:` "actualizar_domicilio_ip_cliente"
++ _Descripción_: Este procedimiento cumple realiza a través de un control de transacciones la modificación del domicilio y N° de la IP de un cliente. Esto generalmente acontece en simultáneo, dado que cuando un cliente se muda de domicilio cambia la IP por la ubicación.
++ _Parámetros de entrada_:
+<p>p_id_cliente INT,</p>
+<p>p_nueva_direccion VARCHAR(100),</p>
+<p>p_nueva_ip VARCHAR(50)</p>
+
++ _CASOS_:
++ Cliente no exite:
+```sql
+CALL Wifly.actualizar_domicilio_ip_cliente(51, 'Av. Nueva Dirección 999', '192.168.1.50');
+```
++ N° de IP en uso (modifica domicilio, pero no N° de IP)
+```sql
+CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Nueva Dirección 100', '192.168.1.2');
+```
++ Exitoso (modifica ip y domicilio)
+```sql
+CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Del Valle', '192.168.1.60');
+```
++ _Mensajes de salida en casos insatisfactorios_:
+
+<p>:warning: 'SQL Error [1644] [45000]: El cliente no existe, deberá darlo de alta'</p>
+<p>:warning: 'SQL Error [1644] [45000]: La IP ya está en uso por otro cliente'</p>
+
+2. `Nombre del procedimiento:` "insertar_cliente_y_factura"
++ _Descripción_: Este procedimiento sirve para insertar un nuevo cliente (en caso que no exista previamente), y a su vez, insertar una factura asociada a ese cliente.
 + _Parámetros de entrada_:
 <p>p_id_cliente INT,</p>
 <p>p_id_equipo INT,</p>
@@ -502,19 +528,18 @@ Se elaboraron 2 procedimientos con implementación de transacciones para la base
 <p>p_nro_factura VARCHAR(100),</p>
 <p>p_id_pago INT</p>
 
-+ _Ejemplo de su uso_:
-```sql
-CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
-```
-+ _Mensajes de salida en caso insatisfactorio_:
 
-<p>:warning: 'La marca del equipo no puede estar vacía'</p>
-<p>:warning: 'La marca del equipo no puede tener más de 100 caracteres'</p>
-<p>:warning: 'El modelo del equipo no puede estar vacío'</p>
-<p>:warning: 'El modelo del equipo no puede tener más de 100 caracteres'</p>
-<p>:warning: 'El costo del equipo debe ser mayor que 28.000'</p>
-<p>:warning: 'El precio del equipo debe ser mayor que su costo'</p>
-<p>:warning: 'La cantidad debe ser mayor que 0'</p>
-<p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
 ___
 ## Roles, usuarios y privilegios
+
+
+
+### CÓMO CORRER MI CÓDIGO:
+bash
+   make
+Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
+- make si te da un error de que no conexion al socket, volver al correr el comando make
+- make test-db para mirar los datos de cada tabla
+- make access-db para acceder a la base de datos
+- make backup-db para realizar un backup de mi base de datos
+- make clean-db limpiar la base de datos
