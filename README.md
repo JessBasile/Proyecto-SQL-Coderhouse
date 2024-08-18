@@ -485,4 +485,36 @@ SELECT @id_abono AS id_nuevo_abono;
 SELECT * FROM ABONOS;
 ```
 ___
+## Lenguaje de Control de Transacciones (TCL): Aplicado a Store Procedures
+Se elaboraron 2 procedimientos con implementación de transacciones para la base de datos Wifly.
+1. `Nombre del procedimiento:` "insertar_cliente_y_factura"
++ _Descripción_: Este procedimiento 
++ _Parámetros de entrada_:
+<p>p_id_cliente INT,</p>
+<p>p_id_equipo INT,</p>
+<p>p_id_abono INT,</p>
+<p>p_razon_social VARCHAR(100),</p>
+<p>p_direccion VARCHAR(100),</p>
+<p>p_celular VARCHAR(100),</p>
+<p>p_dni VARCHAR(50),</p>
+<p>p_numero_ip VARCHAR(50),</p>
+<p>p_correo_electronico VARCHAR(100),</p>
+<p>p_nro_factura VARCHAR(100),</p>
+<p>p_id_pago INT</p>
+
++ _Ejemplo de su uso_:
+```sql
+CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
+```
++ _Mensajes de salida en caso insatisfactorio_:
+
+<p>:warning: 'La marca del equipo no puede estar vacía'</p>
+<p>:warning: 'La marca del equipo no puede tener más de 100 caracteres'</p>
+<p>:warning: 'El modelo del equipo no puede estar vacío'</p>
+<p>:warning: 'El modelo del equipo no puede tener más de 100 caracteres'</p>
+<p>:warning: 'El costo del equipo debe ser mayor que 28.000'</p>
+<p>:warning: 'El precio del equipo debe ser mayor que su costo'</p>
+<p>:warning: 'La cantidad debe ser mayor que 0'</p>
+<p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
+___
 ## Roles, usuarios y privilegios
