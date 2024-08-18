@@ -626,10 +626,12 @@ CALL Wifly.insertar_cliente_y_factura(
   );
 ```
 
-+ _Mensajes de salida en casos insatisfactorios_:
++ _Mensajes de salida en casos insatisfactorios (totales o parciales)_:
 
-<p>:warning: 'SQL Error [1644] [45000]: El cliente no existe, deberá darlo de alta'</p>
-<p>:warning: 'SQL Error [1644] [45000]: La IP ya está en uso por otro cliente'</p>
+<p>:warning: 'SQL Error [1644] [45000]: El tipo de abono especificado no existe.'</p>
+<p>:warning: 'SQL Error [1644] [45000]: El equipo especificado no existe.'</p>
+<p>:warning: 'SQL Error [1644] [45000]: El número de factura ya existe.'</p>
+<p>:warning: 'SQL Error [1644] [45000]: El tipo de pago especificado no existe.'</p>
 ___
 ## Roles, usuarios y privilegios
 
