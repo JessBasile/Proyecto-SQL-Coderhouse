@@ -18,9 +18,9 @@ USER=${MYSQL_USER}
 
 FILES=vistas funciones stored_procedures triggers
 
-.PHONY: all up objects test-db access-db down import-ventas
+.PHONY: all up objects test-db access-db down import-ventas count-ventas count-operaciones
 
-all: info up objects import-ventas
+all: info up objects import-ventas count-ventas count-operaciones
 
 info:
 	@echo "This is a project for $(DATABASE)"
@@ -43,7 +43,11 @@ import-ventas:
 
 count-ventas:
 	@echo "Counting records in VENTAS"
-	@docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SELECT COUNT(*) FROM VENTAS;"
+	@docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SELECT CONCAT('VENTAS: ', COUNT(*)) AS Total_Ventas FROM VENTAS;"
+
+count-operaciones:
+	@echo "Counting records in OPERACIONES"
+	@docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); SELECT CONCAT('OPERACIONES: ', COUNT(*)) AS Total_Operaciones FROM OPERACIONES;"
 
 objects:
 	@echo "Create objects in database"
@@ -56,6 +60,7 @@ test-db:
 	@echo "Testing the tables"
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source ./sql_project/check_db_objects.sql"
 	@make count-ventas
+	@make count-operaciones
 
 access-db:
 	@echo "Access to db-client"
@@ -66,3 +71,4 @@ down:
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) --host $(HOST) --port $(PORT) -e "DROP DATABASE IF EXISTS $(DATABASE);"
 	@echo "Bye"
 	docker compose -f $(DOCKER_COMPOSE_FILE) down
+
