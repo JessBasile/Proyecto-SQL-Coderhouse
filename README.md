@@ -632,6 +632,7 @@ CALL Wifly.insertar_cliente_y_factura(
 <p>:warning: 'SQL Error [1644] [45000]: El equipo especificado no existe.'</p>
 <p>:warning: 'SQL Error [1644] [45000]: El número de factura ya existe.'</p>
 <p>:warning: 'SQL Error [1644] [45000]: El tipo de pago especificado no existe.'</p>
+
 ___
 ## Roles, usuarios y privilegios
 
