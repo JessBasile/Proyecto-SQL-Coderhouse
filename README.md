@@ -669,7 +669,7 @@ ___
 Para efectuar el Backup de la base de datos Wifly se decide utilizar el método de terminal, puesto que resulta mucho más ágil y 
 ___
 ## Exportación de datos a CSV: para análisis de información en otros motores
-Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, puede solo ser necesario exportar los datos de las talas, para que los analistas puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, pueden elaborarse el siguiente Script con el "destino" al que se desea exportar cada archivo en formato csv (en este caso se utiliza la carpeta Uploads, que es el destino que por default establece Workbench en forma local):
+Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, puede solo ser necesario exportar los datos de las tablas, para que los analistas puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, pueden elaborarse el siguiente Script con el "destino" al que se desea exportar cada archivo en formato csv (en este caso se utiliza la carpeta Uploads, que es el destino que por default establece Workbench en forma local):
 ```sql
 SELECT * FROM AREAS
 INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/areas.csv'
