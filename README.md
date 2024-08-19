@@ -560,7 +560,7 @@ CALL Wifly.insertar_cliente_y_factura(
     '192.168.1.120',        -- p_numero_ip
     'cliente@ejemplo.com',  -- p_correo_electronico
     '0001-00000051',        -- p_nro_factura
-    1                       -- p_id_pago
+    1                       -- p_id_pago (Nueva)
 );
 ```
 + Abono no existe: No inserta Cliente ni Factura
@@ -583,7 +583,7 @@ CALL Wifly.insertar_cliente_y_factura(
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
     51,                      -- p_id_cliente
-    999,                    -- p_id_equipo (valor inexistente)
+    999,                    -- p_id_equipo (Inexistente)
     1,                      -- p_id_abono
     'Nuevo Cliente',        -- p_razon_social
     'Direccion',            -- p_direccion
@@ -624,7 +624,7 @@ CALL Wifly.insertar_cliente_y_factura(
     '192.168.1.100',        -- p_numero_ip
     'nuevo_cliente@ejemplo.com', -- p_correo_electronico
     '0001-00000054',       -- p_nro_factura
-    99                     -- p_id_pago (valor que no existe)
+    99                     -- p_id_pago (Inexistente)
 );
 ```
 + Exitoso de Cliente y Factura
