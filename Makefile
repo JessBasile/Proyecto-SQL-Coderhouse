@@ -67,3 +67,5 @@ down:
 export:
 	@echo "Exporting tables to CSV files"
 	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source ./sql_project/export.sql"
+	@echo "Copying CSV files from container to local directory"
+	docker cp $(SERVICE_NAME):/Uploads/ ./sql_project/export_csv/
