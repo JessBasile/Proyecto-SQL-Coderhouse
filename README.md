@@ -630,7 +630,7 @@ CALL Wifly.insertar_cliente_y_factura(
 + Exitoso de Cliente y Factura
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    52,                      -- p_id_cliente (asumiendo que el cliente con id 5 no existe previamente)
+    52,                      -- p_id_cliente (Nuevo)
     1,                      -- p_id_equipo
     1,                      -- p_id_abono
     'Cliente Nuevo',        -- p_razon_social
@@ -639,7 +639,7 @@ CALL Wifly.insertar_cliente_y_factura(
     '12345678',             -- p_dni
     '192.168.1.101',          -- p_numero_ip
     'cliente_nuevo@ejemplo.com', -- p_correo_electronico
-    '0001-00000051',       -- p_nro_factura
+    '0001-00000051',       -- p_nro_factura (Nueva)
     1
   );
 ```
