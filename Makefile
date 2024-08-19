@@ -92,3 +92,6 @@ export:
 	docker cp $(SERVICE_NAME):/var/lib/mysql-files/asignaciones.csv ./sql_project/export_csv/asignaciones.csv
 	docker cp $(SERVICE_NAME):/var/lib/mysql-files/suministros.csv ./sql_project/export_csv/suministros.csv
 	docker cp $(SERVICE_NAME):/var/lib/mysql-files/ventas.csv ./sql_project/export_csv/ventas.csv
+	@echo "Committing and pushing CSV files to GitHub"
+	# Agregar, hacer commit y push de los archivos al repositorio de GitHub
+	cd sql_project/export_csv && git add . && git commit -m "Update CSV files" && git push origin main
