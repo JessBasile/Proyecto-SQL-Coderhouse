@@ -15,7 +15,7 @@ DATABASE_POPULATION=./sql_project/population.sql
 
 FILES=vistas funciones stored_procedures triggers user_roles
 
-.PHONY: all up objects test-db access-db down count-ventas count-operaciones
+.PHONY: all up objects test-db access-db down count-ventas count-operaciones export
 
 all: info up objects
 
@@ -64,3 +64,19 @@ down:
 	@echo "Bye"
 	docker compose -f $(DOCKER_COMPOSE_FILE) down
 
+export:
+	@echo "Exporting tables to CSV"
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "\
+	USE $(DATABASE); \
+	SELECT * FROM AREAS INTO OUTFILE '/export_csv/areas.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM TIPO_DE_PAGO INTO OUTFILE '/export_csv/tipo_de_pago.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM ABONOS INTO OUTFILE '/export_csv/abonos.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM PROVEEDORES INTO OUTFILE '/export_csv/proveedores.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM EQUIPOS INTO OUTFILE '/export_csv/equipos.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM CLIENTES INTO OUTFILE '/export_csv/clientes.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM EMPLEADOS INTO OUTFILE '/export_csv/empleados.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM FACTURAS INTO OUTFILE '/export_csv/facturas.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM OPERACIONES INTO OUTFILE '/export_csv/operaciones.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM ASIGNACIONES INTO OUTFILE '/export_csv/asignaciones.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM SUMINISTROS INTO OUTFILE '/export_csv/suministros.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'; \
+	SELECT * FROM VENTAS INTO OUTFILE '/export_csv/ventas.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';"
