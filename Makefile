@@ -66,6 +66,29 @@ down:
 
 export:
 	@echo "Exporting tables to CSV files"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source ./sql_project/export.sql"
-	@echo "Copying CSV files from container to local directory"
-	docker cp $(SERVICE_NAME):/Uploads/ ./sql_project/export_csv/
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "USE $(DATABASE); \
+	SELECT * FROM AREAS INTO OUTFILE '/var/lib/mysql-files/areas.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM TIPO_DE_PAGO INTO OUTFILE '/var/lib/mysql-files/tipo_de_pago.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM ABONOS INTO OUTFILE '/var/lib/mysql-files/abonos.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM PROVEEDORES INTO OUTFILE '/var/lib/mysql-files/proveedores.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM EQUIPOS INTO OUTFILE '/var/lib/mysql-files/equipos.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM CLIENTES INTO OUTFILE '/var/lib/mysql-files/clientes.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM EMPLEADOS INTO OUTFILE '/var/lib/mysql-files/empleados.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM FACTURAS INTO OUTFILE '/var/lib/mysql-files/facturas.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM OPERACIONES INTO OUTFILE '/var/lib/mysql-files/operaciones.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM ASIGNACIONES INTO OUTFILE '/var/lib/mysql-files/asignaciones.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM SUMINISTROS INTO OUTFILE '/var/lib/mysql-files/suministros.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'; \
+	SELECT * FROM VENTAS INTO OUTFILE '/var/lib/mysql-files/ventas.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n';"
+	@echo "Copying CSV files from container to host"
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/areas.csv ./sql_project/export_csv/areas.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/tipo_de_pago.csv ./sql_project/export_csv/tipo_de_pago.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/abonos.csv ./sql_project/export_csv/abonos.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/proveedores.csv ./sql_project/export_csv/proveedores.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/equipos.csv ./sql_project/export_csv/equipos.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/clientes.csv ./sql_project/export_csv/clientes.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/empleados.csv ./sql_project/export_csv/empleados.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/facturas.csv ./sql_project/export_csv/facturas.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/operaciones.csv ./sql_project/export_csv/operaciones.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/asignaciones.csv ./sql_project/export_csv/asignaciones.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/suministros.csv ./sql_project/export_csv/suministros.csv
+	docker cp $(SERVICE_NAME):/var/lib/mysql-files/ventas.csv ./sql_project/export_csv/ventas.csv
