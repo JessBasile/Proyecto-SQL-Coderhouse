@@ -257,7 +257,7 @@ Los Comandos utilizados para la cargar de datos desde archivos CSV fue la siguie
 LOAD DATA LOCAL INFILE 'ruta/al/archivo/nombre_archivo.csv'
 INTO TABLE nombre_tabla
 FIELDS TERMINATED BY ',' 
-LINES TERMINATED BY '\n'
+LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES;
 ```
 En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco D:/Documents.
