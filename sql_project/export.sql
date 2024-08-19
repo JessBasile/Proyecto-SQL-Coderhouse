@@ -1,74 +1,74 @@
 USE Wifly;
 
--- Exportar tablas a CSV en el directorio especificado
+-- EXPORTACIÓN CSV
 SELECT * FROM AREAS
-INTO OUTFILE 'sql_project/export_csv/areas.csv'
+INTO OUTFILE '/Uploads/areas.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM TIPO_DE_PAGO
-INTO OUTFILE 'sql_project/export_csv/tipo_de_pago.csv'
+INTO OUTFILE '/Uploads/tipo_de_pago.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM ABONOS
-INTO OUTFILE 'sql_project/export_csv/abonos.csv'
+INTO OUTFILE '/Uploads/abonos.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM PROVEEDORES
-INTO OUTFILE 'sql_project/export_csv/proveedores.csv'
+INTO OUTFILE '/Uploads/proveedores.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM EQUIPOS
-INTO OUTFILE 'sql_project/export_csv/equipos.csv'
+INTO OUTFILE '/Uploads/equipos.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM CLIENTES
-INTO OUTFILE 'sql_project/export_csv/clientes.csv'
+INTO OUTFILE '/Uploads/clientes.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM EMPLEADOS
-INTO OUTFILE 'sql_project/export_csv/empleados.csv'
+INTO OUTFILE '/Uploads/empleados.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM FACTURAS
-INTO OUTFILE 'sql_project/export_csv/facturas.csv'
+INTO OUTFILE '/Uploads/facturas.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM OPERACIONES
-INTO OUTFILE 'sql_project/export_csv/operaciones.csv'
+INTO OUTFILE '/Uploads/operaciones.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM ASIGNACIONES
-INTO OUTFILE 'sql_project/export_csv/asignaciones.csv'
+INTO OUTFILE '/Uploads/asignaciones.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM SUMINISTROS
-INTO OUTFILE 'sql_project/export_csv/suministros.csv'
+INTO OUTFILE '/Uploads/suministros.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 
 SELECT * FROM VENTAS
-INTO OUTFILE 'sql_project/export_csv/ventas.csv'
+INTO OUTFILE '/Uploads/ventas.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
