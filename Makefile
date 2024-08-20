@@ -72,3 +72,8 @@ export:
 	@echo "Committing and pushing CSV files to GitHub"
 	# Agregar, hacer commit y push de los archivos al repositorio de GitHub
 	cd sql_project/export_csv && git add . && git commit -m "Update CSV files" && git push origin main
+
+backup:
+	@echo "Creating backup ..."
+	docker exec $(SERVICE_NAME) sh -c 'mysqldump -u${USER} -p${PASSWORD} --host $(HOST) --port 3306 --routines --databases $(DATABASE) > ./backup_Wifly.sql'
+	docker cp $(SERVICE_NAME):/backup_Wifly.sql ./sql_project/dump/backup_Wifly.sql
