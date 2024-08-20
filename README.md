@@ -671,13 +671,14 @@ ___
 ## Roles, usuarios y privilegios
 
 La base de datos Wifly cuenta con 4 roles, 5 usuarios y 5 asignaciones de los roles a los distintos usuarios. A continuación, se detalla explicación de cada uno:
-###Roles:
+***Roles:***
+
 `administrador_role:` se trata de un rol que otorga todos los privilegios (select, insert, update & delete) sobre la base de datos Wifly en su totalidad, y además, permite otorgar esos mismos privilegios a otros usuarios o roles.
 `admin_gral_role:` es un rol cuyo uso es orientado al sector de administración que tiene todos los permisos excepto eliminar registros (delete) sobre `toda` la base de datos Wifly, dado que, eliminar un registro histórico requiere supervisión previa para preservar la integridad de la base de datos, asi como también permite mejorar la seguridad, control, consistencia, y cumplimiento normativo (en cuanto a la preservación de documentación impositiva por el plazo requerido legalmente). Además, fomenta el uso de prácticas más seguras.
 `admin_compras_role:` es un rol orientado al sector de administrativo de compras que posee todos los permisos excepto eliminar registros (delete) únicamente sobre las tablas Proveedores, Suministros y Equipos de la base de datos Wifly, puesto que, al igual que el rol anterior, eliminar un registro histórico requiere supervisión previa para preservar la integridad de la base de datos, la seguridad, control, consistencia, y cumplimiento normativo. Asimismo, fomenta el uso de prácticas más seguras.
 `visualizador_role:` es un rol creado con la finalidad de otorgar privilegios únicamente de lectura (select) con acceso de visualización a determinadas tablas específicas (ventas, facturas, empleados y areas). La finalidad de este rol es limitar el acceso solo a cierta información para casos específicos como: acceso del estudio contable, auditorias de organismos de contralor, etc.
 
-###Usuarios:
+***Usuarios:***
 `admin_compras:` es un usuario creado para el sector de compras, cuya password es 'compras123', posee una configuración con una política de seguridad que permite 3 intentos fallidos de inicio de sesión antes de bloquear la cuenta temporalmente. El bloqueo de la misma, se encuentra configurado por 3 minútos. Un vez transcurrido ese período de tiempo, el usuario podrá
 volver a intentar ingresar normalmente.
 `admin_general:` es un usuario diseñado para el sector de administración, cuya password es 'general456'. Al igual que el otro usuario, posee una configuración con una política de seguridad que permite 3 intentos fallidos de inicio de sesión antes de bloquear la cuenta temporalmente. El bloqueo de la misma, se encuentra configurado por 3 minútos. Una vez transcurrido ese período de tiempo, el usuario podrá volver a intentar ingresar normalmente.
@@ -685,7 +686,7 @@ volver a intentar ingresar normalmente.
 `estudio_contable:` es un usuario para uso exclusivo por parte del asesor contable externo de la organización (por el cual se tiene alta confianza), su password es 'wiflyestudio', y al igual que los demás usuarios se encuentra configurado con un bloqueo luego de 3 intentos fallidos y 3 minútos para reestablecer el integreso. 
 `auditoria:` se trata de un usuario para uso esporádico, cuya password es 'wifly123' y tiene una caducidad a los 180 días. Se encuentra destinado, para casos de auditorias externas (generalmente por organismos de recaudación impositiva en casos requeridos). 
 
-###Asignación de privilegios:
+***Asignación de privilegios:***
 + El rol administrador_role es asignado al usuario administrador: por lo tanto, es un super-usuario con todos los privilegios, que incluso tiene la potestad
 de otorgar privilegios a otros usuarios.
 + El rol admin_gral_role es asignado al usuario admin_general: El usuario de administración general tiene los privilegios previstos en el rol del sector administración
@@ -693,7 +694,7 @@ general.
 + El rol  visualizador_role es asignado a dos usuarios distintos, por un lado al usuario auditoria y a estudio_contable, dado que las caracteristicas del rol 
 son ideales para ese tipo de usuarios. Con la diferencia que el usuario auditoria tiene un período limitado, y el del asesor contable no.
 
-###Testeo de los usuarios y privilegios:
+***Testeo de los usuarios y privilegios:***
 Los distintos usuarios fueron testeados para corroborar que los roles con los privilegios asignados funcionan adecuadamente. Para ello, se procede a editar la conexión en el
 localhost, con el ingreso del usuario y contraseña verificando una proeba de conexión. Previamente a la verificación, la propiedad del driver `allowPublicKeyRetrieval` debe 
 tener un valor `TRUE` para que permita la verificación.
