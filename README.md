@@ -355,6 +355,12 @@ WHERE `Fecha` > '2023-12-31';
 ```sql
 SELECT * FROM view_gerencia_ganancia_equipos;
 ```
+`Resumen de vistas en DBeaver:`
+
+<p style="text-align: center;">
+    <img alt="vistas" width="200" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/vistas.png?raw=true">
+</p>
+
 ___
 ## Triggers
 
