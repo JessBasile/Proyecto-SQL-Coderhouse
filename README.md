@@ -781,79 +781,14 @@ ___
 Para efectuar el Backup de la base de datos Wifly se decide utilizar el método de terminal, puesto que resulta mucho más ágil y 
 ___
 ## Exportación de datos a CSV: para análisis de información en otros motores
-Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, puede solo ser necesario exportar los datos de las tablas, para que los analistas puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, pueden elaborarse el siguiente Script con el "destino" al que se desea exportar cada archivo en formato csv (en este caso se utiliza la carpeta Uploads, que es el destino que por default establece Workbench en forma local):
+Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, resulta más cómodo solo exportar los datos de las tablas, para que los analistas o consultores externos puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, puede elaborarse una exportación automatizada a través del comando `make export` cuya configuración se realizó en el archivo `Makefile` y requirió permisos en `docker_compose.yml`. El funcionamiento, es a través de un Script `export.sql` con el "destino" al que se desea exportar cada archivo en formato csv (la carpeta de destino `export_csv`, es creada en el momento que se ejecuta el comando make export).
+_El formato del Script es el siguiente (adaptado a cada tabla):_
 ```sql
-SELECT * FROM AREAS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/areas.csv'
+SELECT * FROM 'Nombre de la Tabla'
+INTO OUTFILE '/sql_project/export_csv/nombre_de_la_tabla.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM TIPO_DE_PAGO
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/tipo_de_pago.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM ABONOS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/abonos.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM PROVEEDORES
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/proveedores.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM EQUIPOS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/equipos.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM CLIENTES
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/clientes.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM EMPLEADOS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/empleados.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM FACTURAS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/facturas.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM OPERACIONES
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/operaciones.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM ASIGNACIONES
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/asignaciones.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM SUMNISTROS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/suministros.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
-
-SELECT * FROM VENTAS
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ventas.csv'
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\r\n';
 ```
 ___
 ### Como correr código en Codespace Github: con bash
@@ -861,5 +796,6 @@ Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
 - `make` si te da un error de que no conexion al socket, volver al correr el comando make.
 - `make test-db` para mirar los datos de cada tabla.
 - `make access-db` para acceder a la base de datos.
-- `make backup-db` para realizar un backup de mi base de datos.
+- `make backup` para realizar un backup de mi base de datos.
+- `make export` para efectuar la exportación de todas las tablas en distintos archivos tipo csv, dentro de una carpeta denominada `export_csv`.
 - `make clean-db` limpiar la base de datos.
