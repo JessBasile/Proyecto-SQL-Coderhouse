@@ -358,7 +358,7 @@ SELECT * FROM view_gerencia_ganancia_equipos;
 `Resumen de vistas en DBeaver:`
 
 <p style="text-align: center;">
-    <img alt="vistas" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/vistas.png?raw=true">
+    <img alt="vistas" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/vistas.png?raw=true" style="display: block; margin: auto;">
 </p>
 
 ___
