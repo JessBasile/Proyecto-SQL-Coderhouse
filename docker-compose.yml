@@ -6,6 +6,7 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    command: --secure-file-priv=/sql_project
     volumes:
       # - ./mysql:/var/lib/mysql
       - ./sql_project:/sql_project
