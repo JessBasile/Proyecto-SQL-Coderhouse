@@ -65,15 +65,15 @@ down:
 	docker compose -f $(DOCKER_COMPOSE_FILE) down
 
 
-export:
-
-	@echo "Exporting tables to CSV files"
-	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source /sql_project/export.sql";
-	@echo "Committing and pushing CSV files to GitHub"
-	# Agregar, hacer commit y push de los archivos al repositorio de GitHub
-	cd sql_project/export_csv && git add . && git commit -m "Update CSV files" && git push origin main
-
 backup:
 	@echo "Creating backup ..."
 	docker exec $(SERVICE_NAME) sh -c 'mysqldump -u${USER} -p${PASSWORD} --host $(HOST) --port 3306 --routines --databases $(DATABASE) > ./backup_Wifly.sql'
+	cd sql_project && mkdir dump
 	docker cp $(SERVICE_NAME):/backup_Wifly.sql ./sql_project/dump/backup_Wifly.sql
+
+
+export:
+
+	@echo "Exporting tables to CSV files"
+	cd sql_project && mkdir export_csv
+	docker exec -it $(SERVICE_NAME) mysql -u$(USER) -p$(PASSWORD) -e "source /sql_project/export.sql";
