@@ -782,6 +782,7 @@ Para efectuar el Backup de la base de datos Wifly se decide utilizar el método 
 ___
 ## Exportación de datos a CSV: para análisis de información en otros motores
 Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, resulta más cómodo solo exportar los datos de las tablas, para que los analistas o consultores externos puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, puede elaborarse una exportación automatizada a través del comando `make export` cuya configuración se realizó en el archivo `Makefile` y requirió permisos en `docker_compose.yml`. El funcionamiento, es a través de un Script `export.sql` con el "destino" al que se desea exportar cada archivo en formato csv (la carpeta de destino `export_csv`, es creada en el momento que se ejecuta el comando make export).
+
 _El formato del Script es el siguiente (adaptado a cada tabla):_
 ```sql
 SELECT * FROM 'Nombre de la Tabla'
