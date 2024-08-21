@@ -717,6 +717,7 @@ A continuación se muestran las distintas pruebas realizadas con los distintos u
 `administrador:` no tiene limitaciones en cuanto a los privilegios, por lo tanto todas las pruebas efectuadas fueron satisfactorias.
 
 `admin_general:` todos los privilegios asignados funcionan exitosamente, y al intentar realizar un delete se obtuvo la siguiente repuesta:
+
 _Intento de eliminación de un registro:_
 
 ```sql
@@ -733,6 +734,7 @@ Razón:
  SQL Error [1142] [42000]: DELETE command denied to user 'admin_general'@'localhost' for table 'areas'
 ```
 `admin_compras:` todos los privilegios asignados funcionan exitosamente, y al intentar realizar un delete se obtuvo la siguiente repuesta:
+
 _Intento de eliminación de un registro:_
 ```sql
 USE Wifly;
@@ -748,6 +750,7 @@ Razón:
  SQL Error [1142] [42000]: DELETE command denied to user 'admin_compras'@'localhost' for table 'equipos'
 ```
 `estudio_contable:` el privilegio de observar o efectuar consultas funciona exitosamente, y al intentar realizar una inserción se obtuvo la siguiente repuesta:
+
 _Intento de eliminación de un registro:_
 ```sql
 USE Wifly;
@@ -763,6 +766,7 @@ Razón:
  SQL Error [1142] [42000]: DELETE command denied to user 'estudio_contable'@'localhost' for table 'ventas'
 ```
 `auditoria:` el privilegio de observar o efectuar consultas funciona exitosamente, y al intentar realizar una inserción se obtuvo la siguiente repuesta:
+
 _Intento de eliminación de un registro:_
 ```sql
 USE Wifly;
