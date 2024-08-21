@@ -540,7 +540,8 @@ CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Del Valle', '192.168.1.60');
 2. `Nombre del procedimiento:` "insertar_cliente_y_factura"
 + _Descripción_: Este procedimiento sirve para insertar un nuevo cliente (en caso que no exista previamente), y a su vez, insertar una factura asociada a ese cliente.
 + _Parámetros de entrada_:
-<p>p_id_cliente INT,</p>
+
+> p_id_cliente INT,
 <p>p_id_equipo INT,</p>
 <p>p_id_abono INT,</p>
 <p>p_razon_social VARCHAR(100),</p>
