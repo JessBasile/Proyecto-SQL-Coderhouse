@@ -689,7 +689,7 @@ volver a intentar ingresar normalmente.
 
 `admin_general:` es un usuario diseñado para el sector de administración, cuya password es 'general456'. Al igual que el otro usuario, posee una configuración con una política de seguridad que permite 3 intentos fallidos de inicio de sesión antes de bloquear la cuenta temporalmente. El bloqueo de la misma, se encuentra configurado por 3 minútos. Una vez transcurrido ese período de tiempo, el usuario podrá volver a intentar ingresar normalmente.
 
-`administrador:` es un usuario destinado para su uso por parte del CEO y la Gerencia de administración, cuya password es 'administrador789' y posee una configuración similar a los anteriores usuarios con un bloqueo del usuario luego de 3 intentos fallidos y 3 minútos para reestablecer y poder volver a intentar ingresar. Si bien, este usuario podría prescindir del bloqueo, ya que se supone que solo es utilizado por altos mandos de la compañia, implementarlo es una medida preventiva ante intentos de ataques para hackeo del usuario o accesos no autorizados.
+`administrador:` es un usuario destinado para su uso por parte del CEO y la Gerencia de administración, cuya password es 'administrador789' y posee una configuración similar a los anteriores usuarios con un bloqueo del usuario luego de 3 intentos fallidos y 3 minútos para reestablecer y poder volver a intentar ingresar. Si bien, este usuario podría prescindir del bloqueo, ya que se supone que solo es utilizado por altos mandos de la compañia, implementarlo es una medida preventiva ante potenciales ataques de hackeo al usuario o accesos no autorizados.
 
 `estudio_contable:` es un usuario para uso exclusivo por parte del asesor contable externo de la organización (por el cual se tiene alta confianza), su password es 'wiflyestudio', y al igual que los demás usuarios se encuentra configurado con un bloqueo luego de 3 intentos fallidos y 3 minútos para reestablecer el integreso. 
 
@@ -705,7 +705,7 @@ son ideales para ese tipo de usuarios. Con la diferencia que el usuario auditori
 
 ***Testeo de los usuarios y privilegios:***
 Los distintos usuarios fueron testeados para corroborar que los roles con los privilegios asignados funcionan adecuadamente. Para ello, se procede a editar la conexión en el
-localhost, con el ingreso del usuario y contraseña verificando una proeba de conexión. Previamente a la verificación, la propiedad del driver `allowPublicKeyRetrieval` debe 
+localhost, con el ingreso del usuario y contraseña verificando una prueba de conexión. Previamente a la verificación, la propiedad del driver `allowPublicKeyRetrieval` debe 
 tener un valor `TRUE` para que permita la verificación.
 
 <p style="text-align: center;">
