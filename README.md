@@ -457,13 +457,13 @@ Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con paráme
 + _Descripción_: Este procedimiento se ejecuta al momento de insertar un nuevo equipo dentro de la tabla pertinente. En caso que la inserción no cumpla con los requisitos necesarios, el procedimiento expondrá un mensaje de error justificando el motivo por el cual no puede incorporarse ese nuevo producto. Este procedimiento **solo** cuenta con parámetros de entrada.
 + _Parámetros de entrada_:
 > marca VARCHAR(100),
-
+> 
 > modelo VARCHAR(100),
-
+> 
 > costo_equipo INT,
-
+> 
 > precio_equipo INT,
-
+> 
 > cantidad INT
 
 + _Ejemplo de su uso_:
@@ -484,9 +484,11 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 2. `Nombre del procedimiento:` "registrar_abono"
 + _Descripción_: Este procedimiento permite registrar un nuevo abono en la tabla pertinente de la base de datos Wifly, siempre que cumpla con el requisito de ser mayor a 40MB, costo mayor a 16 mil y precio mayor a 36 mil. Si cumple con las condiciones se insertan los nuevos datos y devuelve el id_nuevo_abono, caso contrario, mostrará el valor -1 que significa que el registro no se incorporó.
 + _Parámetros de entrada_:
-<p>tipo_abono VARCHAR(50),</p>
-<p>costo_abono INT,</p>
-<p>precio_abono INT,</p>
+> tipo_abono VARCHAR(50),
+> 
+> costo_abono INT,
+> 
+>precio_abono INT,
 
 + _Ejemplo de su uso_:
 
@@ -519,9 +521,11 @@ Se elaboraron 2 procedimientos con implementación de transacciones para la base
 1. `Nombre del procedimiento:` "actualizar_domicilio_ip_cliente"
 + _Descripción_: Este procedimiento realiza a través de un control de transacciones la modificación del domicilio y N° de la IP de un cliente. Esto generalmente acontece en simultáneo, dado que cuando un cliente se muda de domicilio cambia la IP por la ubicación.
 + _Parámetros de entrada_:
-<p>p_id_cliente INT,</p>
-<p>p_nueva_direccion VARCHAR(100),</p>
-<p>p_nueva_ip VARCHAR(50)</p>
+>p_id_cliente INT,
+>
+>p_nueva_direccion VARCHAR(100),
+>
+>p_nueva_ip VARCHAR(50)
 
 + _CASOS_:
 + Cliente no exite:
@@ -546,16 +550,25 @@ CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Del Valle', '192.168.1.60');
 + _Parámetros de entrada_:
 
 > p_id_cliente INT,
-<p>p_id_equipo INT,</p>
-<p>p_id_abono INT,</p>
-<p>p_razon_social VARCHAR(100),</p>
-<p>p_direccion VARCHAR(100),</p>
-<p>p_celular VARCHAR(100),</p>
-<p>p_dni VARCHAR(50),</p>
-<p>p_numero_ip VARCHAR(50),</p>
-<p>p_correo_electronico VARCHAR(100),</p>
-<p>p_nro_factura VARCHAR(100),</p>
-<p>p_id_pago INT</p>
+> 
+> p_id_equipo INT,
+> 
+> p_id_abono INT,
+> 
+> p_razon_social VARCHAR(100),
+> 
+> p_direccion VARCHAR(100),
+> 
+> p_celular VARCHAR(100),
+> 
+> p_dni VARCHAR(50),
+> p_numero_ip VARCHAR(50),
+> 
+> p_correo_electronico VARCHAR(100),
+> 
+> p_nro_factura VARCHAR(100),
+> 
+> p_id_pago INT
 
 + _CASOS_:
 + Exitoso sobre un Cliente ya registrado: Solo se inserta Factura.
