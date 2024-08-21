@@ -802,6 +802,6 @@ Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
 - `make` si te da un error de que no conexion al socket, volver al correr el comando make.
 - `make test-db` para mirar los datos de cada tabla.
 - `make access-db` para acceder a la base de datos.
-- `make backup` para realizar un backup de mi base de datos.
-- `make export` para efectuar la exportación de todas las tablas en distintos archivos tipo csv, dentro de una carpeta denominada `export_csv`.
+- `make backup` para realizar un backup de mi base de datos, dentro de una carpeta denominada "dump".
+- `make export` para efectuar la exportación de todas las tablas en distintos archivos tipo csv, dentro de una carpeta denominada "export_csv".
 - `make clean-db` limpiar la base de datos.
