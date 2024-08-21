@@ -751,21 +751,20 @@ Razón:
 ```
 `estudio_contable:` el privilegio de observar o efectuar consultas funciona exitosamente, y al intentar realizar una inserción se obtuvo la siguiente repuesta:
 
-_Intento de eliminación de un registro:_
+_Intento de inserción de un registro:_
 ```sql
 USE Wifly;
 
-DELETE FROM VENTAS
-WHERE id_venta = 1;
+
 ```
 _Respuesta:_
 ```sql
 Error occurred during SQL query execution
 
 Razón:
- SQL Error [1142] [42000]: DELETE command denied to user 'estudio_contable'@'localhost' for table 'ventas'
+ SQL Error [1142] [42000]: 
 ```
-`auditoria:` el privilegio de observar o efectuar consultas funciona exitosamente, y al intentar realizar una inserción se obtuvo la siguiente repuesta:
+`auditoria:` el privilegio de observar o efectuar consultas funciona exitosamente, y al intentar realizar un delete se obtuvo la siguiente repuesta:
 
 _Intento de eliminación de un registro:_
 ```sql
