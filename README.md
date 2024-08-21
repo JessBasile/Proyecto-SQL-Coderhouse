@@ -715,7 +715,8 @@ tener un valor `TRUE` para que permita la verificación.
 A continuación se muestran las distintas pruebas realizadas con los distintos usuarios, y las respuestas obtenidas por el motor de la base de datos:
 
 `administrador:` no tiene limitaciones en cuanto a los privilegios, por lo tanto todas las pruebas efectuadas fueron satisfactorias.
-admin_general: todos los privilegios asignados funcionan exitosamente, y al intentar realizar un delete se obtuvo la siguiente repuesta:
+
+`admin_general:` todos los privilegios asignados funcionan exitosamente, y al intentar realizar un delete se obtuvo la siguiente repuesta:
 _Intento de eliminación de un registro:_
 
 ```sql
