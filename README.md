@@ -264,12 +264,12 @@ En mi Proyecto en particular los archivos tipo CSV importados, se encontraban de
 Los archivos csv fueron creados con información ficticia pero semejante a la realidad para otorgar seriedad y coherencia al proyecto, dado que fue inspirado en una empresa real.
 Los 12 archivos se denominan: abonos, areas, asignaciones, clientes, empleados, equipos, facturas, operaciones, proveedores, suministros, tipo_de_pago y ventas.
 
-## Importación en Codespace 
-La importación en Codespace se realiza en forma automatizada y generalmente expone el número de registros con exactitud y precisiónen, se adjunta captura:
+## Importación CSV en Codespace 
+La importación en Codespace se realiza en forma automatizada y generalmente expone el número de registros con exactitud y precisión, tal como se observa en la siguiente captura:
 
 <img align="right" alt="test_db_codespace" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/test-db_codespace.png?raw=true">
-
-De todos modos, en determinadas oportunidades puede presentar algunas discrepancias en el `test-db` sobre el conteo de registros en la tabla de hechos o alguna otra por razones desconocidas que pueden vincularse con cuestiones de compatibilidad con Workbench, entre otros posibles motivos, es por ello que se incorporó en el testeo un conteo adicional de registros sobre dos tablas, para subsanar esa información errónea que codespace muestra. Los cambios se implementaron a través de la modificación del archivo "Makefile" y se especificó que el conteo de registros se ejecute únicamente durante el test-db.
+&nbsp;<br>
+De todos modos, en determinadas oportunidades puede presentar algunas discrepancias en el `test-db` sobre el conteo de registros en la tabla de hechos o alguna otra por razones desconocidas que pueden vincularse con cuestiones de compatibilidad con Workbench, entre otros posibles motivos, es por ello que se incorporó en el testeo un conteo adicional de registros sobre dos tablas, para subsanar esa información errónea que exporádicamente codespace muestra. Los cambios se implementaron a través de la modificación del archivo "Makefile" y se especificó que el conteo de registros se ejecute únicamente durante el test-db.
 A continuación se expone la muestra de como se observa en coderpace:
 ```sql
 +--------------+
@@ -284,6 +284,7 @@ A continuación se expone la muestra de como se observa en coderpace:
 | OPERACIONES: 110  |
 +-------------------+
 ```
+
 De este modo, no caben dudas que las tablas cuentan con la información en su totalidad, aunque el testing en algunas oportunidades muestre una información incompatible y distorcionada.
 
 ### Objetos de la base de datos
