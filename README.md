@@ -271,6 +271,7 @@ La importación en Codespace se realiza en forma automatizada y generalmente exp
 &nbsp;<br>
 De todos modos, en determinadas oportunidades puede presentar algunas discrepancias en el `test-db` sobre el conteo de registros en la tabla de hechos o alguna otra por razones desconocidas que pueden vincularse con cuestiones de compatibilidad con Workbench, entre otros posibles motivos, es por ello que se incorporó en el testeo un conteo adicional de registros sobre dos tablas, para subsanar esa información errónea que exporádicamente codespace muestra. Los cambios se implementaron a través de la modificación del archivo "Makefile" y se especificó que el conteo de registros se ejecute únicamente durante el test-db.
 A continuación se expone la muestra de como se observa en coderpace:
+
 ```sql
 +--------------+
 | Total_Ventas |
