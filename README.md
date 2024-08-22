@@ -842,6 +842,9 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n';
 ```
+
+##Muestra en Codespace:
+<img align="right" alt="qr_wifly" width="200" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/export_codespace.gif?raw=true">
 ___
 ### Como correr código en Codespace Github: con bash
 Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
