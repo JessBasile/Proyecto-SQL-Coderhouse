@@ -843,7 +843,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n';
 ```
 
-<span style="font-size: 24px;">Muestra en Codespace:</span>
+<span style="font-size: 24px; font-weight: bold;">Muestra en Codespace:</span>
 
 <img align="right" alt="qr_wifly" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/export_codespace.gif?raw=true">
 &nbsp;<br>&nbsp;<br>
