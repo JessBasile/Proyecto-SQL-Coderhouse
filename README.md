@@ -331,6 +331,18 @@ SELECT *
 ```sql
 SELECT * FROM view_bajas_clientes;
 ```
++ _Ejemplo consulta específica:_
+```sql
+SELECT 
+    id_cliente, 
+    `Nombre Cliente`,
+    id_operacion, 
+    `Descripcion Operacion`,
+    `Fecha Operacion`
+FROM Wifly.view_bajas_clientes
+WHERE `Fecha Operacion` BETWEEN '2023-01-01' AND '2023-12-31'
+ORDER BY id_cliente, `Fecha Operacion`;
+```
 5. `Nombre de la vista:` "view_reclamos_respuesta"
 + _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
 + _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas proporcionadas por los técnicos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
@@ -354,6 +366,16 @@ WHERE `Fecha` > '2023-12-31';
 + _Ejemplo de consulta general de la vista_:
 ```sql
 SELECT * FROM view_gerencia_ganancia_equipos;
+```
++ _Ejemplo de consulta específica:_
+```sql
+SELECT 
+    id_cliente,
+    razon_social AS 'Nombre Cliente',
+    `Ganancia Equipos`
+FROM Wifly.view_gerencia_ganancia_equipos
+WHERE `Ganancia Equipos` >= 10000
+ORDER BY `Ganancia Equipos` DESC;
 ```
 `Resumen de vistas en DBeaver:`
 
