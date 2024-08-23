@@ -301,7 +301,7 @@ En el proyecto de Wifly las vistas se efectuaron previo a la importación de dat
 ```sql
 SELECT *
 FROM Wifly.view_admin_equipos_adquiridos_fecha
-WHERE `Nombre Cliente` = 'Libreria La Pluma';
+WHERE `Nombre Cliente` = 'Constructora del Norte SA';
 ```
 2. `Nombre de la vista:` "view_admin_abonos_clientes"
 + _Descripción_: Esta vista permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
@@ -407,8 +407,13 @@ VALUES (1, 1, 1, 1, 1, 1, 1, 7000, 15000, 35000, 45000);
 INSERT INTO VENTAS (id_factura, id_abono, id_equipo, id_operacion, id_pago, id_cliente, cantidad, costo_abono, precio_abono, costo_equipo, precio_equipo)
 VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
 ```
-+ _Leyenda de la respuesta_: "SQL Error [1644] [45000]: No hay suficiente cantidad en stock para el equipo seleccionado."
++ _Leyenda de la respuesta_:
+```sql
+Error occurred during SQL query execution
 
+Razón:
+ SQL Error [1644] [45000]: No hay suficiente cantidad en stock para el equipo seleccionado.
+```
 2. `Nombre del Trigger:` "chequear_fecha_futura"
 + _Descripción_: Se encarga de evita inserción de operaciones con fechas futuras que superen los 6 meses.
 + _Tabla afectada_: Operaciones
