@@ -439,6 +439,9 @@ Razón:
 ```sql
 SHOW TRIGGERS;
 ```
+<p style="text-align: center;">
+    <img alt="Show Triggers" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_triggers.png" style="width: 80%; max-width: 1000px; height: auto;">
+</p>
 
 ___
 ## Funciones
