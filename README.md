@@ -440,7 +440,9 @@ Razón:
 SHOW TRIGGERS;
 ```
 
-<img alt="Show Functions" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" style="width: 80%; max-width: 1000px; height: auto;">
+<center>
+    <img alt="Show Triggers" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_triggers.png" style="width: 80%; max-width: 1000px; height: auto;">
+</center>
 
 ___
 ## Funciones
@@ -495,6 +497,10 @@ WHERE
 ```sql
 SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 ```
+
+<center>
+    <img alt="Show Functions" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" style="width: 80%; max-width: 1000px; height: auto;">
+</center>
 
 ___
 ## Procedimientos Almacenados
