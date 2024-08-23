@@ -386,7 +386,7 @@ ORDER BY `Ganancia Equipos` DESC;
 `Resumen de vistas en DBeaver:`
 
 <p style="text-align: center;">
-    <img alt="vistas" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/vistas.png?raw=true" style="display: block; margin: auto;">
+    <img alt="Show Triggers" src="https://github.com/Jessasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/show_triggers.png?raw=true" style="display: block; margin: auto;">
 </p>
 
 ___
