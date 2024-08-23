@@ -493,6 +493,14 @@ JOIN EQUIPOS e ON e.id_equipo = c.id_equipo
 WHERE 
     c.id_cliente = 10;
 ```
+`NOTA:` Para verificar que los Tiggers fueron creados adecuadamente, se pueden listar con la siguiente instrucción:
+```sql
+SHOW FUNCTION STATUS WHERE Db = 'Wifly';
+```
+<center>
+    <img alt="Show Functions" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" style="width: 80%; max-width: 1000px; height: auto;">
+</center>
+
 ___
 ## Procedimientos Almacenados
 Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con parámetros de entrada, y el otro con parámetros tanto de entrada como de salida.
