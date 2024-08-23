@@ -500,6 +500,12 @@ SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 
 <img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_fuctions.png" alt="Show Functions" style="width: 400px; height: auto;">
 
+<img 
+    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_fuctions.png" 
+    alt="Show Functions" 
+    style="width: 100%; max-width: 1000px; height: auto;">
+
+
 ___
 ## Procedimientos Almacenados
 Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con parámetros de entrada, y el otro con parámetros tanto de entrada como de salida.
