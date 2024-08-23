@@ -407,7 +407,7 @@ VALUES (1, 1, 1, 1, 1, 1, 1, 7000, 15000, 35000, 45000);
 INSERT INTO VENTAS (id_factura, id_abono, id_equipo, id_operacion, id_pago, id_cliente, cantidad, costo_abono, precio_abono, costo_equipo, precio_equipo)
 VALUES (2, 2, 1, 1, 1, 1, 10, 7000, 15000, 35000, 45000);
 ```
-+ _Leyenda de la respuesta_:
++ _Leyenda de la respuesta inválida_:
 ```sql
 Error occurred during SQL query execution
 
@@ -428,12 +428,21 @@ VALUES (111, 7, 'Reclamo', 'problema con la factura', 'factura corregida', '2024
 INSERT INTO OPERACIONES (id_operacion, id_cliente, tipo_operacion, descripcion, respuesta, fecha_operaciones)
 VALUES (111, 6, 'Reclamo', 'problema con el equipo', 'equipo reparado', '2025-09-01 15:30:00');
 ```
-+ _Leyenda de la respuesta_: "La fecha de la operación no puede superar los 6 meses desde ahora. La fecha límite es: (se calcula acorde a la fecha de inserción de datos)."
++ _Leyenda de la respuesta inválida_:
+```sql
+Error occurred during SQL query execution
 
+Razón:
+ SQL Error [1644] [45000]: La fecha de la operación no puede superar los 6 meses desde ahora. La fecha límite es: (se calcula acorde a la fecha de inserción de datos).
+```
 `NOTA:` Para verificar que los Tiggers fueron creados adecuadamente, se pueden listar con la siguiente instrucción:
 ```sql
 SHOW TRIGGERS;
 ```
+<p style="text-align: center;">
+    <img alt="Show Triggers" src="URL_DE_TU_IMAGEN" style="display: block; margin: auto;">
+</p>
+
 ___
 ## Funciones
 
