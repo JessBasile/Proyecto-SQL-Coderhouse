@@ -498,9 +498,7 @@ WHERE
 SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 ```
 
-<center>
-    <img alt="Show Functions" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" style="width: 80%; max-width: 1000px; height: auto;">
-</center>
+<img align="left" alt="Show Functions" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" style="width: 80%; max-width: 1000px; height: auto;">
 
 ___
 ## Procedimientos Almacenados
