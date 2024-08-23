@@ -498,29 +498,7 @@ WHERE
 SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 ```
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostrar Imagen</title>
-    <style>
-        .resize-img {
-            float: left;
-            max-width: 100%; /* Ajusta el ancho máximo según el contenedor */
-            width: 200px; /* Tamaño mínimo si la imagen es muy pequeña */
-            height: auto;
-            margin-right: 10px; /* Opcional: Espacio a la derecha de la imagen */
-        }
-    </style>
-</head>
-<body>
-    <img 
-        class="resize-img" 
-        alt="Show Functions" 
-        src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png">
-</body>
-</html>
+<img src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_fuctions.png" alt="Show Functions" style="width: 400px; height: auto;">
 
 ___
 ## Procedimientos Almacenados
