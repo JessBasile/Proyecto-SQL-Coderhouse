@@ -548,21 +548,19 @@ CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 
 1ro: Se declara la variable para recibir el parámetro de salida:
 ```sql
-SET @id_abono = 0;
+SET @id_nuevo_abono = 0;
 ```
 2do: Se llama al procedimiento:
 
-:heavy_check_mark: Caso exitoso:
+:heavy_check_mark: Caso exitoso (el resultado será mayor a 4):
 ```sql
-CALL Wifly.registrar_abono('50MB', 17000, 38000, @id_abono);
+CALL Wifly.registrar_abono('50MB', 20000, 40000, @id_nuevo_abono);
+SELECT @id_nuevo_abono;
 ```
-:no_entry: Caso inválido:
+:no_entry: Caso inválido (el resultado será -1):
 ```sql
-CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_abono);
-```
-3ro: Llamado al id_nuevo_abono:
-```sql
-SELECT @id_abono AS id_nuevo_abono;
+CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_nuevo_abono);
+SELECT @id_nuevo_abono;
 ```
 `NOTA:` Para verificar el ingreso del nuevo abono puede efectuarse una consulta sobre la tabla en cuestión:
 ```sql
