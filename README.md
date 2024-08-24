@@ -449,7 +449,7 @@ ___
 
 Se elaboraron 2 funciones para la base de datos Wifly que retornan información relevante para la toma de decisiones.
 1. `Nombre de la Función:` "ganancia_anual_cliente"
-+ _Descripción_: Arroja la ganancia anual por el tipo de abono que tiene asignado cada id_cliente.
++ _Descripción_: Arroja la ganancia anual proyectada de acuerdo con el tipo de abono que tiene asignado cada id_cliente.
 + _Utilidad_: Permite identificar que tipo de abono genera mayor ganancia.
 + _Parámetros_: id_cliente INT
 + _Retorno_: ganancia_anual INT
@@ -457,7 +457,7 @@ Se elaboraron 2 funciones para la base de datos Wifly que retornan información 
   
 - [x] _General_:
 ```sql
-SELECT ganancia_anual_cliente(10) AS ganancia_anual;
+SELECT ganancia_anual_cliente(5) AS ganancia_anual;
 ```
 - [x] _Específica sobre un cliente en particular_:
 ```sql
@@ -467,7 +467,7 @@ SELECT
 FROM 
     CLIENTES c
 WHERE 
-    c.id_cliente = 10;
+    c.id_cliente = 15;
 ```
 2. `Nombre de la Función:` "cantidad_vendida_por_equipo"
 + _Descripción_: Arroja la cantidad total vendida por id_equipo.
