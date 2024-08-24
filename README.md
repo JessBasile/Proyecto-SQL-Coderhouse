@@ -778,7 +778,7 @@ volver a intentar ingresar normalmente.
 `auditoria:` se trata de un usuario para uso esporádico, cuya password es 'wifly123' y tiene una caducidad a los 180 días. Se encuentra destinado, para casos de auditorias externas (generalmente por organismos de recaudación impositiva en casos requeridos). 
 
 <p style="text-align: center;">
-    <img alt="Roles y Usuarios" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/roles_usuarios.png?raw=true" style="display: block; margin: auto; width: 50%; max-width: 300px; height: auto;">
+    <img alt="Roles y Usuarios" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/roles_usuarios.png?raw=true" style="display: block; margin: auto; width: 30%; max-width: 200px; height: auto;">
 </p>
 
 ***Asignación de privilegios:***
