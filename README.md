@@ -745,8 +745,8 @@ SHOW PROCEDURE STATUS WHERE Db = 'Wifly';
 ```
 
 <img 
-    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_fuctions.png" 
-    alt="Show Functions" 
+    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_procedures.png" 
+    alt="Show Procedure" 
     style="width: 50%; max-width: 300px; height: auto;">
 
 ___
