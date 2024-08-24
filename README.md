@@ -739,6 +739,13 @@ SET @@autocommit = TRUE;
 <p>SAVEPOINT son puntos de retroceso que guardan modificaciones efectuadas, y son muy útiles en casos que surjan errores, para recuperar instancias de avance anteriores.</p>
 <p>COMMIT es el comando que se utiliza para confirmar y guardar permanentemente los cambios efectuados sobre transacciones.</p>
 
+`NOTA:` Para listar la totalidad de los procedimientos creados se puede efectuar la siguiente instrucción:
+```sql
+SHOW PROCEDURE STATUS WHERE Db = 'Wifly';
+```
+
+
+
 ___
 ## Roles, usuarios y privilegios
 
