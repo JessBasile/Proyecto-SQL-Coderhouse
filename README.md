@@ -469,40 +469,23 @@ FROM
 WHERE 
     c.id_cliente = 15;
 ```
-2. `Nombre de la Función:` "cantidad_vendida_por_equipo"
-+ _Descripción_: Arroja la cantidad total vendida por id_equipo.
-+ _Utilidad_: Permite identificar la cantidad vendida de cada tipo de equipo.
-+ _Parámetros_: id_equipo
-+ _Retorno_: cantidad_vendida
+2. `Nombre de la Función:` "descuento_abono"
++ _Descripción_: La función fué creada para utilizarse en el caso de bonificaciones especiales a clientes que sufieron cortes reiterados o baja señal del servicio sostenida, a fin de evitar emisión de nota de crédito (por cuestiones impositivas) para resarcir su disconformidad.
++ _Utilidad_: Evita la emisión de Notas de crédito por reconocimiento de servicio deficiente en determinados casos atípicos con clientes, y directamente se les bonifica el precio del abono en la próxima factura. Su mayor finalidad, es retener al cliente y resarcir el saño provocado por los días con falta de servicio o mala señal.
++ _Parámetros_: p_id_abono INT
++ _Retorno_: precio_descuento INT
 + _Ejemplo de su aplicación_:
 
-- [x] _General_:
+- [x] _Especifica_: (tener en cuenta que solo existen hasta la actualidad solo 4 abonos distintos)
 ```sql
-SELECT cantidad_vendida_por_equipo(5) AS cantidad_vendida;
-```
-- [x] _Específica sobre un cliente en particular_:
-```sql
-SELECT 
-	c.id_cliente,    
-	c.razon_social AS Cliente,
-    e.marca,
-    e.modelo,
-    cantidad_vendida_por_equipo(c.id_cliente) AS cantidad_vendida
-FROM 
-    CLIENTES c
-JOIN EQUIPOS e ON e.id_equipo = c.id_equipo
-WHERE 
-    c.id_cliente = 5;
+SELECT descuento_abono(1) AS 'Precio Abono con Decuento';
 ```
 `NOTA:` Para verificar que las funciones fueron creadas adecuadamente, se pueden listar con la siguiente instrucción:
 ```sql
 SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 ```
 
-<img 
-    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_fuctions.png" 
-    alt="Show Functions" 
-    style="width: 50%; max-width: 300px; height: auto;">
+
 
 ___
 ## Procedimientos Almacenados
