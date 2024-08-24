@@ -486,7 +486,7 @@ SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 ```
 
 <img 
-    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" 
+    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_function.png" 
     alt="Show Functions" 
     style="width: 50%; max-width: 300px; height: auto;">
     
