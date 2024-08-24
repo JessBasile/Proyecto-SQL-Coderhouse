@@ -857,14 +857,15 @@ _Intento de inserción de un registro:_
 ```sql
 USE Wifly;
 
-
+INSERT INTO AREAS (area_de_trabajo)
+VALUES ('Recursos Humanos');
 ```
 _Respuesta:_
 ```sql
 Error occurred during SQL query execution
 
 Razón:
- SQL Error [1142] [42000]: 
+ SQL Error [1142] [42000]: INSERT command denied to user 'estudio_contable'@'localhost' for table 'areas'
 ```
 `auditoria:` el privilegio de observar o efectuar consultas funciona exitosamente, y al intentar realizar un delete se obtuvo la siguiente repuesta:
 
