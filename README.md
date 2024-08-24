@@ -483,7 +483,8 @@ SELECT cantidad_vendida_por_equipo(5) AS cantidad_vendida;
 - [x] _Específica sobre un cliente en particular_:
 ```sql
 SELECT 
-    c.razon_social AS Cliente,
+	c.id_cliente,    
+	c.razon_social AS Cliente,
     e.marca,
     e.modelo,
     cantidad_vendida_por_equipo(c.id_cliente) AS cantidad_vendida
@@ -491,7 +492,7 @@ FROM
     CLIENTES c
 JOIN EQUIPOS e ON e.id_equipo = c.id_equipo
 WHERE 
-    c.id_cliente = 10;
+    c.id_cliente = 5;
 ```
 `NOTA:` Para verificar que las funciones fueron creadas adecuadamente, se pueden listar con la siguiente instrucción:
 ```sql
