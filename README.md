@@ -644,81 +644,81 @@ CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Del Valle', '192.168.1.60');
 + Exitoso sobre un Cliente ya registrado: Solo se inserta Factura.
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    1,                      -- p_id_cliente (Cliene existente)
-    1,                      -- p_id_equipo
-    1,                      -- p_id_abono
-    'Cliente Existente',    -- p_razon_social
-    'Direccion',            -- p_direccion
-    '123456789',            -- p_celular
-    '12345678',             -- p_dni
-    '192.168.1.120',        -- p_numero_ip
-    'cliente@ejemplo.com',  -- p_correo_electronico
-    '0001-00000051',        -- p_nro_factura
-    1                       -- p_id_pago (Nueva)
+    1,                                 -- p_id_cliente ***(Cliene existente)***
+    1,                                 -- p_id_equipo
+    1,                                 -- p_id_abono
+    'Constructora del Norte SA',       -- p_razon_social
+    'Av. Corrientes 1234',             -- p_direccion
+    '011-2345678',                     -- p_celular
+    '30567890',                        -- p_dni
+    '192.168.1.120',                   -- p_numero_ip
+    'info@constructoradelnorte.com.ar',-- p_correo_electronico
+    '0001-00000051',                   -- p_nro_factura
+    1                                  -- p_id_pago ***(Nueva)***
 );
 ```
 + Abono no existe: No inserta Cliente ni Factura
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    51,                     -- p_id_cliente
-    1,                      -- p_id_equipo
-    999,                    -- p_id_abono (No existente)
-    'Nuevo Cliente',        -- p_razon_social
-    'Direccion',            -- p_direccion
-    '123456789',            -- p_celular
-    '12345678',             -- p_dni
-    '192.168.1.200',          -- p_numero_ip
+    51,                          -- p_id_cliente (Nuevo)
+    1,                           -- p_id_equipo
+    999,                         -- p_id_abono (No existente)
+    'Nuevo Cliente',             -- p_razon_social
+    'Calle Falsa 123',           -- p_direccion
+    '123456789',                 -- p_celular
+    '12345678',                  -- p_dni
+    '192.168.1.200',             -- p_numero_ip
     'nuevo_cliente@ejemplo.com', -- p_correo_electronico
-    '0001-00000052',       -- p_nro_factura
-    1                       -- p_id_pago
+    '0001-00000052',             -- p_nro_factura
+    1                            -- p_id_pago
 );
 ```
 + Equipo no existe: No inserta Cliente ni Factura.
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    51,                      -- p_id_cliente
-    999,                    -- p_id_equipo (Inexistente)
-    1,                      -- p_id_abono
-    'Nuevo Cliente',        -- p_razon_social
-    'Direccion',            -- p_direccion
-    '123456789',            -- p_celular
-    '12345678',             -- p_dni
-    '192.168.1.2',          -- p_numero_ip
+    51,                          -- p_id_cliente (Nuevo)
+    999,                         -- p_id_equipo (Inexistente)
+    1,                           -- p_id_abono
+    'Nuevo Cliente',             -- p_razon_social
+    'Calle Falsa 345',           -- p_direccion
+    '123456789',                 -- p_celular
+    '12345678',                  -- p_dni
+    '192.168.1.500',             -- p_numero_ip
     'nuevo_cliente@ejemplo.com', -- p_correo_electronico
-    '0001-00000053',       -- p_nro_factura
-    1                       -- p_id_pago
+    '0001-00000053',             -- p_nro_factura
+    1                            -- p_id_pago
 );
 ```
 + N° Factura ya existe: Cliente insertado y Factura no incorporada
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    51,                     -- p_id_cliente
-    1,                      -- p_id_equipo
-    1,                      -- p_id_abono
-    'Cliente Nuevo',        -- p_razon_social
-    'Direccion',            -- p_direccion
-    '123456789',            -- p_celular
-    '12345678',             -- p_dni
-    '192.168.1.70',         -- p_numero_ip
+    51,                          -- p_id_cliente (Nuevo)
+    1,                           -- p_id_equipo
+    1,                           -- p_id_abono
+    'Nuevo Cliente',             -- p_razon_social
+    'Nueva Direccion 123',       -- p_direccion
+    '123456789',                 -- p_celular
+    '12345678',                  -- p_dni
+    '192.168.1.70',              -- p_numero_ip
     'cliente_nuevo@ejemplo.com', -- p_correo_electronico
-    '0001-00000050',        -- p_nro_factura (Ya existente)
-    1                       -- p_id_pago
+    '0001-00000050',             -- p_nro_factura (Ya existente)
+    1                            -- p_id_pago
 );
 ```
 + ID_PAGO No existente: Cliente incorporado y factura no generada.
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    52,                     -- p_id_cliente (Nuevo)
-    1,                      -- p_id_equipo
-    1,                      -- p_id_abono
-    'Nuevo Cliente',        -- p_razon_social
-    'Direccion',            -- p_direccion
-    '123456789',            -- p_celular
-    '12345678',             -- p_dni
-    '192.168.1.100',        -- p_numero_ip
+    52,                          -- p_id_cliente (Nuevo)
+    1,                           -- p_id_equipo
+    1,                           -- p_id_abono
+    'Nuevo Cliente2',            -- p_razon_social
+    'Nueva Dire 123',            -- p_direccion
+    '123456789',                 -- p_celular
+    '12345678',                  -- p_dni
+    '192.168.1.100',             -- p_numero_ip
     'nuevo_cliente@ejemplo.com', -- p_correo_electronico
-    '0001-00000054',       -- p_nro_factura
-    99                     -- p_id_pago (Inexistente)
+    '0001-00000054',             -- p_nro_factura
+    99                           -- p_id_pago (Inexistente)
 );
 ```
 + Exitoso de Cliente y Factura
@@ -727,13 +727,13 @@ CALL Wifly.insertar_cliente_y_factura(
     52,                      -- p_id_cliente (Nuevo)
     1,                      -- p_id_equipo
     1,                      -- p_id_abono
-    'Cliente Nuevo',        -- p_razon_social
-    'Direccion Nueva',      -- p_direccion
+    'New Client',        -- p_razon_social
+    'New Address',      -- p_direccion
     '123456789',            -- p_celular
     '12345678',             -- p_dni
     '192.168.1.101',          -- p_numero_ip
-    'cliente_nuevo@ejemplo.com', -- p_correo_electronico
-    '0001-00000051',       -- p_nro_factura (Nueva)
+    'new_client@ejemplo.com', -- p_correo_electronico
+    '0001-00000052',       -- p_nro_factura (Nueva)
     1
   );
 ```
@@ -745,6 +745,11 @@ CALL Wifly.insertar_cliente_y_factura(
 <p>:warning: 'SQL Error [1644] [45000]: El número de factura ya existe.'</p>
 <p>:warning: 'SQL Error [1644] [45000]: El tipo de pago especificado no existe.'</p>
 
++ _Para corroborar los cambios realizados o verificar que la información permanece sin modificarse, se puede ejecutar una consulta de selección utilizando las siguientes instrucciones, según corresponda a cada tabla:
+```sql
+SELECT * FROM CLIENTES;
+SELECT * FROM FACTURAS;
+```
 `ACLARACIÓN:` Si bien Workbench y codespace identifican que se trata de transacciones de control al incorporar dentro del código la sintaxis "START TRANSACTION", puede realizarse una desactivación manual y posterior activación general para corroborar el éxito del control sobre las transacciones. Para ello, se utilizarán los comandos:
 ```sql
 SET @@autocommit = FALSE;
