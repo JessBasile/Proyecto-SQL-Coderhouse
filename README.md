@@ -485,10 +485,7 @@ SELECT descuento_abono(1) AS 'Precio Abono con Decuento';
 SHOW FUNCTION STATUS WHERE Db = 'Wifly';
 ```
 
-<img 
-    src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/show_functions.png" 
-    alt="Show Functions" 
-    style="width: 50%; max-width: 300px; height: auto;">
+
 
 ___
 ## Procedimientos Almacenados
