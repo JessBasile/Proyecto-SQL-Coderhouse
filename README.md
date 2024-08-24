@@ -886,13 +886,15 @@ Razón:
 ___
 ## Backup de la base de datos 
 Para efectuar el Backup de la base de datos Wifly se decide automatizarlo desde el comando `make backup` en codespace cuya configuración se efectuó a través de `Makefile`.
-De todos modos, se realizó un backup desde terminal PowerShell para abordar otra de las alternativas posibles de efectuarlo. Para ello, previamente debió modificarse la configuración sobre las variables del entorno del sistema operativo (Windows) ubicando la raíz del archivo ejecutable `mysqldump.exe` y copiando la ruta (en mi caso particular) `C:Program files\MySQL\MySQL Server 8.0\bin` e incorporandolá dentro de las variables del entorno para que esté disponible a nivel global, tal como lo expone la siguiente captura:
-
-Una vez efectuada esa configuración, se procede a ejecutar el siguiente comando que proporciona el archivo `backupWifly.sql` en la carpeta...
+De todos modos, se realizó un backup desde terminal PowerShell para abordar otra de las alternativas posibles de efectuarlo. Para ello, previamente debió modificarse la configuración sobre las variables del entorno del sistema operativo (Windows) ubicando la raíz del archivo ejecutable `mysqldump.exe` y copiando la ruta (en mi caso particular) `C:Program files\MySQL\MySQL Server 8.0\bin` e incorporandolá dentro de las variables del entorno para que esté disponible a nivel global. Una vez efectuada esa configuración, se procede a ejecutar el siguiente comando que proporciona el archivo `backupWifly.sql` en la carpeta backup_Wifly.
 ```sql
 mysqldump -uroot -pcontraseña --host 127.0.0.1 --port 3306 --routines --database Wifly > backupWifly.sql
 ```
-El archivo se encuentra disponible en el repositorio dentro de la carpeta sql_project ---> `backup_wifly`.
+El archivo `backupWifly.sql` se encuentra disponible en el repositorio dentro de la carpeta sql_project ---> `backup_Wifly`.
+`NOTA:`Para coroborar que el backup se realizó correctamente con todos sus objetos, se procede a dropear la base de datos, y nuevamente desde la terminal importar ese backup a MySQL bajo el siguiente comando:
+```sql
+mysql -uroot -p --host 127.0.0.1 --port 3306 Wifly < backupWifly.sql
+```
 ___
 ## Exportación de datos a CSV: para análisis de información en otros motores
 Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, resulta más cómodo solo exportar los datos de las tablas, para que los analistas o consultores externos puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, puede elaborarse una exportación automatizada a través del comando `make export` cuya configuración se realizó en el archivo `Makefile` y requirió permisos en `docker_compose.yml`. El funcionamiento, es a través de un Script `export.sql` con el "destino" al que se desea exportar cada archivo en formato csv (la carpeta de destino `export_csv`, es creada en el momento que se ejecuta el comando make export).
