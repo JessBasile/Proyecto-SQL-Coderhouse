@@ -19,15 +19,11 @@ BEGIN
     -- VALIDAR MARCA DEL EQUIPO
     IF marca = '' THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La marca del equipo no puede estar vacía';
-    ELSEIF LENGTH(marca) > 100 THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La marca del equipo no puede tener más de 100 caracteres';
     END IF;
 
     -- VALIDAR MODELO DEL EQUIPO
     IF modelo = '' THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El modelo del equipo no puede estar vacío';
-    ELSEIF LENGTH(modelo) > 100 THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El modelo del equipo no puede tener más de 100 caracteres';
     END IF;
 
     -- VALIDAR COSTO DEL EQUIPO
