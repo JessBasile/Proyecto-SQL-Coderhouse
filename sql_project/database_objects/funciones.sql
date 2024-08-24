@@ -30,7 +30,7 @@ DROP FUNCTION IF EXISTS Wifly.cantidad_vendida_por_equipo;
 
 DELIMITER //
 
-CREATE FUNCTION cantidad_vendida_por_equipo(id_equipo INT)
+CREATE FUNCTION cantidad_vendida_por_equipo(p_id_equipo INT)
 RETURNS INT
 DETERMINISTIC
 BEGIN
@@ -38,7 +38,7 @@ BEGIN
     
     SELECT SUM(cantidad) INTO cantidad_vendida
     FROM VENTAS
-    WHERE id_equipo = id_equipo;
+    WHERE id_equipo = p_id_equipo;
     
     RETURN cantidad_vendida;
 END //
