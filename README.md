@@ -756,7 +756,7 @@ La base de datos Wifly cuenta con 4 roles, 5 usuarios y 5 asignaciones de los ro
 
 ***Roles:***
 
-`administrador_role:` se trata de un rol que otorga todos los privilegios (select, insert, update & delete) sobre la base de datos Wifly en su totalidad, y además, permite otorgar esos mismos privilegios a otros usuarios o roles.
+`administrador_role:` se trata de un rol que otorga todos los privilegios (select, insert, update & delete) sobre la base de datos Wifly en su totalidad, y además, permite otorgar esos mismos privilegios a otros usuarios o roles. Asimismo, este rol tiene acceso implícito a todas las vistas, ejecución de store procedures y funciones.
 
 `admin_gral_role:` es un rol cuyo uso es orientado al sector de administración que tiene todos los permisos excepto eliminar registros (delete) sobre `toda` la base de datos Wifly, dado que, eliminar un registro histórico requiere supervisión previa para preservar la integridad de la base de datos, asi como también permite mejorar la seguridad, control, consistencia, y cumplimiento normativo (en cuanto a la preservación de documentación impositiva por el plazo requerido legalmente). Además, fomenta el uso de prácticas más seguras.
 
@@ -771,7 +771,7 @@ volver a intentar ingresar normalmente.
 
 `admin_general:` es un usuario diseñado para el sector de administración, cuya password es 'general456'. Al igual que el otro usuario, posee una configuración con una política de seguridad que permite 3 intentos fallidos de inicio de sesión antes de bloquear la cuenta temporalmente. El bloqueo de la misma, se encuentra configurado por 3 minútos. Una vez transcurrido ese período de tiempo, el usuario podrá volver a intentar ingresar normalmente.
 
-`administrador:` es un usuario destinado para su uso por parte del CEO y la Gerencia de administración, cuya password es 'administrador789' y posee una configuración similar a los anteriores usuarios con un bloqueo del usuario luego de 3 intentos fallidos y 3 minútos para reestablecer y poder volver a intentar ingresar. Si bien, este usuario podría prescindir del bloqueo, ya que se supone que solo es utilizado por altos mandos de la compañia, implementarlo es una medida preventiva ante potenciales ataques de hackeo al usuario o accesos no autorizados.
+`administrador:` es un usuario destinado para su uso por parte del CEO y la Gerencia de administración, cuya password es 'administrador789' y posee una configuración similar a los anteriores usuarios con un bloqueo superados 3 intentos fallidos y 3 minútos para reestablecer y poder volver a intentar ingresar. Si bien, este usuario podría prescindir del bloqueo, ya que se supone que solo es utilizado por altos mandos de la compañia, implementarlo es una medida preventiva ante potenciales ataques de hackeo al usuario o accesos no autorizados. Por último, la Gerenta de administración en su usuario de administrador será la única (junto con el CEO) que podrá observar con simplicidad (la exposición de los datos) a través de las vistas que sintetizan información relevante y sensible, así como también, la ejecución de procedimientos almacenados y funciones.
 
 `estudio_contable:` es un usuario para uso exclusivo por parte del asesor contable externo de la organización (por el cual se tiene alta confianza), su password es 'wiflyestudio', y al igual que los demás usuarios se encuentra configurado con un bloqueo luego de 3 intentos fallidos y 3 minútos para reestablecer el integreso. 
 
