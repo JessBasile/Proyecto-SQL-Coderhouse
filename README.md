@@ -524,16 +524,34 @@ Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con paráme
 ```sql
 CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
 ```
++ _Caso inválido:_ Marca del equipo vacía
+```sql
+CALL Wifly.insertar_equipo('', 'ModeloX', 30000, 35000, 10);
+```
++ _Caso inválido:_ El modelo del equipo vacío
+```sql
+CALL Wifly.insertar_equipo('MarcaX', '', 30000, 35000, 10);
+```
++ _Caso inválido:_ Costo del equipo inferior al mínimo
+```sql
+CALL Wifly.insertar_equipo('MarcaX', 'ModeloX', 27000, 35000, 10);
+```
++ _Caso inválido:_ Precio del equipo inferior o igual al costo
+```sql
+CALL Wifly.insertar_equipo('MarcaX', 'ModeloX', 30000, 30000, 10);
+```
++ _Caso inválido:_ La cantidad es cero
+```sql
+CALL Wifly.insertar_equipo('MarcaX', 'ModeloX', 30000, 35000, 0);
+```
 + _Mensajes de salida en caso insatisfactorio_:
 
 <p>:warning: 'La marca del equipo no puede estar vacía'</p>
-<p>:warning: 'La marca del equipo no puede tener más de 100 caracteres'</p>
 <p>:warning: 'El modelo del equipo no puede estar vacío'</p>
-<p>:warning: 'El modelo del equipo no puede tener más de 100 caracteres'</p>
 <p>:warning: 'El costo del equipo debe ser mayor que 28.000'</p>
 <p>:warning: 'El precio del equipo debe ser mayor que su costo'</p>
 <p>:warning: 'La cantidad debe ser mayor que 0'</p>
-<p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos'</p>
+<p>:warning: 'No se insertó ningún equipo por no cumplir con los requisitos mínimos' (para casos excepcionales de errores no anticipados).</p>
 
 2. `Nombre del procedimiento:` "registrar_abono"
 + _Descripción_: Este procedimiento permite registrar un nuevo abono en la tabla pertinente de la base de datos Wifly, siempre que cumpla con el requisito de ser mayor a 40MB, costo mayor a 16 mil y precio mayor a 36 mil. Si cumple con las condiciones se insertan los nuevos datos y devuelve el id_nuevo_abono, caso contrario, mostrará el valor -1 que significa que el registro no se incorporó.
