@@ -744,7 +744,10 @@ SET @@autocommit = TRUE;
 SHOW PROCEDURE STATUS WHERE Db = 'Wifly';
 ```
 
-
+<img 
+    src="ruta/a/show_procedure.png" 
+    alt="Show Procedures" 
+    style="width: 50%; max-width: 300px; height: auto;">
 
 ___
 ## Roles, usuarios y privilegios
