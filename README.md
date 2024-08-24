@@ -598,7 +598,7 @@ Se elaboraron 2 procedimientos con implementación de transacciones para la base
 >p_nueva_ip VARCHAR(50)
 
 + _CASOS_:
-+ Cliente no exite:
++ Cliente no exite (no incorpora ninguna modificación):
 ```sql
 CALL Wifly.actualizar_domicilio_ip_cliente(51, 'Av. Nueva Dirección 999', '192.168.1.50');
 ```
