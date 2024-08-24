@@ -24,23 +24,28 @@ END //
 
 DELIMITER ;
 
--- FUNCIÓN DE CANTIDAD EQUIPOS VENDIDOS: Arroja la cantidad total vendida por id equipo.
-
-DROP FUNCTION IF EXISTS Wifly.cantidad_vendida_por_equipo;
+-- FUNCIÓN DESCUENTO SOBRE ABONOS: Se utiliza para el caso de bonificaciones especiales a clientes que sufieron cortes reiterados o baja señal del servicio sostenida, a fin de evitar emisión de nota de crédito para resarcir su disconformidad.
+DROP FUNCTION IF EXISTS Wifly.descuento_abono;
 
 DELIMITER //
 
-CREATE FUNCTION cantidad_vendida_por_equipo(p_id_equipo INT)
+CREATE FUNCTION descuento_abono(p_id_abono INT) 
 RETURNS INT
 DETERMINISTIC
 BEGIN
-    DECLARE cantidad_vendida INT;
-    
-    SELECT SUM(cantidad) INTO cantidad_vendida
-    FROM VENTAS
-    WHERE id_equipo = p_id_equipo;
-    
-    RETURN cantidad_vendida;
+    DECLARE precio_origen INT;
+    DECLARE precio_descuento INT;
+
+    -- PRECIO ORIGINAL SEGÚN ABONO PROPORCIONADO
+    SELECT precio_abono INTO precio_origen
+    FROM ABONOS
+    WHERE id_abono = p_id_abono;
+
+    -- CALCULAR EL 10% CON DESCUENTO
+    SET precio_descuento = precio_origen * 0.5;
+
+    -- RETORNAR EL PRECIO CON EL DESCUENTO
+    RETURN precio_descuento;
 END //
 
 DELIMITER ;
