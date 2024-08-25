@@ -941,4 +941,4 @@ Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
 - `make clean-db` limpiar la base de datos.
 
 ___
-<h2 align="center">¡Muchas gracias por su atención! <img src="https://github.com/ABSphreak/ABSphreak/blob/master/gifs/Hi.gif" width="30px"></h2>
+<h2 align="center">¡Muchas gracias por su visita! <img src="https://github.com/ABSphreak/ABSphreak/blob/master/gifs/Hi.gif" width="30px"></h2>
