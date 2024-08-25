@@ -888,7 +888,7 @@ Para efectuar el Backup de la base de datos Wifly se decide automatizarlo desde 
 De todos modos, se realizó un backup desde terminal cmd del sistema para abordar otra de las alternativas posibles de efectuarlo. Para ello, previamente debió modificarse la configuración sobre las variables del entorno del sistema operativo (Windows) ubicando la raíz del archivo ejecutable `mysqldump.exe` y copiando la ruta (en mi caso particular) `C:Program files\MySQL\MySQL Server 8.0\bin` en el directorio `PATH`, tal como lo expone la captura a continuación:
 
 <center>
-    <img alt="Variables de Entorno" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/variables_entorno.png" style="width: 80%; max-width: 1000px; height: auto;">
+    <img alt="Variables de Entorno" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/variables_entorno.png" style="width: 90%; max-width: 1200px; height: auto;">
 </center>
 
 Una vez efectuados los pasos previamente detallado, es importante verificar configuración del directorio PATH es correcta ejecutando el comando: 
