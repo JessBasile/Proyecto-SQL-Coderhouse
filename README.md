@@ -939,3 +939,6 @@ Ingresar en la sección codespaces y en la terminal, utilizar los comandos:
 - `make backup` para realizar un backup de mi base de datos, dentro de una carpeta denominada "dump".
 - `make export` para efectuar la exportación de todas las tablas en distintos archivos tipo csv, dentro de una carpeta denominada "export_csv".
 - `make clean-db` limpiar la base de datos.
+
+___
+<h2 align="center">¡Muchas gracias por su atención! <img src="https://github.com/ABSphreak/ABSphreak/blob/master/gifs/Hi.gif" width="30px"></h2>
