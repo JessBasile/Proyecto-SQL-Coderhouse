@@ -899,17 +899,18 @@ Y si la respueta es el siguiente comando (o similar), significa que se encuentra
 ```sql
 MySQL80
 ```
-Aposteriori deberá ejecutarse el siguiente comando, ***mientras MySQL se encuentra corriendo y en funcionamiento*** y la carpeta de destino deberá cntar con las permisos pertinentes para poder alojar el backup obtenido:
+Aposteriori deberá ejecutarse el siguiente comando, ***mientras MySQL se encuentra corriendo y en funcionamiento*** y la carpeta de destino deberá contar con las permisos pertinentes para poder alojar el backup obtenido:
 ```sql
 mysqldump -u root -p --host 127.0.0.1 --port 3306 --routines --databases Wifly > "C:\Users\Jesica Basile\Documents\backup_Wifly\backupWifly.sql"
 ```
 Esa operación proporcionará el archivo `backupWifly.sql` en la carpeta local backup_Wifly indicada como destino.
-El archivo `backupWifly.sql` se encuentra disponible en el repositorio dentro de la carpeta sql_project ---> `backup_Wifly`.
+
+El archivo `backupWifly.sql` se encuentra disponible en el repositorio dentro de la carpeta `backup_Wifly` en la raíz del repositorio.
 `NOTA:`Para coroborar que el backup se realizó correctamente con todos sus objetos, se procede a dropear la base de datos, y nuevamente desde la terminal importar ese backup a MySQL bajo el siguiente comando:
 ```sql
 mysql -u root -p --host 127.0.0.1 --port 3306 Wifly < "C:\Users\Jesica Basile\Documents\backup_Wifly\backupWifly.sql"
 ```
-Una vez ejecutado, si fué exitosa la operación, debe aparecer la base de datos con todos sus objetos creada en MySQL.
+Una vez ejecutado, si fué exitosa la operación, deberá aparecer la base de datos completa con todos sus objetos creada en MySQL.
 ___
 ## Exportación de datos a CSV: para análisis de información en otros motores
 Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, resulta más cómodo solo exportar los datos de las tablas, para que los analistas o consultores externos puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, puede elaborarse una exportación automatizada a través del comando `make export` cuya configuración se realizó en el archivo `Makefile` y requirió permisos en `docker_compose.yml`. El funcionamiento, es a través de un Script `export.sql` con el "destino" al que se desea exportar cada archivo en formato csv (la carpeta de destino `export_csv`, es creada en el momento que se ejecuta el comando make export).
