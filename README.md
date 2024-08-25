@@ -24,19 +24,19 @@ Diseñar e implementar una base de datos relacional que satisfaga las necesidade
 
 ### Situación problemática
 ___
-Se enfrenta la necesidad de la creación de una base de datos relacional eficiente que permita manejar adecuadamente la asignación de las diferentes operaciones (instalaciones, reclamos, modificaciones/cambios, bajas) a los distintos grupos de trabajo, con los equipos correpondientes a los planes adquiridos por los clientes. Asimismo, la base de datos deberá proporcionar ágilmente la información del proveedor que otorgó el equipamiento con su correspondiente costo y precio de venta.
+Se enfrenta la necesidad de la creación de una base de datos relacional eficiente que permita manejar adecuadamente la asignación de las diferentes operaciones (instalaciones, reclamos, modificaciones/cambios, bajas) a los distintos grupos de técnicos que trabajan en conjunto, con los equipos correpondientes a los planes adquiridos por los clientes. Asimismo, la base de datos deberá proporcionar ágilmente la información del proveedor que otorgó el equipamiento con su correspondiente costo y precio de venta.
 
 ### Descripción del problema:
 
-1. Gestión de Operaciones y Empleados: Es necesaria una base de datos que permita identificar los equipos de trabajo a los que se les asignan las distintas operaciones para establecer un orden claro de las tareas a ejecutar por parte de los trabajadores.
+1. Gestión de Operaciones y Empleados: Es necesaria una base de datos que permita identificar los equipos de trabajo a los que se les asignan las distintas operaciones para establecer un orden claro de las tareas a ejecutar por parte de los técnicos.
 
-2. Gestión del Equipamiento adquirido a los Proveedores: Es importante poder determinar y suministrar los equipos necesarios para los clientes que son adquiridos a los proveedores para satisfacer adecuadamente la necesidad del servicio que contrató el consumidor.
+2. Gestión del Equipamiento adquirido a los Proveedores: Es importante poder determinar con precisión los disponitivos que fueron proporcionados por cada proveedor y suministrar los equipos necesarios para los clientes para satisfacer adecuadamente la necesidad del servicio que contrató el consumidor.
 
-3. Gestión de Facturas y Medios de pago: La base de datos deberá proporcionar información certera para la emisión de las facturas, acorde a las operaciones efectuadas sobre cada cliente, de acuerdo a su costo y precio, a través del pago previsto por el mismo.
+3. Gestión de Facturas y Medios de pago: La base de datos deberá proporcionar información certera para la emisión de las facturas, acorde a las operaciones efectuadas sobre cada cliente, de acuerdo a su costo y precio, a través del tipo de pago previsto por el mismo.
 
 ### Resolución de la problemática
 ___
-El problema planteado logra resolverse a través del diseño e implementación de una base de datos que permita identificar con claridad y agilidad las operaciones asignadas a los diferentes técnicos, la respuesta obtenida por los mismos en cada ejecución, el tipo de equipo que adquirió cada cliente (en conocimiento del proveedor que lo suministró) y el abono que contrató en función de ese equipamiento instalado. Asimismo, la base proporcionará la información sobre los precios de los abonos y equipos para la emisión de las facturas, con los distintos medios de pago establecidos por los consumidores. Por último, el CEO podrá acceder a información específica sobre las ganancias obtenidas en las operaciones comerciales efectuadas.
+El problema planteado logra resolverse a través del diseño e implementación de una base de datos que permita identificar con claridad y agilidad las operaciones asignadas a los diferentes técnicos, la respuesta obtenida por los mismos en cada ejecución, el tipo de equipo que adquirió cada cliente (en conocimiento del proveedor que lo suministró) y el abono que contrató en función de ese equipamiento instalado. Asimismo, la base proporcionará la información sobre los precios de los abonos y equipos para la emisión de las facturas, con los distintos medios de pago establecidos por los consumidores. Por último, el CEO podrá acceder a información específica sobre las ganancias obtenidas en las operaciones comerciales efectuadas, entre otros reportes importantes.
 
 ### Diagrama de entidad relación
 ___
@@ -260,15 +260,16 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES;
 ```
-En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco D:/Documents. En el caso de codespace, el archivo que contiene todos los comandos de importación se encuentran dentro de la carpeta `sql_project` y en el archivo que se denomina `population.sql` y los archivos `.csv` se encuentran alojados en la carpeta `sql_project/data_csv`.
+En mi Proyecto en particular los archivos tipo CSV importados, se encontraban dentro de una carpeta denominada “dataset_mysql” en disco C:/Documents. En el caso de codespace, el archivo que contiene todos los comandos de importación se encuentran dentro de la carpeta `sql_project`, se denomina `population.sql` y los archivos `.csv` se encuentran alojados en la carpeta `sql_project/data_csv`.
 Los archivos csv fueron creados con información ficticia pero semejante a la realidad para otorgar seriedad y coherencia al proyecto, dado que fue inspirado en una empresa real.
-Los 12 archivos se denominan: abonos, areas, asignaciones, clientes, empleados, equipos, facturas, operaciones, proveedores, suministros, tipo_de_pago y ventas.
+Los 12 archivos tupo csv se denominan: abonos, areas, asignaciones, clientes, empleados, equipos, facturas, operaciones, proveedores, suministros, tipo_de_pago y ventas.
 
 ## Importación CSV en Codespace 
 La importación en Codespace se realiza en forma automatizada y generalmente expone el número de registros con exactitud y precisión, tal como se observa en la siguiente captura:
 
 <img align="right" alt="test_db_codespace" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/test-db_codespace.png?raw=true">
 &nbsp;<br>
+
 De todos modos, en determinadas oportunidades puede presentar algunas discrepancias en el `test-db` sobre el conteo de registros en la tabla de hechos o alguna otra por razones desconocidas que pueden vincularse con cuestiones de compatibilidad con Workbench, entre otros posibles motivos, es por ello que se incorporó en el testeo un conteo adicional de registros sobre dos tablas, para subsanar esa información errónea que exporádicamente codespace muestra. Los cambios se implementaron a través de la modificación del archivo "Makefile" y se especificó que el conteo de registros se ejecute únicamente durante el test-db.
 A continuación se expone la muestra de como se observa en coderpace:
 
@@ -295,7 +296,7 @@ ___
 En el proyecto de Wifly las vistas se efectuaron previo a la importación de datos, puesto que se dominaba información sobre los requerimientos necesarios para cada sector. Se diseñaron un total de 6 vistas para diferentes áreas y con distinta finalidad, a continuación se detallan:
 1. `Nombre de la vista:` "view_admin_equipos_adquiridos_fecha"
 + _Descripción_: Esta vista permite visualizar el modelo del equipo que tiene asignado e instalado cada cliente y el proveedor que lo suministro con la fecha en la que fué dquirido, y la fecha en la que fué efectivamente facturado al cliente (siempre la fecha en la que se adquirió será anterior a la fecha de facturación).
-+ _Objetivo_: Sirve para identificar con exactitud que marca y modelo de equipo tiene instalado cada cliente, el dominio de esa información por parte de los administrativos y los técnicos es importante, ya que en caso de un reclamo o fallas, al momento de ir hacia el domicilio a revisar podrán tener una noción del modelo de router que se trata, y por experiencia de reportes sobre fallos anteriores en los mismos equipos, identificar con mayor facilidad el problema y solucionarlo para reestablecer el servicio.
++ _Objetivo_: Sirve para identificar con exactitud la marca y modelo de equipo que tiene instalado cada cliente; el dominio de esa información por parte de los administrativos y los técnicos es importante, ya que en caso de un reclamo o fallas, al momento de ir hacia el domicilio a revisar podrán tener una noción del modelo de router que se trata, y por experiencia de reportes sobre fallos anteriores en los mismos equipos, identificar con mayor facilidad el problema para solucionarlo reestableciendo el servicio lo antes posible.
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_equipo, marca, modelo, id_proveedor, Nombre Proveedor, fecha_de_suministro y fecha_factura.
 + _Ejemplo de consulta sobre un cliente en específico:_
 ```sql
@@ -305,7 +306,7 @@ WHERE `Nombre Cliente` = 'Constructora del Norte SA';
 ```
 2. `Nombre de la vista:` "view_admin_abonos_clientes"
 + _Descripción_: Esta vista permite a los administrativos observar el tipo de abono que tiene contratado cada cliente y el precio.
-+ _Objetivo_: Es útil para los administrativos y técnicos saber el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio, y permite identificar tendencias en los patrones de consumo y preferencias. 
++ _Objetivo_: Es útil para los administrativos y técnicos estar en conocimiento sobre el tipo de abono que tiene contratado el cliente, puesto que mientras mayor ancho de banda se proporcione, mayor será su precio, y permite identificar tendencias en los patrones de consumo y preferencias. 
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_abono, Tipo de Abono y precio_abono.
 + _Ejemplo de consulta sobre los clientes que tienen contratado el abono más caro:_
 ```sql
@@ -314,8 +315,8 @@ FROM Wifly.view_admin_abonos_clientes
 WHERE `Tipo de Abono` = '40MB';
 ```
 3. `Nombre de la vista:` "view_admin_operaciones_respuesta"
-+ _Descripción_: El diseño de esta vista permite visualizar las operaciones que se le asignaron a los distintos empleados y su respuesta.
-+ _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios y la distribución en el volumen de tareas a cada grupo de trabajo.
++ _Descripción_: El diseño de esta vista permite visualizar las operaciones que fueron asignadas a los distintos empleados y su respuesta.
++ _Objetivo_: Es relevante, dado que los administrativos necesitan estar en conocimiento del "estado" de los reclamos, y el seguimiento de como fueron solucionados los inconvenientes. Asimismo, el dominio de esa información refleja el desempeño obtenido por los técnicos en sus visitas a los domicilios, asi como también, identificar la distribución en el volumen de tareas a cada grupo de trabajo.
 + _Columnas que la componen_: tipo_operacion, fecha_operaciones, "Empleado" (una concatenación de su nombre y apellido) y respuesta.
 + _Ejemplo de consultas:_
 
@@ -323,21 +324,21 @@ WHERE `Tipo de Abono` = '40MB';
 ```sql
 SELECT * FROM Wifly.view_admin_operaciones_respuesta;
 ```
-- [x] _Específica sobre un empleado_:
+- [x] _Específica sobre un técnico/empleado_:
 ```sql
 SELECT *   
    FROM view_admin_operaciones_respuesta
    WHERE `Empleado`= 'Juan Perez';
 ```
 4. `Nombre de la vista:` "view_bajas_clientes"
-+ _Descripción_: Esta vista permite visualizar los clientes dados de baja con la fecha, a el CEO y los administrativos.
++ _Descripción_: Esta vista permite visualizar los clientes dados de baja con la fecha, destinada principalmente al el CEO y los administrativos.
 + _Objetivo_: Es útil para ambos sectores (CEO y Administración) dado que si el volumen de bajas en muy grande o se eleva, se requerirá indagar para evitar la fuga de clientes hacia la competencia.
 + _Columnas que la componen_: id_cliente, Nombre Cliente, id_operacion, Descripcion Operacion y Fecha Operacion.
 + _Ejemplo de consulta de la vista completa:_
 ```sql
 SELECT * FROM view_bajas_clientes;
 ```
-+ _Ejemplo consulta específica:_
++ _Ejemplo consulta específica por fecha:_
 ```sql
 SELECT 
     id_cliente, 
@@ -350,7 +351,7 @@ WHERE `Fecha Operacion` BETWEEN '2023-01-01' AND '2023-12-31'
 ORDER BY id_cliente, `Fecha Operacion`;
 ```
 5. `Nombre de la vista:` "view_reclamos_respuesta"
-+ _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas efectuadas a los domicilios.
++ _Descripción_: Muestra los reclamos asentados en la base de datos, y las respuestas efectuadas por los técnicos en las visitas realizadas a los domicilios.
 + _Objetivo_: Es funcional para el Ceo y la Administración poder observar los reclamos registrados, y las respuestas proporcionadas por los técnicos, para analizar en profundidad los motivos que generan mayor disconformidad en los clientes y aplicar medidas para reverir las debilidades identificadas.
 + _Columnas que la componen_: id_peracion, Descripción Reclamo, Respuesta, Fecha, id_cliente y Nombre Cliente.
 + _Ejemplo de consultas_:
@@ -366,22 +367,21 @@ FROM view_reclamos_respuesta
 WHERE `Fecha` > '2023-12-31';
 ```
 6. `Nombre de la vista:` "view_gerencia_ganancia_equipos"
-+ _Descripción_: Esta vista permite ver en forma concisa la ganancia total obtenida por la suma obtenida de los abonos y equipos agrupado por cada cliente.
++ _Descripción_: Esta vista permite ver en forma concisa la ganancia total obtenida por la suma de los equipos suministrados y agrupados por cliente.
 + _Objetivo_: Proporciona a la Gerencia información sobre la ganancia total agrupada por cliente, y permite tomar decisiones sobre inversiones y distribución de dividendos.
 + _Columnas que la componen_: id_cliente, Ganancia Equipos y razon_social.
 + _Ejemplo de consulta general de la vista_:
 ```sql
 SELECT * FROM view_gerencia_ganancia_equipos;
 ```
-+ _Ejemplo de consulta específica:_
++ _Ejemplo de consulta por órden alfabético:_
 ```sql
 SELECT 
     id_cliente,
     razon_social AS 'Nombre Cliente',
     `Ganancia Equipos`
 FROM Wifly.view_gerencia_ganancia_equipos
-WHERE `Ganancia Equipos` >= 10000
-ORDER BY `Ganancia Equipos` DESC;
+ORDER BY razon_social ASC;
 ```
 `Resumen de vistas en DBeaver:`
 
@@ -415,7 +415,7 @@ Razón:
  SQL Error [1644] [45000]: No hay suficiente cantidad en stock para el equipo seleccionado.
 ```
 2. `Nombre del Trigger:` "chequear_fecha_futura"
-+ _Descripción_: Se encarga de evita inserción de operaciones con fechas futuras que superen los 6 meses.
++ _Descripción_: Se encarga de evitar inserción de operaciones con fechas futuras que superen los 6 meses, dado que toman compromisos con clientes que probablemente no podrán cumplirse en el plazo establecido, y se sobrecarga de trabajo a los técnicos.
 + _Tabla afectada_: Operaciones
 + Acción: Insert
 + _Ejemplo de inserción de datos válidos_:
@@ -423,7 +423,7 @@ Razón:
 INSERT INTO OPERACIONES (id_operacion, id_cliente, tipo_operacion, descripcion, respuesta, fecha_operaciones)
 VALUES (111, 7, 'Reclamo', 'problema con la factura', 'factura corregida', '2024-12-01 09:00:00');
 ```
-+ _Ejemplo de inserción de datos inválidos_:
++ _Ejemplo de inserción de datos inválidos (que superan los 6 meses)_:
 ```sql
 INSERT INTO OPERACIONES (id_operacion, id_cliente, tipo_operacion, descripcion, respuesta, fecha_operaciones)
 VALUES (111, 6, 'Reclamo', 'problema con el equipo', 'equipo reparado', '2025-09-01 15:30:00');
@@ -459,19 +459,19 @@ Se elaboraron 2 funciones para la base de datos Wifly que retornan información 
 ```sql
 SELECT ganancia_anual_cliente(5) AS ganancia_anual;
 ```
-- [x] _Específica sobre un cliente en particular_:
+- [x] _Específica: Expone ganancia anual descendente por cliente _:
 ```sql
 SELECT 
-    c.razon_social,
-    ganancia_anual_cliente(c.id_cliente) AS ganancia_anual
+    c.razon_social AS 'Nombre Cliente',
+    ganancia_anual_cliente(c.id_cliente) AS 'Ganancia Anual'
 FROM 
     CLIENTES c
-WHERE 
-    c.id_cliente = 15;
+ORDER BY 
+    `Ganancia Anual` DESC;
 ```
 2. `Nombre de la Función:` "descuento_abono"
 + _Descripción_: La función fué creada para utilizarse en el caso de bonificaciones especiales a clientes que sufieron cortes reiterados o baja señal del servicio sostenida, a fin de evitar emisión de nota de crédito (por cuestiones impositivas) para resarcir su disconformidad.
-+ _Utilidad_: Evita la emisión de Notas de crédito por reconocimiento de servicio deficiente en determinados casos atípicos con clientes, y directamente se les bonifica el precio del abono en la próxima factura. Su mayor finalidad, es retener al cliente y resarcir el saño provocado por los días con falta de servicio o mala señal.
++ _Utilidad_: Evita la emisión de Notas de crédito por reconocimiento de servicio deficiente en determinados casos atípicos con clientes, y directamente se les bonifica el precio del abono en la próxima factura. Su mayor finalidad, es retener al cliente y resarcir el daño provocado a razón de los días con falta de servicio o mala señal.
 + _Parámetros_: p_id_abono INT
 + _Retorno_: precio_descuento INT
 + _Ejemplo de su aplicación_:
@@ -492,7 +492,8 @@ SHOW FUNCTION STATUS WHERE Db = 'Wifly';
     
 ___
 ## Procedimientos Almacenados
-Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con parámetros de entrada, y el otro con parámetros tanto de entrada como de salida.
+Se elaboraron un total de 4 procedimientos para la base de datos Wifly, 2 en formato tradicional y 2 con la implementación de TCL. 
+En los Procedimientos tradicionales, el primero posee solo parámetros de entrada, mientras que el otro, cuenta con parámetros tanto de entrada como de salida.
 1. `Nombre del procedimiento:` "insertar_equipo"
 + _Descripción_: Este procedimiento se ejecuta al momento de insertar un nuevo equipo dentro de la tabla pertinente. En caso que la inserción no cumpla con los requisitos necesarios, el procedimiento expondrá un mensaje de error justificando el motivo por el cual no puede incorporarse ese nuevo producto. Este procedimiento **solo** cuenta con parámetros de entrada.
 + _Parámetros de entrada_:
@@ -509,6 +510,10 @@ Se elaboraron 2 procedimientos para la base de datos Wifly, uno solo con paráme
 + _Ejemplo de su uso_:
 ```sql
 CALL insertar_equipo(marca, modelo, costo_equipo, precio_equipo, cantidad);
+```
++ _Caso exitoso_:
+```sql
+CALL insertar_equipo('Net-Link', 'DIR-850L', 30000, 45000, 20);
 ```
 + _Caso inválido:_ Marca del equipo vacía
 ```sql
@@ -556,12 +561,12 @@ SET @id_nuevo_abono = 0;
 ```
 2do: Se llama al procedimiento:
 
-:heavy_check_mark: Caso exitoso (el resultado será mayor a 4):
+:heavy_check_mark: Caso exitoso: se inserta el nuevo abono (el resultado será mayor a 4):
 ```sql
 CALL Wifly.registrar_abono('50MB', 20000, 40000, @id_nuevo_abono);
 SELECT @id_nuevo_abono;
 ```
-:no_entry: Caso inválido (el resultado será -1):
+:no_entry: Caso inválido: No se inserta el nuevo abono (el resultado será -1):
 ```sql
 CALL Wifly.registrar_abono('30MB', 15000, 25000, @id_nuevo_abono);
 SELECT @id_nuevo_abono;
@@ -618,6 +623,7 @@ CALL Wifly.actualizar_domicilio_ip_cliente(1, 'Av. Del Valle', '192.168.1.60');
 > p_celular VARCHAR(100),
 > 
 > p_dni VARCHAR(50),
+> 
 > p_numero_ip VARCHAR(50),
 > 
 > p_correo_electronico VARCHAR(100),
@@ -710,16 +716,16 @@ CALL Wifly.insertar_cliente_y_factura(
 + Exitoso de Cliente y Factura
 ```sql
 CALL Wifly.insertar_cliente_y_factura(
-    52,                      -- p_id_cliente (Nuevo)
-    1,                      -- p_id_equipo
-    1,                      -- p_id_abono
-    'New Client',        -- p_razon_social
-    'New Address',      -- p_direccion
-    '123456789',            -- p_celular
-    '12345678',             -- p_dni
+    53,                       -- p_id_cliente (Nuevo)
+    1,                        -- p_id_equipo
+    1,                        -- p_id_abono
+    'New Client',             -- p_razon_social
+    'New Address',            -- p_direccion
+    '123456789',              -- p_celular
+    '12345678',               -- p_dni
     '192.168.1.101',          -- p_numero_ip
     'new_client@ejemplo.com', -- p_correo_electronico
-    '0001-00000052',       -- p_nro_factura (Nueva)
+    '0001-00000052',          -- p_nro_factura (Nueva)
     1
   );
 ```
@@ -782,7 +788,7 @@ volver a intentar ingresar normalmente.
 
 `estudio_contable:` es un usuario para uso exclusivo por parte del asesor contable externo de la organización (por el cual se tiene alta confianza), su password es 'wiflyestudio', y al igual que los demás usuarios se encuentra configurado con un bloqueo luego de 3 intentos fallidos y 3 minútos para reestablecer el integreso. 
 
-`auditoria:` se trata de un usuario para uso esporádico, cuya password es 'wifly123' y tiene una caducidad a los 180 días. Se encuentra destinado, para casos de auditorias externas (generalmente por organismos de recaudación impositiva en casos requeridos). 
+`auditoria:` se trata de un usuario para uso esporádico, cuya password es 'wifly123' y tiene una caducidad a los 180 días. Se encuentra destinado, para casos de auditorias externas (generalmente por organismos de recaudación impositiva en casos requeridos por inspecciones o algún acontecimiento semejante). 
 
 `ACLARACIÓN:` Para listar o consultar los usuarios y roles que han sido explícitamente asignados independientemente de los predeterminados por MySQL, puede ejecutarse la siguiente instrucción:
 ```sql
@@ -806,8 +812,8 @@ son ideales para ese tipo de usuarios. Con la diferencia que el usuario auditori
 
 ***Testeo de los usuarios y privilegios:***
 Los distintos usuarios fueron testeados para corroborar que los roles con los privilegios asignados funcionan adecuadamente. Para ello, se procede a editar la conexión en el
-localhost, con el ingreso del usuario y contraseña verificando una prueba de conexión. Previamente a la verificación, la propiedad del driver `allowPublicKeyRetrieval` debe 
-tener un valor `TRUE` para que permita la verificación.
+localhost, con el ingreso del usuario y contraseña verificndo una prueba de conexión. Previamente a la comprobación de conexión, la propiedad del driver `allowPublicKeyRetrieval` debe 
+establecerse en un valor `TRUE` para que permita la verificación.
 
 <p style="text-align: center;">
     <img alt="PublicKey" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/blob/main/imagenes/PublicKey.png?raw=true" style="display: block; margin: auto;">
@@ -825,7 +831,7 @@ _Intento de eliminación de un registro:_
 USE Wifly;
 
 DELETE FROM AREAS
-WHERE area_de_trabajo = 'Técnicos';
+WHERE area_de_trabajo = 'Tecnicos';
 ```
 _Respuesta:_ 
 ```sql
@@ -885,17 +891,17 @@ Razón:
 ___
 ## Backup de la base de datos 
 Para efectuar el Backup de la base de datos Wifly se decide automatizarlo desde el comando `make backup` en codespace cuya configuración se efectuó a través de `Makefile`.
-De todos modos, se realizó un backup desde terminal cmd del sistema para abordar otra de las alternativas posibles de efectuarlo. Para ello, previamente debió modificarse la configuración sobre las variables del entorno del sistema operativo (Windows) ubicando la raíz del archivo ejecutable `mysqldump.exe` y copiando la ruta (en mi caso particular) `C:Program files\MySQL\MySQL Server 8.0\bin` en el directorio `PATH`, tal como lo expone la captura a continuación:
+De todos modos, se realizó un backup desde terminal `cmd` del sistema para abordar otra de las alternativas posibles de efectuarlo. Para ello, previamente debió modificarse la configuración sobre las variables del entorno del sistema operativo (Windows) ubicando la raíz del archivo ejecutable `mysqldump.exe` y copiando la ruta (en mi caso particular) `C:Program files\MySQL\MySQL Server 8.0\bin` en el directorio `PATH`, tal como lo expone la captura a continuación:
 
 <center>
     <img alt="Variables de Entorno" src="https://github.com/JessBasile/Proyecto-SQL-Coderhouse/raw/main/imagenes/variables_entorno.png" style="width: 90%; max-width: 1200px; height: auto;">
 </center>
 
-Una vez efectuados los pasos previamente detallado, es importante verificar configuración del directorio PATH es correcta ejecutando el comando: 
+Una vez efectuados los pasos previamente detallados, es importante verificar que la configuración del directorio PATH es correcta ejecutando el comando: 
 ```sql
 mysqldump --version
 ```
-Y si la respueta es el siguiente comando (o similar), significa que se encuentra en óptimo funcionamiento:
+Si la respueta es el siguiente comando (o similar), significa que se encuentra en óptimo funcionamiento:
 ```sql
 MySQL80
 ```
@@ -903,7 +909,7 @@ Aposteriori deberá ejecutarse el siguiente comando, ***mientras MySQL se encuen
 ```sql
 mysqldump -u root -p --host 127.0.0.1 --port 3306 --routines --databases Wifly > "C:\Users\Jesica Basile\Documents\backup_Wifly\backupWifly.sql"
 ```
-Esa operación proporcionará el archivo `backupWifly.sql` en la carpeta local backup_Wifly indicada como destino.
+Esa operación proporcionará el archivo `backupWifly.sql` en la carpeta local "backup_Wifly" indicada como destino.
 
 El archivo `backupWifly.sql` se encuentra disponible en el repositorio dentro de la carpeta `backup_Wifly` en la raíz del repositorio.
 
@@ -911,7 +917,7 @@ El archivo `backupWifly.sql` se encuentra disponible en el repositorio dentro de
 ```sql
 mysql -u root -p --host 127.0.0.1 --port 3306 Wifly < "C:\Users\Jesica Basile\Documents\backup_Wifly\backupWifly.sql"
 ```
-Una vez ejecutado, si fué exitosa la operación, deberá aparecer la base de datos completa con todos sus objetos creada en MySQL.
+Una vez ejecutado, si fué exitosa la operación, deberá aparecer la base de datos completa con todos sus objetos creados en MySQL.
 ___
 ## Exportación de datos a CSV: para análisis de información en otros motores
 Si bien, puede elaborarse un backup sobre la base de datos completa, en ciertos casos, resulta más cómodo solo exportar los datos de las tablas, para que los analistas o consultores externos puedan utilizar esa información en otros motores, tales como: Excel, Power Bi, Tableau, etc. En ese caso, puede elaborarse una exportación automatizada a través del comando `make export` cuya configuración se realizó en el archivo `Makefile` y requirió permisos en `docker_compose.yml`. El funcionamiento, es a través de un Script `export.sql` con el "destino" al que se desea exportar cada archivo en formato csv (la carpeta de destino `export_csv`, es creada en el momento que se ejecuta el comando make export).
